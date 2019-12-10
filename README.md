@@ -20,5 +20,5 @@ Several projects aided in inspiring this project. Notably they are:
 
 ### Install Series
 ![PWA Certified](https://pwa-shields.richarddawson.codes/install/gray.svg)
-!PWA Certified](https://pwa-shields.richarddawson.codes/install/purple.svg)
+![PWA Certified](https://pwa-shields.richarddawson.codes/install/purple.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/install/green.svg)
