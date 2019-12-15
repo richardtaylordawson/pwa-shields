@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    title: `PWA Shields - Richard Taylor Dawson`,
+    description: `Unique, fun, and original PWA badges in SVG`,
+    author: `Richard Taylor Dawson`,
+    siteUrl: `https://pwa-shields.richarddawson.codes`
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,

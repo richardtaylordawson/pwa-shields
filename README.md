@@ -1,5 +1,5 @@
 # PWA Shields - ![PWA Certified](https://pwa-shields.richarddawson.codes/classic/purple.svg)
-> Concise, consistent, and legible PWA badges in SVG
+> Unique, fun, and original PWA badges in SVG
 
 ## Credits
 Several projects aided in inspiring this project. Notably they are:
