@@ -14,11 +14,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `PWA Shields`,
+        short_name: `PWA Shields`,
         start_url: `/`,
-        background_color: `#5A0FC8`,
-        theme_color: `#5A0FC8`,
+        background_color: `#5B6168`,
+        theme_color: `#5B6168`,
         display: `minimal-ui`,
         icon: `static/pwa-shields-logo.svg`,
       },
