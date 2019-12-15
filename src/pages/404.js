@@ -1,10 +1,18 @@
 import React from "react"
-import MainLayout from "./../layouts/main"
+import { Link } from "gatsby"
+import { MainLayout } from "./../layouts/mainLayout"
+import { Container, Row, Col } from "shards-react"
 
 const NotFoundPage = () => (
   <MainLayout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Container>
+      <Row>
+        <Col>
+          <h1>NOT FOUND</h1>
+          <p>Unfortunately that route doesn't exist. Return to <Link to="/">home page</Link></p>
+        </Col>
+      </Row>
+    </Container>
   </MainLayout>
 )
 
