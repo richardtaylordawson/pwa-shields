@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import { MainLayout } from "./../layouts/mainLayout"
+import { SEO } from "./../components"
 import { Container, Row, Col } from "shards-react"
 
 const NotFoundPage = () => (
   <MainLayout>
+    <SEO title="PWA Shields - Not Found" />
     <Container>
       <Row>
         <Col>

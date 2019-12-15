@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { MainLayout } from "./../layouts/mainLayout"
+import { SEO } from "./../components"
 import { copyToClipboard, getQueryVariable } from "./../components/utils"
 import { Container, Row, Col, Form, FormGroup, Card, CardBody, Button, FormSelect } from "shards-react"
 
@@ -20,6 +21,7 @@ const CreatePage = () => {
 
   return (
     <MainLayout currentPage="create">
+      <SEO title="PWA Shields - Create" />
       <Container>
         <Row>
           <Col>

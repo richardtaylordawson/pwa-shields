@@ -1,9 +1,11 @@
 import React from "react"
 import { MainLayout } from "./../layouts/mainLayout"
+import { SEO } from "./../components"
 import { Container, Row, Col, Card, CardBody, Button } from "shards-react"
 
 const IndexPage = () => (
   <MainLayout currentPage="series">
+    <SEO title="PWA Shields - Series" />
     <Container>
       <Row>
         <Col>
