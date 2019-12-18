@@ -3,7 +3,7 @@ module.exports = {
     title: `PWA Shields - Richard Taylor Dawson`,
     description: `Unique, fun, and original PWA badges in SVG`,
     author: `Richard Taylor Dawson`,
-    siteUrl: `https://pwa-shields.richarddawson.codes`
+    siteUrl: `https://www.pwa-shields.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://pwa-shields.richarddawson.codes',
-        sitemap: 'https://pwa-shields.richarddawson.codes/sitemap.xml',
+        host: 'https://www.pwa-shields.com',
+        sitemap: 'https://www.pwa-shields.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/', }]
       }
     },

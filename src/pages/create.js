@@ -36,7 +36,7 @@ const CreatePage = () => {
     }
   }
 
-  const snippet = `![PWA Shields](https://pwa-shields.richarddawson.codes${logoURL})`
+  const snippet = `![PWA Shields](https://www.pwa-shields.com${logoURL})`
 
   return (
     <MainLayout currentPage="create">
