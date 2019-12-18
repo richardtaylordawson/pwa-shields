@@ -1,11 +1,6 @@
 # ![PWA Shields](https://www.pwa-shields.com/site/logo.svg)
 > Personalize your app's README with custom, fun, PWA shields in SVG
 
-## Credits
-Several projects aided in inspiring this project. Notably they are:
-
-- [Shields.io](https://github.com/badges/shields)
-
 ## Explore Docs
 <https://www.pwa-shields.com>
 
@@ -37,6 +32,13 @@ Several projects aided in inspiring this project. Notably they are:
 ![PWA Certified](https://www.pwa-shields.com/series/install/gray.svg)
 ![PWA Certified](https://www.pwa-shields.com/series/install/purple.svg)
 ![PWA Certified](https://www.pwa-shields.com/series/install/green.svg)
+
+## Credits
+Several projects aided in inspiring this project. Notably they are:
+
+- [Shields.io](https://github.com/badges/shields)
+- [GatsbyJS](https://www.gatsbyjs.org/)
+- [Shards React](https://designrevision.com/docs/shards-react/getting-started)
 
 ## Deployment
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6b847872-2e80-45dd-8dc0-5490bd7d6acd/deploy-status)](https://app.netlify.com/sites/rtd-pwa-shields/deploys)
