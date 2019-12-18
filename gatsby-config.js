@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `PWA Shields - Richard Taylor Dawson`,
-    description: `Unique, fun, and original PWA badges in SVG`,
+    description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
     author: `Richard Taylor Dawson`,
     siteUrl: `https://www.pwa-shields.com`
   },

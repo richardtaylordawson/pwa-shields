@@ -1,5 +1,5 @@
 # ![PWA Shields](https://www.pwa-shields.com/site/logo.svg)
-> Unique, fun, and original PWA badges in SVG
+> Personalize your app's README with custom, fun, PWA shields in SVG
 
 ## Credits
 Several projects aided in inspiring this project. Notably they are:
