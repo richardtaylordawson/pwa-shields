@@ -17,7 +17,7 @@ const IndexPage = () => (
         <Col xs={12} sm={12} md={7} lg={7}>
           <Card className="flex-card mb-3">
             <CardBody>
-              <div class="flex-group space-between">
+              <div className="flex-group space-between">
                 <h3>Classic</h3>
                 <a href="/create?series=classic"><Button size="sm" outline theme="secondary">Try me</Button></a>
               </div>
@@ -50,7 +50,7 @@ const IndexPage = () => (
         <Col xs={12} sm={12} md={5} lg={5}>
           <Card className="flex-card mb-3">
             <CardBody>
-              <div class="flex-group space-between">
+              <div className="flex-group space-between">
                 <h3>Certified</h3>
                 <a href="/create?series=certified"><Button size="sm" outline theme="secondary">Try me</Button></a>
               </div>
@@ -68,7 +68,7 @@ const IndexPage = () => (
         <Col xs={12} sm={12} md={5} lg={5}>
           <Card className="flex-card mb-3">
             <CardBody>
-              <div class="flex-group space-between">
+              <div className="flex-group space-between">
                 <h3>Install</h3>
                 <a href="/create?series=install"><Button size="sm" outline theme="secondary">Try me</Button></a>
               </div>
