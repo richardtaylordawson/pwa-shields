@@ -22,7 +22,7 @@ export class Navigation extends React.Component {
     return (
       <Navbar sticky="top" type="dark" theme="secondary" expand="md">
         <NavbarBrand href="/"><img className="m-0" src="/site/logo.svg" alt="pwa shields logo" /></NavbarBrand>
-        <NavbarToggler onClick={this.toggleNavbar} />
+        <NavbarToggler onClick={this.toggleNavbar} aria-label="mobile navigation" />
 
         <Collapse open={this.state.collapseOpen} navbar>
           <Nav navbar>

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-// import Favicon from "./../../static/pwa-"
+import Favicon from "./../../static/site/favicons/128x128.svg"
 
 export const SEO = ({ description, lang, meta, keywords, title }) => {
   const { site } = useStaticQuery(
@@ -12,6 +12,7 @@ export const SEO = ({ description, lang, meta, keywords, title }) => {
           siteMetadata {
             title
             description
+            siteUrl
           }
         }
       }
@@ -19,15 +20,16 @@ export const SEO = ({ description, lang, meta, keywords, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const siteUrl = site.siteUrl
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      // link={[
-      //   { rel: "shortcut icon", type: "image/png", href: `${Favicon}` },
-      // ]}
+      link={[
+        { rel: "shortcut icon", type: "image/png", href: `${Favicon}` },
+      ]}
       title={`${title}`}
       meta={[
         {
@@ -76,19 +78,19 @@ export const SEO = ({ description, lang, meta, keywords, title }) => {
         },
         {
           property: `og:url`,
-          content: `https://pwa-shields.richarddawson.codes`,
+          content: `${siteUrl}`,
         },
         {
           property: `og:image`,
-          content: `https://pwa-shields.richarddawson.codes/images/social-share.png`,
+          content: `${siteUrl}/images/social-share.png`,
         },
         {
           itemprop: `image`,
-          content: `https://pwa-shields.richarddawson.codes/images/social-share.png`,
+          content: `${siteUrl}/images/social-share.png`,
         },
         {
           name: `twitter:image`,
-          content: `https://pwa-shields.richarddawson.codes/images/social-share.png`,
+          content: `${siteUrl}/images/social-share.png`,
         },
         {
           property: `og:image:type`,
