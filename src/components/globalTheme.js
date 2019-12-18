@@ -60,6 +60,11 @@ export const GlobalTheme = () => (
 
       .small { font-size: 0.85rem; }
       .legal { font-size: 0.75rem; }
+      .block { display: block; }
+      .opaque { opacity: 0.5; }
+      .navbar-brand img { height: 30px; }
+      .flex-card { height: 90%; }
+      .hidden { display: none; }
 
       .flex-group {
         display: flex;

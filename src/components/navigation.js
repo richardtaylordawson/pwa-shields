@@ -21,7 +21,7 @@ export class Navigation extends React.Component {
   render() {
     return (
       <Navbar sticky="top" type="dark" theme="secondary" expand="md">
-        <NavbarBrand href="/"><img className="m-0" src="/pwa-shields-logo.svg" alt="pwa shields logo" /></NavbarBrand>
+        <NavbarBrand href="/"><img className="m-0" src="/site/logo.svg" alt="pwa shields logo" /></NavbarBrand>
         <NavbarToggler onClick={this.toggleNavbar} />
 
         <Collapse open={this.state.collapseOpen} navbar>

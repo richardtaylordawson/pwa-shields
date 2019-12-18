@@ -9,7 +9,9 @@ const CreatePage = () => {
 
   const [formValues, setFormValues] = useState({
     "series": series,
-    "color": "gray"
+    "color": "gray",
+    "background": "white",
+    "logo": "inverse"
   })
 
   const handleInputChange = (event) => {
@@ -17,7 +19,24 @@ const CreatePage = () => {
     setFormValues(formValues => ({...formValues, [event.target.name]: event.target.value}))
   }
 
-  const snippet = `![PWA Shields](https://pwa-shields.richarddawson.codes/${formValues.series}/${formValues.color}.svg)`
+  let classicOrNo = ""
+  let fadedOrNo = ""
+  let logoURL = ""
+
+  if(formValues.series !== "classic") {
+    classicOrNo = "hidden"
+    fadedOrNo = "hidden"
+    logoURL = `/series/${formValues.series}/${formValues.color}.svg`;
+  } else {
+    if(formValues.background !== "faded") {
+      logoURL = `/series/${formValues.series}/${formValues.background}/${formValues.color}.svg`
+      fadedOrNo = "hidden"
+    } else {
+      logoURL = `/series/${formValues.series}/${formValues.background}/${formValues.logo}/${formValues.color}.svg`
+    }
+  }
+
+  const snippet = `![PWA Shields](https://pwa-shields.richarddawson.codes${logoURL})`
 
   return (
     <MainLayout currentPage="create">
@@ -26,7 +45,7 @@ const CreatePage = () => {
         <Row>
           <Col>
             <h1>Create</h1>
-            <p>Easily create a PWA shield for your next project or existing PWA.</p>
+            <p>Easily create a PWA shield for your next project or existing PWA's README file.</p>
           </Col>
         </Row>
         <Row>
@@ -37,7 +56,7 @@ const CreatePage = () => {
                   <FormGroup>
                     <div className="flex-group">
                       <label htmlFor="#preview" className="mr-3">Preview:</label>
-                      <img src={`/${formValues.series}/${formValues.color}.svg`} alt="shield preview" />
+                      <img src={logoURL} alt="shield preview" />
                     </div>
                   </FormGroup>
                   <FormGroup>
@@ -54,6 +73,21 @@ const CreatePage = () => {
                       <option value="gray">Gray</option>
                       <option value="purple">Purple</option>
                       <option value="green">Green</option>
+                    </FormSelect>
+                  </FormGroup>
+                  <FormGroup className={classicOrNo}>
+                    <label htmlFor="#color">Background</label>
+                    <FormSelect value={formValues.background} onChange={handleInputChange} name="background">
+                      <option value="white">White</option>
+                      <option value="faded">Faded</option>
+                      <option value="solid">Solid</option>
+                    </FormSelect>
+                  </FormGroup>
+                  <FormGroup className={fadedOrNo}>
+                    <label htmlFor="#color">Logo</label>
+                    <FormSelect value={formValues.logo} onChange={handleInputChange} name="logo">
+                      <option value="inverse">Inverse</option>
+                      <option value="white">White</option>
                     </FormSelect>
                   </FormGroup>
                   <Button outline theme="secondary" onClick={event => copyToClipboard(snippet, event, "Copy markdown")}>Copy markdown</Button>
