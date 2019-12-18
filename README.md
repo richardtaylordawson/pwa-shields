@@ -15,12 +15,15 @@ Several projects aided in inspiring this project. Notably they are:
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/white/gray.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/white/purple.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/white/green.svg)
+
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/faded/inverse/gray.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/faded/inverse/purple.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/faded/inverse/green.svg)
+
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/faded/white/gray.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/faded/white/purple.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/faded/white/green.svg)
+
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/solid/gray.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/solid/purple.svg)
 ![PWA Certified](https://pwa-shields.richarddawson.codes/series/classic/solid/green.svg)
