@@ -65,6 +65,7 @@ export const GlobalTheme = () => (
       .navbar-brand img { height: 30px; }
       .flex-card { height: 90%; }
       .hidden { display: none; }
+      .text-decoration-underline { text-decoration: underline; }
 
       .flex-group {
         display: flex;
