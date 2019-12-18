@@ -1,4 +1,4 @@
-# PWA Shields - ![PWA Certified](https://pwa-shields.richarddawson.codes/classic/purple.svg)
+# PWA Shields - ![PWA Shields](https://pwa-shields.richarddawson.codes/series/classic/faded/inverse/gray.svg)
 > Unique, fun, and original PWA badges in SVG
 
 ## Credits
