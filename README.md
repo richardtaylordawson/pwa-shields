@@ -1,7 +1,7 @@
 # ![PWA Shields](https://www.pwa-shields.com/site/logo.svg)
 > Personalize your app's README with custom, fun, PWA shields in SVG
 
-## Explore Docs
+## Explore the Docs
 <https://www.pwa-shields.com>
 
 ## Usage
@@ -34,7 +34,7 @@
 ![PWA Certified](https://www.pwa-shields.com/series/install/green.svg)
 
 ## Credits
-Several projects aided in inspiring this project. Notably they are:
+Several projects aided in inspiring this project & building. Notably they are:
 
 - [Shields.io](https://github.com/badges/shields)
 - [GatsbyJS](https://www.gatsbyjs.org/)
