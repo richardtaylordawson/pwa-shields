@@ -1,9 +1,16 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "pwa-shields",
+  "version": "1.0.0",
+  "description": "Personalize your app's README with custom, fun, PWA shields in SVG",
+  "homepage": "https://www.pwa-shields.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardtaylordawson/pwa-shields.git"
+  },
+  "author": "richardtaylordawson",
+  "bugs": {
+    "url": "https://github.com/richardtaylordawson/pwa-shields/issues"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
@@ -28,10 +35,6 @@
     "gatsby-plugin-remove-trailing-slashes": "^2.1.17",
     "prettier": "^1.19.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -41,11 +44,4 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
 }
