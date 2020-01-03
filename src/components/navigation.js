@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Collapse } from "shards-react"
 
 export class Navigation extends React.Component {
@@ -21,16 +22,16 @@ export class Navigation extends React.Component {
   render() {
     return (
       <Navbar sticky="top" type="dark" theme="secondary" expand="md">
-        <NavbarBrand href="/"><img className="m-0" src="/site/logo.svg" alt="pwa shields logo" /></NavbarBrand>
+        <Link to="/" className="navbar-brand"><img className="m-0" src="/site/logo.svg" alt="pwa shields logo" /></Link>
         <NavbarToggler onClick={this.toggleNavbar} aria-label="mobile navigation" />
 
         <Collapse open={this.state.collapseOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/" active={this.activePage === "series"}>Series</NavLink>
+              <Link to="/" className="nav-link" activeClassName={this.activePage === "series" && "active"}>Series</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/create" active={this.activePage === "create"}>Create</NavLink>
+              <Link to="/create" className="nav-link" activeClassName={this.activePage === "create" && "active"}>Create</Link>
             </NavItem>
           </Nav>
         </Collapse>
