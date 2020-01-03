@@ -58,14 +58,21 @@ export const GlobalTheme = () => (
         margin-right: 1px;
       }
 
+      a:hover {
+        text-decoration: none;
+      }
+
       .small { font-size: 0.85rem; }
       .legal { font-size: 0.75rem; }
       .block { display: block; }
       .opaque { opacity: 0.5; }
       .navbar-brand img { height: 30px; }
+      .flex { display: flex; }
       .flex-card { height: 90%; }
+      .flex-column { flex-direction: column; }
       .hidden { display: none; }
       .text-decoration-underline { text-decoration: underline; }
+      .mb-6 { margin-bottom: 60px; }
 
       .flex-group {
         display: flex;
