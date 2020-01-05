@@ -26,7 +26,7 @@ const CreatePage = () => {
   if(formValues.series !== "classic") {
     classicOrNo = "hidden"
     fadedOrNo = "hidden"
-    logoURL = `/series/${formValues.series}/${formValues.color}.svg`;
+    logoURL = `/1.0.0/series/${formValues.series}/${formValues.color}.svg`;
   } else {
     if(formValues.background !== "faded") {
       logoURL = `/1.0.0/series/${formValues.series}/${formValues.background}/${formValues.color}.svg`
