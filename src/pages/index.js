@@ -17,7 +17,7 @@ const IndexPage = () => (
           <p>Personalize your app's README with custom, fun, PWA shields in SVG!</p>
           <p>PWA Shields was created to give developers a way to show off the fact that their app is a PWA. These SVG's are created to be consistent, concise, and really really good looking.</p>
           <Link to="/series"><Button className="mr-2 mb-3" outline theme="secondary">Get Started</Button></Link>
-          <p className="small mt-3"><i>Current Version: 1.0.0</i></p>
+          <p className="small mt-3"><i>Current Version: 1.0.1</i></p>
         </Col>
         <Col xs={12} sm={12} md={5} lg={5}>
           <img className="d-none d-md-inline float-md-right" width="75%" src="/images/logo-shadow.svg" alt="pwa shields logo" />
