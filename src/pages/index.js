@@ -26,7 +26,7 @@ const IndexPage = () => (
       <Row className="mb-6">
         <Col xs={12} sm={12} md={6} lg={6}>
           <h2>Usage</h2>
-          <p>1. Create your personalized shield on our <Link to="/create">create page.</Link></p>
+          <p>1. Create your personalized shield on our <Link to="/create" className="text-secondary text-decoration-underline">create page.</Link></p>
           <p>2. Paste your snippet in your project's README file.</p>
           <p>3. Sit back and enjoy your awesome, new looking README 😎.</p>
         </Col>

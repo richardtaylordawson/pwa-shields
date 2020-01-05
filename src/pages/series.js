@@ -14,7 +14,7 @@ const SeriesPage = () => (
       <Row>
         <Col>
           <h1>Series</h1>
-          <p>Current, up to date list of current shields offered. Don't see one you like and have an idea for one? Submit your idea to the <a href="https://github.com/richardtaylordawson/pwa-shields/issues" className="text-secondary text-decoration-underline" target="_blank" rel="noopener noreferrer">project repo</a></p>
+          <p>Current, up to date list of current shields offered. Don't see one you like and have an idea for one? Submit your idea to the <a href="https://github.com/richardtaylordawson/pwa-shields/issues" className="text-secondary text-decoration-underline" target="_blank" rel="noopener noreferrer">project repo</a>.</p>
         </Col>
       </Row>
       <Row>
