@@ -63,7 +63,7 @@ const IndexPage = () => (
             </div>
             <p>This project could not have been possible without the inspirational help of Shields.io. They are the leader in providing endpoints for hundreds of shields for developer README's.</p>
           </div>
-          <a href="https://shields.io/" target="_blank" rel="noopener noreferrer" className="text-secondary text-decoration-underline"><Button outline block theme="secondary">Shields.io</Button></a>
+          <a href="https://shields.io/" target="_blank" rel="noopener noreferrer"><Button outline block theme="secondary">Shields.io</Button></a>
         </Col>
       </Row>
     </Container>
