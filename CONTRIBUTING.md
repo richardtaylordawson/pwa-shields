@@ -28,9 +28,9 @@ Example: `pwa-shields-issue-1`
 3. Complete the issue making sure that the issue is 100% finished and does not break
 other parts of the code.
 
-4. Submit a PR into the `release` branch for review within the issue. This will start
-an automated process with Netlify. If the code is reviewed and all checks pass then it
-will be merged into `release` and then determined when it will be launched to production.
+4. Submit a PR into the `release` branch for review within the issue. If the code passes
+review, then it will be merged into `release` and then determined when it will be launched
+to production.
 
 ## Figma
 
