@@ -73,6 +73,7 @@ export const GlobalTheme = () => (
       .hidden { display: none; }
       .text-decoration-underline { text-decoration: underline; }
       .mb-6 { margin-bottom: 60px; }
+      .max-width-50 { max-width: 50px; }
 
       .flex-group {
         display: flex;
