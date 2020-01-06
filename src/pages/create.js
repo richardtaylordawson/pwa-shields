@@ -21,18 +21,18 @@ const CreatePage = () => {
 
   let classicOrNo = ""
   let fadedOrNo = ""
-  let logoURL = ""
+  let logoURL = `/1.0.0/series/${formValues.series}`;
 
-  if(formValues.series !== "classic") {
+  if (formValues.series !== "classic") {
     classicOrNo = "hidden"
     fadedOrNo = "hidden"
-    logoURL = `/1.0.0/series/${formValues.series}/${formValues.color}.svg`;
+    logoURL += `/${formValues.color}.svg`;
   } else {
     if(formValues.background !== "faded") {
-      logoURL = `/1.0.0/series/${formValues.series}/${formValues.background}/${formValues.color}.svg`
+      logoURL += `/${formValues.background}/${formValues.color}.svg`
       fadedOrNo = "hidden"
     } else {
-      logoURL = `/1.0.0/series/${formValues.series}/${formValues.background}/${formValues.logo}/${formValues.color}.svg`
+      logoURL += `/${formValues.background}/${formValues.logo}/${formValues.color}.svg`
     }
   }
 
@@ -68,6 +68,7 @@ const CreatePage = () => {
                       <option value="classic">Classic</option>
                       <option value="certified">Certified</option>
                       <option value="install">Install</option>
+                      <option value="dark">Dark</option>
                     </FormSelect>
                   </FormGroup>
                   <FormGroup>
