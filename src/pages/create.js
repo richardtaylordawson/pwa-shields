@@ -58,8 +58,8 @@ const CreatePage = () => {
                 <Form>
                   <FormGroup>
                     <div className="flex-group">
-                      <label className="mr-3">Preview:</label>
-                      <img src={logoURL} alt="shield preview" />
+                      <label htmlFor="preview" className="mr-3">Preview:</label>
+                      <img src={logoURL} alt="shield preview" id="preview" />
                     </div>
                   </FormGroup>
                   <FormGroup>
