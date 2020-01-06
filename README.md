@@ -34,7 +34,7 @@
 ![PWA Certified](https://www.pwa-shields.com/1.0.0/series/install/green.svg)
 
 ## Credits
-Several projects aided in inspiring this project & building. Notably they are:
+Several projects aided in inspiring & building this project. Notably they are:
 
 - [Shields.io](https://github.com/badges/shields)
 - [Figma](https://www.figma.com/login)
