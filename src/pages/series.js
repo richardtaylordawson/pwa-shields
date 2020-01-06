@@ -28,24 +28,24 @@ const SeriesPage = () => (
               <p className="small"><i>Simple and clean, just like your app</i></p>
               <Row>
                 <Col xs={12} sm={3} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/white/gray.svg" alt="classic white series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/white/purple.svg" alt="classic white series purple" />
-                  <img className="mb-3" src="/1.0.0/series/classic/white/green.svg" alt="classic white series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/white/gray.svg" alt="series classic white gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/white/purple.svg" alt="series classic white purple" />
+                  <img className="mb-3" src="/1.0.0/series/classic/white/green.svg" alt="series classic white green" />
                 </Col>
                 <Col xs={12} sm={3} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/faded/inverse/gray.svg" alt="classic faded inverse series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/faded/inverse/purple.svg" alt="classic faded inverse series purple" />
-                  <img className="mb-3" src="/1.0.0/series/classic/faded/inverse/green.svg" alt="classic faded inverse series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/faded/inverse/gray.svg" alt="series classic faded inverse gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/faded/inverse/purple.svg" alt="series classic faded inverse gray purple" />
+                  <img className="mb-3" src="/1.0.0/series/classic/faded/inverse/green.svg" alt="series classic faded inverse gray green" />
                 </Col>
                 <Col xs={12} sm={3} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/faded/white/gray.svg" alt="classic faded white series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/faded/white/purple.svg" alt="classic faded white series purple" />
-                  <img className="mb-3" src="/1.0.0/series/classic/faded/white/green.svg" alt="classic faded white series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/faded/white/gray.svg" alt="series classic faded white gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/faded/white/purple.svg" alt="series classic faded white purple" />
+                  <img className="mb-3" src="/1.0.0/series/classic/faded/white/green.svg" alt="series classic faded white green" />
                 </Col>
                 <Col xs={12} sm={3} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/solid/gray.svg" alt="classic solid series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/solid/purple.svg" alt="classic solid series purple" />
-                  <img className="mb-3" src="/1.0.0/series/classic/solid/green.svg" alt="classic solid series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/solid/gray.svg" alt="series classic solid gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/classic/solid/purple.svg" alt="series classic solid purple" />
+                  <img className="mb-3" src="/1.0.0/series/classic/solid/green.svg" alt="series classic solid green" />
                 </Col>
               </Row>
             </CardBody>
@@ -61,15 +61,15 @@ const SeriesPage = () => (
               <p className="small"><i>Show off the fact that your app is PWA certified</i></p>
               <Row>
                 <Col xs={12} sm={12} md={2} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/certified/gray.svg" alt="certified series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/certified/purple.svg" alt="certified series purple" />
-                  <img className="mb-3" src="/1.0.0/series/certified/green.svg" alt="certified series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/certified/gray.svg" alt="series certified gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/certified/purple.svg" alt="series certified purple" />
+                  <img className="mb-3" src="/1.0.0/series/certified/green.svg" alt="series certified green" />
                 </Col>
               </Row>
             </CardBody>
           </Card>
         </Col>
-        <Col xs={12} sm={12} md={5} lg={5}>
+        <Col xs={12} sm={12} md={6} lg={6}>
           <Card className="flex-card mb-3">
             <CardBody>
               <div className="flex-group space-between">
@@ -79,44 +79,62 @@ const SeriesPage = () => (
               <p className="small"><i>Get your users to install your cool, hip, PWA</i></p>
               <Row>
                 <Col xs={12} sm={12} md={2} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/install/gray.svg" alt="install series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/install/purple.svg" alt="install series purple" />
-                  <img className="mb-3" src="/1.0.0/series/install/green.svg" alt="install series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/install/gray.svg" alt="series install gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/install/purple.svg" alt="series install purple" />
+                  <img className="mb-3" src="/1.0.0/series/install/green.svg" alt="series install green" />
                 </Col>
               </Row>
             </CardBody>
           </Card>
         </Col>
-        <Col xs={12} sm={12} md={7} lg={7}>
+        <Col xs={12} sm={12} md={6} lg={6}>
+          <Card className="flex-card mb-3">
+            <CardBody>
+              <div className="flex-group space-between">
+                <h3>Dark</h3>
+                <Link to="/create?series=dark"><Button size="sm" outline theme="secondary">Try me</Button></Link>
+              </div>
+              <p className="small"><i>Shields....in #DarkMode</i></p>
+              <Row>
+                 <Col xs={12} sm={12} md={2} lg={2}>
+                  <img className="mb-3 mr-3" src="/1.0.0/series/dark/gray.svg" alt="dark series gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/dark/purple.svg" alt="dark series purple" />
+                  <img className="mb-3" src="/1.0.0/series/dark/green.svg" alt="dark series green" />
+                </Col>
+              </Row>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={12} md={12} lg={12}>
           <Card className="flex-card mb-3">
             <CardBody className="opaque">
               <h3>Language</h3>
               <p className="small"><i>Series currently under work and will be up soon.</i></p>
               <Row>
                 <Col xs={12} sm={2} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={2} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={2} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={2} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={2} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
               </Row>
             </CardBody>
@@ -129,19 +147,19 @@ const SeriesPage = () => (
               <p className="small"><i>Series currently under work and will be up soon.</i></p>
               <Row>
                 <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
               </Row>
             </CardBody>
@@ -154,44 +172,19 @@ const SeriesPage = () => (
               <p className="small"><i>Series currently under work and will be up soon.</i></p>
               <Row>
                 <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
-                </Col>
-              </Row>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={12} md={12} lg={12}>
-          <Card className="flex-card mb-3">
-            <CardBody className="opaque">
-              <h3>Dark</h3>
-              <p className="small"><i>Shields....in #DarkMode</i></p>
-              <Row>
-                <Col xs={12} sm={4} md={12} lg={4}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
-                </Col>
-                <Col xs={12} sm={4} md={12} lg={4}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
-                </Col>
-                <Col xs={12} sm={4} md={12} lg={4}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="future series gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="future series purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="future series green" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
               </Row>
             </CardBody>
