@@ -58,37 +58,37 @@ const CreatePage = () => {
                 <Form>
                   <FormGroup>
                     <div className="flex-group">
-                      <label htmlFor="#preview" className="mr-3">Preview:</label>
+                      <label className="mr-3">Preview:</label>
                       <img src={logoURL} alt="shield preview" />
                     </div>
                   </FormGroup>
                   <FormGroup>
-                    <label htmlFor="#series">Series</label>
-                    <FormSelect value={formValues.series} onChange={handleInputChange} name="series">
+                    <label htmlFor="series">Series</label>
+                    <FormSelect value={formValues.series} onChange={handleInputChange} name="series" id="series">
                       <option value="classic">Classic</option>
                       <option value="certified">Certified</option>
                       <option value="install">Install</option>
                     </FormSelect>
                   </FormGroup>
                   <FormGroup>
-                    <label htmlFor="#color">Color</label>
-                    <FormSelect value={formValues.color} onChange={handleInputChange} name="color">
+                    <label htmlFor="color">Color</label>
+                    <FormSelect value={formValues.color} onChange={handleInputChange} name="color" id="color">
                       <option value="gray">Gray</option>
                       <option value="purple">Purple</option>
                       <option value="green">Green</option>
                     </FormSelect>
                   </FormGroup>
                   <FormGroup className={classicOrNo}>
-                    <label htmlFor="#color">Background</label>
-                    <FormSelect value={formValues.background} onChange={handleInputChange} name="background">
+                    <label htmlFor="background">Background</label>
+                    <FormSelect value={formValues.background} onChange={handleInputChange} name="background" id="background">
                       <option value="white">White</option>
                       <option value="faded">Faded</option>
                       <option value="solid">Solid</option>
                     </FormSelect>
                   </FormGroup>
                   <FormGroup className={fadedOrNo}>
-                    <label htmlFor="#color">Logo</label>
-                    <FormSelect value={formValues.logo} onChange={handleInputChange} name="logo">
+                    <label htmlFor="logo">Logo</label>
+                    <FormSelect value={formValues.logo} onChange={handleInputChange} name="logo" id="logo">
                       <option value="inverse">Inverse</option>
                       <option value="white">White</option>
                     </FormSelect>
