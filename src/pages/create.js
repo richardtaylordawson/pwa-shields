@@ -19,18 +19,28 @@ const CreatePage = () => {
     setFormValues(formValues => ({...formValues, [event.target.name]: event.target.value}))
   }
 
-  let classicOrNo = ""
-  let fadedOrNo = ""
+  let hideBackground = ""
+  let hideLogo = ""
+  let hideRainbow = ""
   let logoURL = `/1.0.0/series/${formValues.series}`;
 
-  if (formValues.series !== "classic") {
-    classicOrNo = "hidden"
-    fadedOrNo = "hidden"
-    logoURL += `/${formValues.color}.svg`;
+  if (formValues.series === "love") {
+    hideLogo = "hidden"
+    logoURL += `/${formValues.background}/${formValues.color}.svg`
+  } else if (formValues.series !== "classic") {
+    hideBackground = "hidden"
+    hideLogo = "hidden"
+    logoURL += `/${formValues.color}.svg`
   } else {
-    if(formValues.background !== "faded") {
+    hideRainbow = "hidden"
+
+    if (formValues.background === "rainbow") {
+      formValues.background = "white" // resets background to white in case user switches off rainbow
+    }
+
+    if (formValues.background !== "faded") {
       logoURL += `/${formValues.background}/${formValues.color}.svg`
-      fadedOrNo = "hidden"
+      hideLogo = "hidden"
     } else {
       logoURL += `/${formValues.background}/${formValues.logo}/${formValues.color}.svg`
     }
@@ -69,6 +79,7 @@ const CreatePage = () => {
                       <option value="certified">Certified</option>
                       <option value="install">Install</option>
                       <option value="dark">Dark</option>
+                      <option value="love">Love</option>
                     </FormSelect>
                   </FormGroup>
                   <FormGroup>
@@ -79,15 +90,16 @@ const CreatePage = () => {
                       <option value="green">Green</option>
                     </FormSelect>
                   </FormGroup>
-                  <FormGroup className={classicOrNo}>
+                  <FormGroup className={hideBackground}>
                     <label htmlFor="background">Background</label>
                     <FormSelect value={formValues.background} onChange={handleInputChange} name="background" id="background">
                       <option value="white">White</option>
                       <option value="faded">Faded</option>
                       <option value="solid">Solid</option>
+                      <option value="rainbow" className={hideRainbow}>Rainbow</option>
                     </FormSelect>
                   </FormGroup>
-                  <FormGroup className={fadedOrNo}>
+                  <FormGroup className={hideLogo}>
                     <label htmlFor="logo">Logo</label>
                     <FormSelect value={formValues.logo} onChange={handleInputChange} name="logo" id="logo">
                       <option value="inverse">Inverse</option>

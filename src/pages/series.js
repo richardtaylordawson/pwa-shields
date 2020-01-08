@@ -105,6 +105,59 @@ const SeriesPage = () => (
             </CardBody>
           </Card>
         </Col>
+        <Col xs={12} sm={12} md={7} lg={7}>
+          <Card className="flex-card mb-3">
+            <CardBody>
+              <div className="flex-group space-between">
+                <h3>Love</h3>
+                <Link to="/create?series=love"><Button size="sm" outline theme="secondary">Try me</Button></Link>
+              </div>
+              <p className="small"><i>Classic, but with a little more...well, love</i> <span role="img" aria-label="heart emoji">❤️</span></p>
+              <Row>
+                <Col xs={12} sm={3} md={12} lg={2}>
+                  <img className="mb-3 mr-3" src="/1.0.0/series/love/white/gray.svg" alt="series love white gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/love/white/purple.svg" alt="series love white purple" />
+                  <img className="mb-3" src="/1.0.0/series/love/white/green.svg" alt="series love white green" />
+                </Col>
+                <Col xs={12} sm={3} md={12} lg={2}>
+                  <img className="mb-3 mr-3" src="/1.0.0/series/love/faded/gray.svg" alt="series love faded gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/love/faded/purple.svg" alt="series love faded gray purple" />
+                  <img className="mb-3" src="/1.0.0/series/love/faded/green.svg" alt="series love faded gray green" />
+                </Col>
+                <Col xs={12} sm={3} md={12} lg={2}>
+                  <img className="mb-3 mr-3" src="/1.0.0/series/love/solid/gray.svg" alt="series love solid gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/love/solid/purple.svg" alt="series love solid purple" />
+                  <img className="mb-3" src="/1.0.0/series/love/solid/green.svg" alt="series love solid green" />
+                </Col>
+                <Col xs={12} sm={3} md={12} lg={2}>
+                  <img className="mb-3 mr-3" src="/1.0.0/series/love/rainbow/gray.svg" alt="series love rainbow gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/love/rainbow/purple.svg" alt="series love rainbow purple" />
+                  <img className="mb-3" src="/1.0.0/series/love/rainbow/green.svg" alt="series love rainbow green" />
+                </Col>
+              </Row>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={12} md={5} lg={5}>
+          <Card className="flex-card mb-3">
+            <CardBody className="opaque">
+              <h3>Browser</h3>
+              <p className="small"><i>Series currently under work and will be up soon.</i></p>
+              <Row>
+                <Col xs={12} sm={3} md={12} lg={4}>
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
+                </Col>
+                <Col xs={12} sm={3} md={12} lg={4}>
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
+                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
+                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
+                </Col>
+              </Row>
+            </CardBody>
+          </Card>
+        </Col>
         <Col xs={12} sm={12} md={12} lg={12}>
           <Card className="flex-card mb-3">
             <CardBody className="opaque">
@@ -132,56 +185,6 @@ const SeriesPage = () => (
                   <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
                 </Col>
                 <Col xs={12} sm={2} md={12} lg={2}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
-                </Col>
-              </Row>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
-          <Card className="flex-card mb-3">
-            <CardBody className="opaque">
-              <h3>Browser</h3>
-              <p className="small"><i>Series currently under work and will be up soon.</i></p>
-              <Row>
-                <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
-                </Col>
-                <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
-                </Col>
-                <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
-                </Col>
-              </Row>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
-          <Card className="flex-card mb-3">
-            <CardBody className="opaque">
-              <h3>Love</h3>
-              <p className="small"><i>Series currently under work and will be up soon.</i></p>
-              <Row>
-                <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
-                </Col>
-                <Col xs={12} sm={3} md={12} lg={3}>
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
-                  <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
-                  <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
-                </Col>
-                <Col xs={12} sm={3} md={12} lg={3}>
                   <img className="mb-3 mr-3" src="/1.0.0/series/future/gray.svg" alt="series future gray" />
                   <img className="mb-3 mr-3" src="/1.0.0/series/future/purple.svg" alt="series future purple" />
                   <img className="mb-3" src="/1.0.0/series/future/green.svg" alt="series future green" />
