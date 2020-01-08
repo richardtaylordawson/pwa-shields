@@ -32,7 +32,6 @@
     "shards-react": "^1.0.3"
   },
   "devDependencies": {
-    "gatsby-plugin-remove-trailing-slashes": "^2.1.17",
     "prettier": "^1.19.1"
   },
   "scripts": {
