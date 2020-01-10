@@ -1,0 +1,3 @@
+# Netlify Redirects File
+/series/  /series  301!
+/create/  /create  301!
