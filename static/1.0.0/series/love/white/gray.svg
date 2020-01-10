@@ -1,0 +1,26 @@
+<svg width="75" height="20" viewBox="0 0 75 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M51 0H70C72.7614 0 75 2.23858 75 5V15C75 17.7614 72.7614 20 70 20H51V0Z" fill="#3D3D3D"/>
+<circle cx="63" cy="10" r="5.5" fill="url(#paint0_linear)" stroke="white"/>
+<rect x="61.0502" y="11.8712" width="6.85" height="1.15" transform="rotate(-45.3263 61.0502 11.8712)" fill="white"/>
+<rect x="59.8572" y="9.00003" width="3" height="1.22153" transform="rotate(44.5671 59.8572 9.00003)" fill="white"/>
+<path d="M5 0.5H51.5V19.5H5C2.51472 19.5 0.5 17.4853 0.5 15V5C0.5 2.51472 2.51472 0.5 5 0.5Z" fill="white" stroke="#3D3D3D"/>
+<path d="M34.2872 14.166L35.2405 11.7632H37.9931L36.6868 8.11812L38.3205 4L43.0001 16.3841H39.5491L38.7494 14.166H34.2872Z" fill="#3D3D3D"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="18" y="4" width="19" height="13">
+<path d="M31.3395 16.3749L36.349 3.99997L33.0278 3.99999L29.6011 11.997L27.1643 4H24.6115L21.995 11.997L20.1498 8.35291L18.48 13.4768L20.1754 16.3749H23.4438L25.8081 9.20337L28.0625 16.3749H31.3395Z" fill="#3D3D3D"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="18.48" y="14.8856" width="18" height="1.4844" fill="#DF0A16"/>
+<rect x="18.48" y="3.99997" width="18" height="0.9896" fill="#4A23B7"/>
+<rect x="18.48" y="12.4116" width="18" height="2.474" fill="#FF7020"/>
+<rect x="18.48" y="9.93757" width="18" height="2.474" fill="#FCBF2F"/>
+<rect x="18.48" y="7.46357" width="18" height="2.474" fill="#00BF2A"/>
+<rect x="18.48" y="4.98957" width="18" height="2.474" fill="#208EEE"/>
+</g>
+<path d="M13.1525 12.1329H15.1982C15.8178 12.1329 16.3696 12.064 16.8535 11.9261L17.3826 10.3016L18.8611 5.76126C18.7485 5.58328 18.6198 5.41499 18.4753 5.25643C17.7161 4.41887 16.6054 4.00011 15.1431 4.00011H10V16.3842H13.1525V12.1329ZM15.8602 6.84919C16.1568 7.14665 16.305 7.54471 16.305 8.04341C16.305 8.54593 16.1746 8.94448 15.9139 9.23906C15.628 9.56638 15.1016 9.73004 14.3347 9.73004H13.1525V6.40297H14.3434C15.0581 6.40297 15.5637 6.55171 15.8602 6.84919Z" fill="#3D3D3D"/>
+<defs>
+<linearGradient id="paint0_linear" x1="63" y1="4.00003" x2="63" y2="16" gradientUnits="userSpaceOnUse">
+<stop stop-color="#57BF65"/>
+<stop offset="1" stop-color="#459B82"/>
+</linearGradient>
+</defs>
+</svg>
