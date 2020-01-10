@@ -33,6 +33,28 @@
 ![PWA Certified](https://www.pwa-shields.com/1.0.0/series/install/purple.svg)
 ![PWA Certified](https://www.pwa-shields.com/1.0.0/series/install/green.svg)
 
+### Dark Series
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/dark/gray.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/dark/purple.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/dark/green.svg)
+
+### Love Series
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/white/gray.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/white/purple.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/white/green.svg)
+
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/faded/gray.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/faded/purple.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/faded/green.svg)
+
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/solid/gray.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/solid/purple.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/solid/green.svg)
+
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/rainbow/gray.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/rainbow/purple.svg)
+![PWA Certified](https://www.pwa-shields.com/1.0.0/series/love/rainbow/green.svg)
+
 ## Credits
 Several projects aided in inspiring & building this project. Notably they are:
 
