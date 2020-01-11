@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { MainLayout } from "./../layouts/mainLayout"
-import { SEO } from "./../components"
+import { SEO, CertifiedTooltip } from "./../components"
 import { Container, Row, Col, Card, CardBody, Button } from "shards-react"
 
 const SeriesPage = () => (
@@ -55,7 +55,7 @@ const SeriesPage = () => (
           <Card className="flex-card mb-3">
             <CardBody>
               <div className="flex-group space-between">
-                <h3>Certified</h3>
+                <h3>Certified <CertifiedTooltip /></h3>
                 <Link to="/create?series=certified"><Button size="sm" outline theme="secondary">Try me</Button></Link>
               </div>
               <p className="small"><i>Show off the fact that your app is PWA certified</i></p>

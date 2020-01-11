@@ -74,13 +74,18 @@ export const GlobalTheme = () => (
       .text-decoration-underline { text-decoration: underline; }
       .mb-6 { margin-bottom: 60px; }
       .max-width-50 { max-width: 50px; }
+      .space-between { justify-content: space-between; }
+
+      .xs-button {
+        padding: 1px 5px;
+        border-radius: 50%;
+        margin-top: -15px;
+      }
 
       .flex-group {
         display: flex;
         align-items: end;
       }
-
-      .space-between { justify-content: space-between; }
     `}
   />
 )
