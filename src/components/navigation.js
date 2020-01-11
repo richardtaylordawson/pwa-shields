@@ -28,13 +28,13 @@ export class Navigation extends React.Component {
         <Collapse open={this.state.collapseOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <Link to="/" className="nav-link" activeClassName={this.activePage === "home" ? "active" : ""}>Home</Link>
+              <Link to="/" className={`nav-link ${this.activePage === "home" ? "active" : ""}`}>Home</Link>
             </NavItem>
             <NavItem>
-              <Link to="/series" className="nav-link" activeClassName={this.activePage === "series" ? "active" : ""}>Series</Link>
+              <Link to="/series" className={`nav-link ${this.activePage === "series" ? "active" : ""}`}>Series</Link>
             </NavItem>
             <NavItem>
-              <Link to="/create" className="nav-link" activeClassName={this.activePage === "create" ? "active" : ""}>Create</Link>
+              <Link to="/create" className={`nav-link ${this.activePage === "create" ? "active" : ""}`}>Create</Link>
             </NavItem>
           </Nav>
         </Collapse>
