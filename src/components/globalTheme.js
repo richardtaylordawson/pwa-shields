@@ -77,7 +77,7 @@ export const GlobalTheme = () => (
       .space-between { justify-content: space-between; }
 
       .xs-button {
-        padding: 3px 8px;
+        padding: 1px 5px;
         border-radius: 50%;
         margin-top: -15px;
       }
