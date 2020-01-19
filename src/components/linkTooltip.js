@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { Tooltip, Button } from "shards-react"
 
-export class CertifiedTooltip extends React.Component {
+export class LinkTooltip extends React.Component {
   constructor(props) {
     super(props)
     this.toggle = this.toggle.bind(this)
@@ -17,14 +17,14 @@ export class CertifiedTooltip extends React.Component {
   render() {
     return (
       <Fragment>
-        <Button className="xxs-button" id="certifiedTooltip" outline theme="secondary">?</Button>
+        <Button className="xs-button" id="linkTooltip" outline theme="secondary">?</Button>
         <Tooltip
           open={this.state.open}
-          target="#certifiedTooltip"
+          target="#linkTooltip"
           toggle={this.toggle}
           placement="right"
         >
-          Please note that the use of the word "certified" was just another way of saying your application is a PWA. It does not mean it is certified by PWA Shields or another application.
+          This will allow your shield to act as a link to an external site.
         </Tooltip>
       </Fragment>
     )
