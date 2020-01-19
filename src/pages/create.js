@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { MainLayout } from "./../layouts/mainLayout"
-import { SEO } from "./../components"
+import { SEO, LinkTooltip } from "./../components"
 import { copyToClipboard, getQueryVariable } from "./../components/utils"
-import { Container, Row, Col, Form, FormGroup, Card, CardBody, Button, FormSelect } from "shards-react"
+import { Container, Row, Col, Form, FormGroup, Card, CardBody, Button, FormSelect, FormCheckbox, FormInput } from "shards-react"
 
 const CreatePage = () => {
   const series = getQueryVariable("series") ? getQueryVariable("series") : "classic"
@@ -11,8 +11,11 @@ const CreatePage = () => {
     "series": series,
     "color": "gray",
     "background": "white",
-    "logo": "inverse"
+    "logo": "inverse",
+    "link": ""
   })
+
+  const [linkCheckbox, setLinkCheckbox] = useState(false)
 
   const handleInputChange = (event) => {
     event.persist()
@@ -23,6 +26,7 @@ const CreatePage = () => {
   let hideLogo = ""
   let hideRainbow = ""
   let logoURL = `/1.0.0/series/${formValues.series}`;
+  let snippet = ""
 
   if (formValues.series === "love") {
     hideLogo = "hidden"
@@ -46,7 +50,11 @@ const CreatePage = () => {
     }
   }
 
-  const snippet = `![PWA Shields](https://www.pwa-shields.com${logoURL})`
+  if (linkCheckbox) {
+    snippet += `[![PWA Shields](https://www.pwa-shields.com${logoURL})](${formValues.link})`
+  } else {
+    snippet = `![PWA Shields](https://www.pwa-shields.com${logoURL})`;
+  }
 
   return (
     <MainLayout currentPage="create">
@@ -73,23 +81,44 @@ const CreatePage = () => {
                     </div>
                   </FormGroup>
                   <FormGroup>
-                    <label htmlFor="series">Series</label>
-                    <FormSelect value={formValues.series} onChange={handleInputChange} name="series" id="series">
-                      <option value="classic">Classic</option>
-                      <option value="certified">Certified</option>
-                      <option value="install">Install</option>
-                      <option value="dark">Dark</option>
-                      <option value="love">Love</option>
-                    </FormSelect>
+                    <label htmlFor="link">Link <LinkTooltip /></label>
+                    <FormGroup className="flex flex-end">
+                      <FormCheckbox toggle onChange={() => setLinkCheckbox(!linkCheckbox)} checked={linkCheckbox}></FormCheckbox>
+                      <FormInput
+                        type="url"
+                        disabled={!linkCheckbox}
+                        placeholder="https://pwa-shields.com"
+                        value={formValues.link}
+                        onChange={handleInputChange}
+                        name="link"
+                        id="link"
+                      />
+                    </FormGroup>
                   </FormGroup>
-                  <FormGroup>
-                    <label htmlFor="color">Color</label>
-                    <FormSelect value={formValues.color} onChange={handleInputChange} name="color" id="color">
-                      <option value="gray">Gray</option>
-                      <option value="purple">Purple</option>
-                      <option value="green">Green</option>
-                    </FormSelect>
-                  </FormGroup>
+                  <Row>
+                    <Col>
+                      <FormGroup>
+                        <label htmlFor="series">Series</label>
+                        <FormSelect value={formValues.series} onChange={handleInputChange} name="series" id="series">
+                          <option value="classic">Classic</option>
+                          <option value="certified">Certified</option>
+                          <option value="install">Install</option>
+                          <option value="dark">Dark</option>
+                          <option value="love">Love</option>
+                        </FormSelect>
+                      </FormGroup>
+                    </Col>
+                    <Col>
+                      <FormGroup>
+                        <label htmlFor="color">Color</label>
+                        <FormSelect value={formValues.color} onChange={handleInputChange} name="color" id="color">
+                          <option value="gray">Gray</option>
+                          <option value="purple">Purple</option>
+                          <option value="green">Green</option>
+                        </FormSelect>
+                      </FormGroup>
+                    </Col>
+                  </Row>
                   <FormGroup className={hideBackground}>
                     <label htmlFor="background">Background</label>
                     <FormSelect value={formValues.background} onChange={handleInputChange} name="background" id="background">
