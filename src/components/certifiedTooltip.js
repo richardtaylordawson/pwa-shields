@@ -17,7 +17,7 @@ export class CertifiedTooltip extends React.Component {
   render() {
     return (
       <Fragment>
-        <Button className="xxs-button" id="certifiedTooltip" outline theme="secondary">?</Button>
+        <Button className="xs-button" id="certifiedTooltip" outline theme="secondary">?</Button>
         <Tooltip
           open={this.state.open}
           target="#certifiedTooltip"

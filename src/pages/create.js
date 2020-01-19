@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { MainLayout } from "./../layouts/mainLayout"
-import { SEO, CertifiedTooltip } from "./../components"
+import { SEO, LinkTooltip } from "./../components"
 import { copyToClipboard, getQueryVariable } from "./../components/utils"
 import { Container, Row, Col, Form, FormGroup, Card, CardBody, Button, FormSelect, FormCheckbox, FormInput } from "shards-react"
 
@@ -81,7 +81,7 @@ const CreatePage = () => {
                     </div>
                   </FormGroup>
                   <FormGroup>
-                    <label htmlFor="link">Link <CertifiedTooltip /></label>
+                    <label htmlFor="link">Link <LinkTooltip /></label>
                     <FormGroup className="flex flex-end">
                       <FormCheckbox toggle onChange={() => setLinkCheckbox(!linkCheckbox)} checked={linkCheckbox}></FormCheckbox>
                       <FormInput

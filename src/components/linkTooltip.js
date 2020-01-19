@@ -17,7 +17,7 @@ export class LinkTooltip extends React.Component {
   render() {
     return (
       <Fragment>
-        <Button className="xs-button" id="linkTooltip" outline theme="secondary">?</Button>
+        <Button onClick={e => e.preventDefault} className="xxs-button" id="linkTooltip" outline theme="secondary">?</Button>
         <Tooltip
           open={this.state.open}
           target="#linkTooltip"
