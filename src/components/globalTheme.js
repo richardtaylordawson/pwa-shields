@@ -68,6 +68,7 @@ export const GlobalTheme = () => (
       .opaque { opacity: 0.5; }
       .navbar-brand img { height: 30px; }
       .flex { display: flex; }
+      .flex-end { align-items: flex-end; }
       .flex-card { height: 90%; }
       .flex-column { flex-direction: column; }
       .hidden { display: none; }
@@ -78,6 +79,13 @@ export const GlobalTheme = () => (
 
       .xs-button {
         padding: 1px 5px;
+        border-radius: 50%;
+        margin-top: -15px;
+      }
+
+      .xxs-button {
+        font-size: 10px;
+        padding: 1px 4px;
         border-radius: 50%;
         margin-top: -15px;
       }

@@ -1,4 +1,5 @@
 export { CertifiedTooltip } from "./certifiedTooltip"
 export { GlobalTheme } from "./globalTheme"
+export { LinkTooltip } from "./linkTooltip"
 export { Navigation } from "./navigation"
 export { SEO } from "./seo"
