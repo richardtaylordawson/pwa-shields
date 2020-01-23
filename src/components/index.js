@@ -1,5 +1,5 @@
-export { CertifiedTooltip } from "./certifiedTooltip"
+export { Hint } from "./hint"
+export { IconLink } from "./iconLink"
 export { GlobalTheme } from "./globalTheme"
-export { LinkTooltip } from "./linkTooltip"
 export { Navigation } from "./navigation"
 export { SEO } from "./seo"

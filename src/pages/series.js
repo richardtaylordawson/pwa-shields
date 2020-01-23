@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import { MainLayout } from "./../layouts/mainLayout"
-import { SEO, CertifiedTooltip } from "./../components"
 import { Container, Row, Col, Card, CardBody, Button } from "shards-react"
+import { MainLayout } from "./../layouts/mainLayout"
+import { SEO, Hint } from "./../components"
 
 const SeriesPage = () => (
   <MainLayout currentPage="series">
@@ -55,7 +55,15 @@ const SeriesPage = () => (
           <Card className="flex-card mb-3">
             <CardBody>
               <div className="flex-group space-between">
-                <h3>Certified <CertifiedTooltip /></h3>
+                <h3>
+                  Certified
+                  <Hint
+                    id="certifiedHint"
+                    description={`Please note that the use of the word "certified" was just another way of saying your application is a PWA. It does not mean it is certified by PWA Shields or another application.`}
+                    theme="secondary"
+                    placement="right"
+                  />
+                </h3>
                 <Link to="/create?series=certified"><Button size="sm" outline theme="secondary">Try me</Button></Link>
               </div>
               <p className="small"><i>Show off the fact that your app is PWA certified</i></p>

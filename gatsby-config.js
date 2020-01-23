@@ -1,10 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `PWA Shields - Richard Taylor Dawson`,
-    description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
-    author: `Richard Taylor Dawson`,
-    siteUrl: `https://www.pwa-shields.com`
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -34,8 +28,8 @@ module.exports = {
       options: {
         host: 'https://www.pwa-shields.com',
         sitemap: 'https://www.pwa-shields.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/', }]
-      }
+        policy: [{ userAgent: '*', allow: '/', }],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

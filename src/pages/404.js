@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Container, Row, Col } from "shards-react"
 import { MainLayout } from "./../layouts/mainLayout"
 import { SEO } from "./../components"
-import { Container, Row, Col } from "shards-react"
 
 const NotFoundPage = () => (
   <MainLayout>

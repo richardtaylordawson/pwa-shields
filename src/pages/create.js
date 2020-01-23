@@ -1,21 +1,18 @@
 import React, { useState } from "react"
-import { MainLayout } from "./../layouts/mainLayout"
-import { SEO, LinkTooltip } from "./../components"
-import { copyToClipboard, getQueryVariable } from "./../components/utils"
 import { Container, Row, Col, Form, FormGroup, Card, CardBody, Button, FormSelect, FormCheckbox, FormInput } from "shards-react"
+import { MainLayout } from "./../layouts/mainLayout"
+import { SEO, Hint } from "./../components"
+import { copyToClipboard, getQueryVariable } from "./../components/utils"
 
 const CreatePage = () => {
-  const series = getQueryVariable("series") ? getQueryVariable("series") : "classic"
-
+  const [linkCheckbox, setLinkCheckbox] = useState(false)
   const [formValues, setFormValues] = useState({
-    "series": series,
+    "series": getQueryVariable("series") ? getQueryVariable("series") : "classic",
     "color": "gray",
     "background": "white",
     "logo": "inverse",
     "link": ""
   })
-
-  const [linkCheckbox, setLinkCheckbox] = useState(false)
 
   const handleInputChange = (event) => {
     event.persist()
@@ -81,7 +78,15 @@ const CreatePage = () => {
                     </div>
                   </FormGroup>
                   <FormGroup>
-                    <label htmlFor="link">Link <LinkTooltip /></label>
+                    <label htmlFor="link">
+                      Link
+                      <Hint
+                        id="linkHint"
+                        description={`This will allow your shield to act as a link to an external site.`}
+                        theme="secondary"
+                        placement="right"
+                      />
+                    </label>
                     <FormGroup className="flex flex-end">
                       <FormCheckbox toggle onChange={() => setLinkCheckbox(!linkCheckbox)} checked={linkCheckbox}></FormCheckbox>
                       <FormInput
