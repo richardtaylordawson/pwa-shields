@@ -83,7 +83,6 @@ const CreatePage = () => {
                   <FormGroup>
                     <label htmlFor="link">Link <LinkTooltip /></label>
                     <FormGroup className="flex flex-end">
-                      {// adding both events because it fixes safari}
                       <FormCheckbox toggle onClick={() => setLinkCheckbox(prevState => !prevState)} onChange={() => setLinkCheckbox(prevState => !prevState)} checked={linkCheckbox}></FormCheckbox>
                       <FormInput
                         type="url"
