@@ -83,7 +83,7 @@ const CreatePage = () => {
                   <FormGroup>
                     <label htmlFor="link">Link <LinkTooltip /></label>
                     <FormGroup className="flex flex-end">
-                      <FormCheckbox toggle value="1" onClick={() => setLinkCheckbox(prevState => !prevState)} checked={linkCheckbox}></FormCheckbox>
+                      <FormCheckbox toggle onClick={() => setLinkCheckbox(!linkCheckbox)} checked={!!linkCheckbox}></FormCheckbox>
                       <FormInput
                         type="url"
                         disabled={!linkCheckbox}
