@@ -18,17 +18,17 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: 'UA-142412414-8',
+        trackingId: "UA-142412414-8",
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.pwa-shields.com',
-        sitemap: 'https://www.pwa-shields.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/', }],
+        host: "https://www.pwa-shields.com",
+        sitemap: "https://www.pwa-shields.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {
@@ -38,5 +38,5 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-  ]
+  ],
 }
