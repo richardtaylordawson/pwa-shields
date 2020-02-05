@@ -5,15 +5,17 @@ import "shards-ui/dist/css/shards.min.css"
 import "./../styles/global.css"
 import { Navigation, GlobalTheme } from "../components"
 
-export const MainLayout = ({ children, currentPage }) => (
+export const Main = ({ children, currentPage }) => (
   <>
     <GlobalTheme />
-    <header><Navigation currentPage={currentPage} /></header>
+    <header>
+      <Navigation currentPage={currentPage} />
+    </header>
     <main>{children}</main>
   </>
 )
 
-MainLayout.propTypes = {
+Main.propTypes = {
   children: PropTypes.node.isRequired,
   currentPage: PropTypes.string.isRequired,
 }
