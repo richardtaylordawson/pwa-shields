@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Container, Row, Col, Button } from "shards-react"
-import { MainLayout } from "./../layouts/mainLayout"
+import { Main } from "./../layouts/main"
 import { SEO, IconLink } from "./../components"
 
 const IndexPage = ({ data }) => (
-  <MainLayout currentPage="home">
+  <Main currentPage="home">
     <SEO
       title="PWA Shields - Home"
       description="Introduction to PWA Shields, the one place to create a personalized shield for your next project's README."
@@ -16,28 +16,61 @@ const IndexPage = ({ data }) => (
       <Row className="mb-6">
         <Col xs={12} sm={12} md={7} lg={7}>
           <h1>Home</h1>
-          <p>Personalize your app's README with custom, fun, PWA shields in SVG!</p>
-          <p>PWA Shields was created to give developers a way to show off the fact that their app is a PWA. These SVG's are created to be consistent, concise, and really really good looking.</p>
+          <p>
+            Personalize your app's README with custom, fun, PWA shields in SVG!
+          </p>
+          <p>
+            PWA Shields was created to give developers a way to show off the
+            fact that their app is a PWA. These SVG's are created to be
+            consistent, concise, and really really good looking.
+          </p>
 
           <Link to="/series">
-            <Button className="mr-2 mb-3" outline theme="secondary">Get Started</Button>
+            <Button className="mr-2 mb-3" outline theme="secondary">
+              Get Started
+            </Button>
           </Link>
 
-          <p className="small mb-0"><i>Current Version: 1.4.0</i></p>
+          <p className="small mb-0">
+            <i>Current Version: 1.4.0</i>
+          </p>
         </Col>
         <Col xs={12} sm={12} md={5} lg={5}>
-          <img className="d-none d-md-inline float-md-right" width="75%" src="/images/logo-shadow.svg" alt="pwa shields logo" />
+          <img
+            className="d-none d-md-inline float-md-right"
+            width="75%"
+            src="/images/logo-shadow.svg"
+            alt="pwa shields logo"
+          />
         </Col>
       </Row>
       <Row className="mb-6">
         <Col xs={12} sm={12} md={6} lg={6}>
           <h2>Usage</h2>
-          <p>1. Create your personalized shield on our <Link to="/create" className="text-secondary text-decoration-underline">create page.</Link></p>
+          <p>
+            1. Create your personalized shield on our{" "}
+            <Link
+              to="/create"
+              className="text-secondary text-decoration-underline"
+            >
+              create page.
+            </Link>
+          </p>
           <p>2. Paste your snippet in your project's README file.</p>
-          <p>3. Sit back and enjoy your awesome, new looking README <span role="img" aria-label="sunglasses emoji">😎</span>.</p>
+          <p>
+            3. Sit back and enjoy your awesome, new looking README{" "}
+            <span role="img" aria-label="sunglasses emoji">
+              😎
+            </span>
+            .
+          </p>
         </Col>
         <Col xs={12} sm={12} md={6} lg={6}>
-          <Img fluid={data.exampleProject.childImageSharp.fluid} className="img-fluid shadow rounded" alt="example project" />
+          <Img
+            fluid={data.exampleProject.childImageSharp.fluid}
+            className="img-fluid shadow rounded"
+            alt="example project"
+          />
         </Col>
       </Row>
       <Row>
@@ -69,12 +102,12 @@ const IndexPage = ({ data }) => (
         />
       </Row>
     </Container>
-  </MainLayout>
+  </Main>
 )
 
 export const query = graphql`
   query {
-    logo: file(relativePath: {eq: "logo.png"}) {
+    logo: file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
         fluid(maxWidth: 500, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -82,7 +115,7 @@ export const query = graphql`
       }
     }
 
-    exampleProject: file(relativePath: {eq: "example-project.png"}) {
+    exampleProject: file(relativePath: { eq: "example-project.png" }) {
       childImageSharp {
         fluid(maxWidth: 500, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -90,7 +123,7 @@ export const query = graphql`
       }
     }
 
-    badge: file(relativePath: {eq: "badge.png"}) {
+    badge: file(relativePath: { eq: "badge.png" }) {
       childImageSharp {
         fluid(maxWidth: 50, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -98,7 +131,7 @@ export const query = graphql`
       }
     }
 
-    bug: file(relativePath: {eq: "bug.png"}) {
+    bug: file(relativePath: { eq: "bug.png" }) {
       childImageSharp {
         fluid(maxWidth: 50, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -106,7 +139,7 @@ export const query = graphql`
       }
     }
 
-    fork: file(relativePath: {eq: "fork.png"}) {
+    fork: file(relativePath: { eq: "fork.png" }) {
       childImageSharp {
         fluid(maxWidth: 50, quality: 100) {
           ...GatsbyImageSharpFluid

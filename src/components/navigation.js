@@ -12,18 +12,36 @@ export const Navigation = ({ currentPage }) => {
         <img className="m-0" src="/images/logo.svg" alt="pwa shields logo" />
       </Link>
 
-      <NavbarToggler onClick={() => setNavbarOpen(prevState => !prevState)} aria-label="mobile navigation" />
+      <NavbarToggler
+        onClick={() => setNavbarOpen(prevState => !prevState)}
+        aria-label="mobile navigation"
+      />
 
       <Collapse open={navbarOpen} navbar>
         <Nav navbar>
           <NavItem>
-            <Link to="/" className={`nav-link ${currentPage === "home" && "active"}`}>Home</Link>
+            <Link
+              to="/"
+              className={`nav-link ${currentPage === "home" && "active"}`}
+            >
+              Home
+            </Link>
           </NavItem>
           <NavItem>
-            <Link to="/series" className={`nav-link ${currentPage === "series" && "active"}`}>Series</Link>
+            <Link
+              to="/series"
+              className={`nav-link ${currentPage === "series" && "active"}`}
+            >
+              Series
+            </Link>
           </NavItem>
           <NavItem>
-            <Link to="/create" className={`nav-link ${currentPage === "create" && "active"}`}>Create</Link>
+            <Link
+              to="/create"
+              className={`nav-link ${currentPage === "create" && "active"}`}
+            >
+              Create
+            </Link>
           </NavItem>
         </Nav>
       </Collapse>
