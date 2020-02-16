@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => (
 
           <p>
             <small>
-              <em>Current Version: 1.4.2</em>
+              <em>Current Version: 1.4.3</em>
             </small>
           </p>
         </Col>
