@@ -15,22 +15,21 @@ the preferred way for adding bugs, feature requests, and submitting pull request
 Please tag the issue with the appropriate label(s). Currently we use the default
 labels provided by Github, but are open to suggestions to change this.
 
-
 ## Contribution Process
 
 1. Determine a current unassigned issue or new issue that you would like to work on.
-If it is a new issue, please create the issue and tag appropriately. Once you determine
-what you'd like to work on, assign the issue to you.
+   If it is a new issue, please create the issue and tag appropriately. Once you determine
+   what you'd like to work on, assign the issue to you.
 
 2. Create a branch off of master using the project name & issue number.
-Example: `pwa-shields-issue-1`
+   Example: `pwa-shields-issue-1`
 
 3. Complete the issue making sure that the issue is 100% finished and does not break
-other parts of the code.
+   other parts of the code.
 
 4. Submit a PR into the `release` branch for review within the issue. If the code passes
-review, then it will be merged into `release` and then determined when it will be launched
-to production.
+   review, then it will be merged into `release` and then determined when it will be launched
+   to production.
 
 ## Figma
 

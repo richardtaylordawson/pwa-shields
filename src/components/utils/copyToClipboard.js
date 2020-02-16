@@ -1,9 +1,9 @@
 /**
-* Copies a value to the user's clipboard
-* @param {string} value - The value to copy to the clipboard
-* @param {object} event - The event object that fires the copy event
-* @param {string} eventAfterText - The text that will be changed once the event is complete
-*/
+ * Copies a value to the user's clipboard
+ * @param {string} value - The value to copy to the clipboard
+ * @param {object} event - The event object that fires the copy event
+ * @param {string} eventAfterText - The text that will be changed once the event is complete
+ */
 export const copyToClipboard = (value, event, eventAfterText) => {
   const tempElement = document.createElement("textarea")
   tempElement.value = value
@@ -18,7 +18,11 @@ export const copyToClipboard = (value, event, eventAfterText) => {
 
   event.currentTarget.innerText = "Copied!"
 
-  setTimeout(element => {
-    element.innerText = eventAfterText
-  }, 1000, event.currentTarget)
+  setTimeout(
+    element => {
+      element.innerText = eventAfterText
+    },
+    1000,
+    event.currentTarget
+  )
 }
