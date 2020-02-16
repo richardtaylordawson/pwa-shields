@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react"
 import PropTypes from "prop-types"
 import { Tooltip, Button } from "shards-react"
 
-export const Hint = ({ id, description, theme, placement, className }) => {
+export const Hint = ({ id, description, theme, placement }) => {
   const [hintOpen, setHintOpen] = useState(false)
 
   return (
@@ -11,7 +11,7 @@ export const Hint = ({ id, description, theme, placement, className }) => {
         id={id}
         outline
         onClick={e => e.preventDefault}
-        className={`button-xxs ${className}`}
+        className="button-xxs ml-5px"
         theme={theme}
       >
         ?
@@ -33,5 +33,4 @@ Hint.propTypes = {
   description: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
   placement: PropTypes.string.isRequired,
-  className: PropTypes.string,
 }

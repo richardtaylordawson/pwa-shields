@@ -25,7 +25,6 @@ export const SeriesCard = ({
         description={hintDescription}
         theme="secondary"
         placement="right"
-        className="ml-2"
       />
     )
   }

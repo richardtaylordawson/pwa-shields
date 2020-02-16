@@ -72,7 +72,7 @@ export const CreateShield = () => {
         <Form>
           <FormGroup>
             <div className="d-flex">
-              <label htmlFor="preview" className="mr-3">
+              <label htmlFor="preview" className="mr-3 mb-0">
                 Preview:
               </label>
               <img src={logoURL} alt="shield preview" id="preview" />
@@ -91,6 +91,7 @@ export const CreateShield = () => {
             <FormGroup className="d-flex align-items-end">
               <FormCheckbox
                 toggle
+                onClick={() => setLinkCheckbox(!linkCheckbox)} // must have both events to fix safari & safari mobile
                 onChange={() => setLinkCheckbox(!linkCheckbox)}
                 checked={linkCheckbox}
               ></FormCheckbox>
