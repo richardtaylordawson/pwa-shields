@@ -91,8 +91,8 @@ export const CreateShield = () => {
             <FormGroup className="d-flex align-items-end">
               <FormCheckbox
                 toggle
-                onClick={() => setLinkCheckbox(!linkCheckbox)} // must have both events to fix safari & safari mobile
-                onChange={() => setLinkCheckbox(!linkCheckbox)}
+                onClick={() => setLinkCheckbox(prevState => !prevState)}
+                onChange={() => setLinkCheckbox(prevState => !prevState)} // must have both events to fix safari & safari mobile
                 checked={linkCheckbox}
               ></FormCheckbox>
               <FormInput

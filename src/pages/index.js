@@ -34,19 +34,17 @@ const IndexPage = ({ data }) => (
 
           <p>
             <small>
-              <em>Current Version: 1.4.1</em>
+              <em>Current Version: 1.4.2</em>
             </small>
           </p>
         </Col>
         <Col xs={12} sm={12} md={5} lg={5}>
-          <div className="d-flex justify-content-end">
-            <img
-              className="d-none d-md-inline"
-              width="75%"
-              src={LogoShadow}
-              alt="pwa shields logo"
-            />
-          </div>
+          <img
+            className="d-none d-md-inline float-md-right"
+            width="75%"
+            src={LogoShadow}
+            alt="pwa shields logo"
+          />
         </Col>
       </Row>
       <Row className="mb-5">
