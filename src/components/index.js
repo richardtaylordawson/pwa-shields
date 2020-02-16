@@ -1,5 +1,6 @@
+export { CreateShield } from "./createShield"
 export { Hint } from "./hint"
 export { IconLink } from "./iconLink"
-export { GlobalTheme } from "./globalTheme"
 export { Navigation } from "./navigation"
 export { SEO } from "./seo"
+export { SeriesCard } from "./seriesCard"

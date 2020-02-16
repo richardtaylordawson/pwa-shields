@@ -5,15 +5,16 @@ import Img from "gatsby-image"
 import { Container, Row, Col, Button } from "shards-react"
 import { Main } from "./../layouts/main"
 import { SEO, IconLink } from "./../components"
+import LogoShadow from "./../images/logo-shadow.svg"
 
 const IndexPage = ({ data }) => (
   <Main currentPage="home">
     <SEO
-      title="PWA Shields - Home"
-      description="Introduction to PWA Shields, the one place to create a personalized shield for your next project's README."
+      metaTitle="PWA Shields - Home"
+      metaDescription="Introduction to PWA Shields, the one place to create a personalized shield for your next project's README."
     />
     <Container>
-      <Row className="mb-6">
+      <Row className="mb-5">
         <Col xs={12} sm={12} md={7} lg={7}>
           <h1>Home</h1>
           <p>
@@ -26,39 +27,44 @@ const IndexPage = ({ data }) => (
           </p>
 
           <Link to="/series">
-            <Button className="mr-2 mb-3" outline theme="secondary">
+            <Button className="mb-3" outline theme="secondary">
               Get Started
             </Button>
           </Link>
 
-          <p className="small mb-0">
-            <i>Current Version: 1.4.0</i>
+          <p>
+            <small>
+              <em>Current Version: 1.4.0</em>
+            </small>
           </p>
         </Col>
         <Col xs={12} sm={12} md={5} lg={5}>
-          <img
-            className="d-none d-md-inline float-md-right"
-            width="75%"
-            src="/images/logo-shadow.svg"
-            alt="pwa shields logo"
-          />
+          <div className="d-flex justify-content-end">
+            <img
+              className="d-none d-md-inline"
+              width="75%"
+              src={LogoShadow}
+              alt="pwa shields logo"
+            />
+          </div>
         </Col>
       </Row>
-      <Row className="mb-6">
+      <Row className="mb-5">
         <Col xs={12} sm={12} md={6} lg={6}>
           <h2>Usage</h2>
           <p>
-            1. Create your personalized shield on our{" "}
+            1. Create your personalized shield on our
             <Link
               to="/create"
               className="text-secondary text-decoration-underline"
             >
-              create page.
+              create page
             </Link>
+            .
           </p>
           <p>2. Paste your snippet in your project's README file.</p>
           <p>
-            3. Sit back and enjoy your awesome, new looking README{" "}
+            3. Sit back and enjoy your awesome, new looking README
             <span role="img" aria-label="sunglasses emoji">
               😎
             </span>
@@ -73,33 +79,57 @@ const IndexPage = ({ data }) => (
           />
         </Col>
       </Row>
-      <Row>
-        <IconLink
-          img={data.bug.childImageSharp.fluid}
-          imgAlt="bug icon"
-          heading="Bugs or Issues?"
-          description="If you are experiencing any problems or have an idea you would like reviewed for a future release, then please open an issue."
-          link="https://github.com/richardtaylordawson/pwa-shields/issues"
-          linkText="Open Bug or Issue"
-        />
+      <Row className="mb-5">
+        <Col
+          xs={12}
+          sm={12}
+          md={4}
+          lg={4}
+          className="d-flex flex-column justify-content-between mb-5"
+        >
+          <IconLink
+            img={data.bug.childImageSharp.fluid}
+            imgAlt="bug icon"
+            heading="Bugs or Issues?"
+            description="If you are experiencing any problems or have an idea you would like reviewed for a future release, then please open an issue."
+            link="https://github.com/richardtaylordawson/pwa-shields/issues"
+            linkText="Open Bug or Issue"
+          />
+        </Col>
 
-        <IconLink
-          img={data.fork.childImageSharp.fluid}
-          imgAlt="fork icon"
-          heading="Contributing"
-          description="Would you like to contribute? Please see the contribution guidelines for more information on how to do so."
-          link="https://github.com/richardtaylordawson/pwa-shields/blob/master/CONTRIBUTING.md"
-          linkText="Contribution Guidelines"
-        />
+        <Col
+          xs={12}
+          sm={12}
+          md={4}
+          lg={4}
+          className="d-flex flex-column justify-content-between mb-5"
+        >
+          <IconLink
+            img={data.fork.childImageSharp.fluid}
+            imgAlt="fork icon"
+            heading="Contributing"
+            description="Would you like to contribute? Please see the contribution guidelines for more information on how to do so."
+            link="https://github.com/richardtaylordawson/pwa-shields/blob/master/CONTRIBUTING.md"
+            linkText="Contribution Guidelines"
+          />
+        </Col>
 
-        <IconLink
-          img={data.badge.childImageSharp.fluid}
-          imgAlt="badge icon"
-          heading="Shields.io"
-          description="This project could not have been possible without the inspirational help of Shields.io. They are the leader in providing endpoints for hundreds of shields for developer README's."
-          link="https://shields.io/"
-          linkText="Shields.io"
-        />
+        <Col
+          xs={12}
+          sm={12}
+          md={4}
+          lg={4}
+          className="d-flex flex-column justify-content-between mb-5"
+        >
+          <IconLink
+            img={data.badge.childImageSharp.fluid}
+            imgAlt="badge icon"
+            heading="Shields.io"
+            description="This project could not have been possible without the inspirational help of Shields.io. They are the leader in providing endpoints for hundreds of shields for developer README's."
+            link="https://shields.io/"
+            linkText="Shields.io"
+          />
+        </Col>
       </Row>
     </Container>
   </Main>
@@ -108,43 +138,23 @@ const IndexPage = ({ data }) => (
 export const query = graphql`
   query {
     logo: file(relativePath: { eq: "logo.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...Image350
     }
 
     exampleProject: file(relativePath: { eq: "example-project.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...Image550
     }
 
     badge: file(relativePath: { eq: "badge.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 50, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...Image50
     }
 
     bug: file(relativePath: { eq: "bug.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 50, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...Image50
     }
 
     fork: file(relativePath: { eq: "fork.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 50, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...Image50
     }
   }
 `

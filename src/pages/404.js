@@ -6,7 +6,10 @@ import { SEO } from "./../components"
 
 const NotFoundPage = () => (
   <Main>
-    <SEO title="PWA Shields - Page Not Found" description="Page not found" />
+    <SEO
+      metaTitle="PWA Shields - Page Not Found"
+      metaDescription="Page not found"
+    />
     <Container>
       <Row>
         <Col>

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
-import { Button, Col } from "shards-react"
+import { Button } from "shards-react"
 
 export const IconLink = ({
   img,
@@ -11,15 +11,9 @@ export const IconLink = ({
   link,
   linkText,
 }) => (
-  <Col
-    xs={12}
-    sm={12}
-    md={4}
-    lg={4}
-    className="flex flex-column space-between mb-6"
-  >
+  <>
     <div>
-      <Img fluid={img} alt={imgAlt} className="max-width-50 ml-auto mr-auto" />
+      <Img fluid={img} alt={imgAlt} className="mw-50 ml-auto mr-auto" />
       <h3 className="text-center">{heading}</h3>
       <p>{description}</p>
     </div>
@@ -29,11 +23,11 @@ export const IconLink = ({
         {linkText}
       </Button>
     </a>
-  </Col>
+  </>
 )
 
 IconLink.propTypes = {
-  img: PropTypes.string.isRequired,
+  img: PropTypes.object.isRequired,
   imgAlt: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

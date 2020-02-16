@@ -12,17 +12,17 @@
     "url": "https://github.com/richardtaylordawson/pwa-shields/issues"
   },
   "dependencies": {
-    "gatsby": "^2.18.4",
-    "gatsby-image": "^2.2.34",
-    "gatsby-plugin-google-analytics": "^2.1.31",
-    "gatsby-plugin-manifest": "^2.2.33",
-    "gatsby-plugin-offline": "^3.0.29",
-    "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby": "^2.19.16",
+    "gatsby-image": "^2.2.40",
+    "gatsby-plugin-google-analytics": "^2.1.35",
+    "gatsby-plugin-manifest": "^2.2.41",
+    "gatsby-plugin-offline": "^3.0.34",
+    "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sharp": "^2.3.4",
-    "gatsby-plugin-sitemap": "^2.2.24",
-    "gatsby-source-filesystem": "^2.1.39",
-    "gatsby-transformer-sharp": "^2.3.6",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-plugin-sitemap": "^2.2.27",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-sharp": "^2.3.14",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -34,11 +34,9 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   }
 }

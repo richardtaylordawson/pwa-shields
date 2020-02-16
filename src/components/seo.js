@@ -1,16 +1,31 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
 
 export const SEO = ({ metaTitle, metaDescription }) => {
-  const siteUrl = "https://www.pwa-shields.com"
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            siteUrl
+            twitterHandle
+          }
+        }
+      }
+    `
+  )
+
+  const { siteUrl, twitterHandle } = site.siteMetadata
   const shareImageUrl = `${siteUrl}/images/social-share.png`
-  const twitterHandle = "@richard_codes"
 
   return (
     <Helmet
-      htmlAttributes={"en"}
-      title={`${metaTitle}`}
+      htmlAttributes={{
+        lang: "en",
+      }}
+      title={metaTitle}
       meta={[
         {
           name: `description`,

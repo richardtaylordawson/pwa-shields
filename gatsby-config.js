@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.pwa-shields.com`, // for gatsby-plugin-sitemap
+    title: `PWA Shields`,
+    description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
+    twitterHandle: `@richard_codes`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -13,7 +19,7 @@ module.exports = {
         background_color: `#5B6168`,
         theme_color: `#5B6168`,
         display: `standalone`,
-        icon: `static/images/favicon.svg`,
+        icon: `src/images/favicon.svg`,
       },
     },
     `gatsby-plugin-offline`,
