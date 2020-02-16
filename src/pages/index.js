@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => (
         <Col xs={12} sm={12} md={6} lg={6}>
           <h2>Usage</h2>
           <p>
-            1. Create your personalized shield on our
+            1. Create your personalized shield on our{" "}
             <Link
               to="/create"
               className="text-secondary text-decoration-underline"
@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => (
           </p>
           <p>2. Paste your snippet in your project's README file.</p>
           <p>
-            3. Sit back and enjoy your awesome, new looking README
+            3. Sit back and enjoy your awesome, new looking README{" "}
             <span role="img" aria-label="sunglasses emoji">
               😎
             </span>
