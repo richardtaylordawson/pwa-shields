@@ -1,32 +1,31 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
-export const SEO = ({ description, lang, meta, keywords, title }) => {
+export const SEO = ({ metaTitle, metaDescription }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
             siteUrl
+            twitterHandle
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const siteUrl = site.siteMetadata.siteUrl
+  const { siteUrl, twitterHandle } = site.siteMetadata
+  const shareImageUrl = `${siteUrl}/images/social-share.png`
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: "en",
       }}
-      title={`${title}`}
+      title={metaTitle}
       meta={[
         {
           name: `description`,
@@ -34,27 +33,27 @@ export const SEO = ({ description, lang, meta, keywords, title }) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:site_name`,
-          content: title,
+          content: metaTitle,
         },
         {
           itemprop: `name`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:text:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:image:alt`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -74,19 +73,19 @@ export const SEO = ({ description, lang, meta, keywords, title }) => {
         },
         {
           property: `og:url`,
-          content: `${siteUrl}`,
+          content: siteUrl,
         },
         {
           property: `og:image`,
-          content: `${siteUrl}/images/social-share.png`,
+          content: shareImageUrl,
         },
         {
           itemprop: `image`,
-          content: `${siteUrl}/images/social-share.png`,
+          content: shareImageUrl,
         },
         {
           name: `twitter:image`,
-          content: `${siteUrl}/images/social-share.png`,
+          content: shareImageUrl,
         },
         {
           property: `og:image:type`,
@@ -106,37 +105,18 @@ export const SEO = ({ description, lang, meta, keywords, title }) => {
         },
         {
           name: `twitter:site`,
-          content: `@richard_codes`,
+          content: twitterHandle,
         },
         {
           name: `twitter:creator`,
-          content: `@richard_codes`,
+          content: twitterHandle,
         },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
+      ]}
     />
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [],
-  description: ``,
-}
-
 SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
+  metaTitle: PropTypes.string.isRequired,
+  metaDescription: PropTypes.string.isRequired,
 }

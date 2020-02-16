@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `PWA Shields - Richard Taylor Dawson`,
+    siteUrl: `https://www.pwa-shields.com`, // for gatsby-plugin-sitemap
+    title: `PWA Shields`,
     description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
-    author: `Richard Taylor Dawson`,
-    siteUrl: `https://www.pwa-shields.com`
+    twitterHandle: `@richard_codes`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,23 +19,23 @@ module.exports = {
         background_color: `#5B6168`,
         theme_color: `#5B6168`,
         display: `standalone`,
-        icon: `static/images/favicon.svg`,
+        icon: `src/images/favicon.svg`,
       },
     },
     `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: 'UA-142412414-8',
+        trackingId: "UA-142412414-8",
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.pwa-shields.com',
-        sitemap: 'https://www.pwa-shields.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/', }]
-      }
+        host: "https://www.pwa-shields.com",
+        sitemap: "https://www.pwa-shields.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -44,5 +44,5 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-  ]
+  ],
 }

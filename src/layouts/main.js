@@ -2,17 +2,19 @@ import React from "react"
 import PropTypes from "prop-types"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "shards-ui/dist/css/shards.min.css"
-import { Navigation, GlobalTheme } from "../components"
+import "./../styles/global.css"
+import { Navigation } from "./../components"
 
-export const MainLayout = ({ children, currentPage }) => (
+export const Main = ({ children, currentPage }) => (
   <>
-    <GlobalTheme />
-    <Navigation currentPage={currentPage} />
+    <header>
+      <Navigation currentPage={currentPage} />
+    </header>
     <main>{children}</main>
   </>
 )
 
-MainLayout.propTypes = {
+Main.propTypes = {
   children: PropTypes.node.isRequired,
   currentPage: PropTypes.string.isRequired,
 }
