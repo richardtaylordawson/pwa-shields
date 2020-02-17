@@ -137,7 +137,7 @@ const SeriesPage = () => (
         <Col xs={12} sm={12} md={7} lg={8}>
           <SeriesCard
             title="Gatsby"
-            linkQuery="gatsyby"
+            linkQuery="gatsby"
             description="A tribute to Gatsby making PWA's simple & easy"
           >
             <Row>
