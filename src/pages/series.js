@@ -38,12 +38,12 @@ const SeriesPage = () => (
             <Row>
               <Col xs={12} sm={3} md={12} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 mr-sm-0"
                   src="/1.0.0/series/classic/white/gray.svg"
                   alt="series classic white gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 mr-sm-0"
                   src="/1.0.0/series/classic/white/purple.svg"
                   alt="series classic white purple"
                 />
@@ -55,12 +55,12 @@ const SeriesPage = () => (
               </Col>
               <Col xs={12} sm={3} md={12} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 mr-sm-0"
                   src="/1.0.0/series/classic/faded/inverse/gray.svg"
                   alt="series classic faded inverse gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 mr-sm-0"
                   src="/1.0.0/series/classic/faded/inverse/purple.svg"
                   alt="series classic faded inverse gray purple"
                 />
@@ -72,12 +72,12 @@ const SeriesPage = () => (
               </Col>
               <Col xs={12} sm={3} md={12} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 mr-sm-0"
                   src="/1.0.0/series/classic/faded/white/gray.svg"
                   alt="series classic faded white gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 mr-sm-0"
                   src="/1.0.0/series/classic/faded/white/purple.svg"
                   alt="series classic faded white purple"
                 />
@@ -89,12 +89,12 @@ const SeriesPage = () => (
               </Col>
               <Col xs={12} sm={3} md={12} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 mr-sm-0"
                   src="/1.0.0/series/classic/solid/gray.svg"
                   alt="series classic solid gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3 mr-3 mr-sm-0"
                   src="/1.0.0/series/classic/solid/purple.svg"
                   alt="series classic solid purple"
                 />
@@ -109,6 +109,111 @@ const SeriesPage = () => (
         </Col>
         <Col xs={12} sm={12} md={5} lg={5}>
           <SeriesCard
+            title="Dark"
+            linkQuery="dark"
+            description="Shields....in #DarkMode"
+          >
+            <Row>
+              <Col xs={12} sm={12} md={2} lg={2}>
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/dark/gray.svg"
+                  alt="dark series gray"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/dark/purple.svg"
+                  alt="dark series purple"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/dark/green.svg"
+                  alt="dark series green"
+                />
+              </Col>
+            </Row>
+          </SeriesCard>
+        </Col>
+        <Col xs={12} sm={12} md={7} lg={8}>
+          <SeriesCard
+            title="Gatsby"
+            linkQuery="gatsyby"
+            description="A tribute to Gatsby making PWA's simple & easy"
+          >
+            <Row>
+              <Col xs={12} sm={3} md={12} lg={2}>
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/white/gray.svg"
+                  alt="series gatsby white gray"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/white/purple.svg"
+                  alt="series gatsby white purple"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/white/green.svg"
+                  alt="series gatsby white green"
+                />
+              </Col>
+              <Col xs={12} sm={3} md={12} lg={2}>
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/faded/inverse/gray.svg"
+                  alt="series gatsby faded inverse gray"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/faded/inverse/purple.svg"
+                  alt="series gatsby faded inverse gray purple"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/faded/inverse/green.svg"
+                  alt="series gatsby faded inverse gray green"
+                />
+              </Col>
+              <Col xs={12} sm={3} md={12} lg={2}>
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/faded/white/gray.svg"
+                  alt="series gatsby faded white gray"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/faded/white/purple.svg"
+                  alt="series gatsby faded white purple"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/faded/white/green.svg"
+                  alt="series gatsby faded white green"
+                />
+              </Col>
+              <Col xs={12} sm={3} md={12} lg={2}>
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/solid/gray.svg"
+                  alt="series gatsby solid gray"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/solid/purple.svg"
+                  alt="series gatsby solid purple"
+                />
+                <img
+                  className="mb-3"
+                  src="/1.0.0/series/gatsby/solid/green.svg"
+                  alt="series gatsby solid green"
+                />
+              </Col>
+            </Row>
+          </SeriesCard>
+        </Col>
+        <Col xs={12} sm={12} md={4} lg={4}>
+          <SeriesCard
             title="Certified"
             linkQuery="certified"
             description="Show off the fact that your app is PWA certified"
@@ -119,12 +224,12 @@ const SeriesPage = () => (
             <Row>
               <Col xs={12} sm={12} md={2} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/certified/gray.svg"
                   alt="series certified gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/certified/purple.svg"
                   alt="series certified purple"
                 />
@@ -137,7 +242,7 @@ const SeriesPage = () => (
             </Row>
           </SeriesCard>
         </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col xs={12} sm={12} md={5} lg={5}>
           <SeriesCard
             title="Install"
             linkQuery="install"
@@ -146,12 +251,12 @@ const SeriesPage = () => (
             <Row>
               <Col xs={12} sm={12} md={2} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/install/gray.svg"
                   alt="series install gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/install/purple.svg"
                   alt="series install purple"
                 />
@@ -159,33 +264,6 @@ const SeriesPage = () => (
                   className="mb-3"
                   src="/1.0.0/series/install/green.svg"
                   alt="series install green"
-                />
-              </Col>
-            </Row>
-          </SeriesCard>
-        </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
-          <SeriesCard
-            title="Dark"
-            linkQuery="dark"
-            description="Shields....in #DarkMode"
-          >
-            <Row>
-              <Col xs={12} sm={12} md={2} lg={2}>
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/dark/gray.svg"
-                  alt="dark series gray"
-                />
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/dark/purple.svg"
-                  alt="dark series purple"
-                />
-                <img
-                  className="mb-3"
-                  src="/1.0.0/series/dark/green.svg"
-                  alt="dark series green"
                 />
               </Col>
             </Row>
@@ -200,12 +278,12 @@ const SeriesPage = () => (
             <Row>
               <Col xs={12} sm={3} md={12} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/love/white/gray.svg"
                   alt="series love white gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/love/white/purple.svg"
                   alt="series love white purple"
                 />
@@ -217,12 +295,12 @@ const SeriesPage = () => (
               </Col>
               <Col xs={12} sm={3} md={12} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/love/faded/gray.svg"
                   alt="series love faded gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/love/faded/purple.svg"
                   alt="series love faded gray purple"
                 />
@@ -234,12 +312,12 @@ const SeriesPage = () => (
               </Col>
               <Col xs={12} sm={3} md={12} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/love/solid/gray.svg"
                   alt="series love solid gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/love/solid/purple.svg"
                   alt="series love solid purple"
                 />
@@ -251,12 +329,12 @@ const SeriesPage = () => (
               </Col>
               <Col xs={12} sm={3} md={12} lg={2}>
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/love/rainbow/gray.svg"
                   alt="series love rainbow gray"
                 />
                 <img
-                  className="mb-3 mr-3"
+                  className="mb-3"
                   src="/1.0.0/series/love/rainbow/purple.svg"
                   alt="series love rainbow purple"
                 />
@@ -264,145 +342,6 @@ const SeriesPage = () => (
                   className="mb-3"
                   src="/1.0.0/series/love/rainbow/green.svg"
                   alt="series love rainbow green"
-                />
-              </Col>
-            </Row>
-          </SeriesCard>
-        </Col>
-        <Col xs={12} sm={12} md={5} lg={5}>
-          <SeriesCard
-            title="Browser"
-            description="Series currently under work and will be up soon."
-            futureSeries={true}
-          >
-            <Row>
-              <Col xs={12} sm={3} md={12} lg={4}>
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/gray.svg"
-                  alt="series future gray"
-                />
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/purple.svg"
-                  alt="series future purple"
-                />
-                <img
-                  className="mb-3"
-                  src="/1.0.0/series/future/green.svg"
-                  alt="series future green"
-                />
-              </Col>
-              <Col xs={12} sm={3} md={12} lg={4}>
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/gray.svg"
-                  alt="series future gray"
-                />
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/purple.svg"
-                  alt="series future purple"
-                />
-                <img
-                  className="mb-3"
-                  src="/1.0.0/series/future/green.svg"
-                  alt="series future green"
-                />
-              </Col>
-            </Row>
-          </SeriesCard>
-        </Col>
-        <Col xs={12} sm={12} md={12} lg={12}>
-          <SeriesCard
-            title="Language"
-            description="Series currently under work and will be up soon."
-            futureSeries={true}
-          >
-            <Row>
-              <Col xs={12} sm={2} md={12} lg={2}>
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/gray.svg"
-                  alt="series future gray"
-                />
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/purple.svg"
-                  alt="series future purple"
-                />
-                <img
-                  className="mb-3"
-                  src="/1.0.0/series/future/green.svg"
-                  alt="series future green"
-                />
-              </Col>
-              <Col xs={12} sm={2} md={12} lg={2}>
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/gray.svg"
-                  alt="series future gray"
-                />
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/purple.svg"
-                  alt="series future purple"
-                />
-                <img
-                  className="mb-3"
-                  src="/1.0.0/series/future/green.svg"
-                  alt="series future green"
-                />
-              </Col>
-              <Col xs={12} sm={2} md={12} lg={2}>
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/gray.svg"
-                  alt="series future gray"
-                />
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/purple.svg"
-                  alt="series future purple"
-                />
-                <img
-                  className="mb-3"
-                  src="/1.0.0/series/future/green.svg"
-                  alt="series future green"
-                />
-              </Col>
-              <Col xs={12} sm={2} md={12} lg={2}>
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/gray.svg"
-                  alt="series future gray"
-                />
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/purple.svg"
-                  alt="series future purple"
-                />
-                <img
-                  className="mb-3"
-                  src="/1.0.0/series/future/green.svg"
-                  alt="series future green"
-                />
-              </Col>
-              <Col xs={12} sm={2} md={12} lg={2}>
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/gray.svg"
-                  alt="series future gray"
-                />
-                <img
-                  className="mb-3 mr-3"
-                  src="/1.0.0/series/future/purple.svg"
-                  alt="series future purple"
-                />
-                <img
-                  className="mb-3"
-                  src="/1.0.0/series/future/green.svg"
-                  alt="series future green"
                 />
               </Col>
             </Row>
