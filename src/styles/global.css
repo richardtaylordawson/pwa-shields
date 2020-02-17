@@ -66,6 +66,10 @@ a:hover {
   max-width: 50px;
 }
 
+.h-90 {
+  height: 90%;
+}
+
 .ml-5px {
   margin-left: 5px;
 }

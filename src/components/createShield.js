@@ -26,48 +26,78 @@ export const CreateShield = () => {
 
   const handleInputChange = event => {
     event.persist()
-    setFormValues(formValues => ({
-      ...formValues,
-      [event.target.name]: event.target.value,
-    }))
+    setFormValues(formValues => {
+      // set form values back to default values as user changes series
+      if (event.target.name === "series") {
+        formValues.color = "gray"
+        formValues.background = "white"
+
+        if (formValues.series === "react") {
+          formValues.logo = "white"
+        } else {
+          formValues.logo = "inverse"
+        }
+      }
+
+      // reset logo value when changing background of react series
+      if (event.target.name === "background" && formValues.series === "react") {
+        formValues.logo = event.target.value === "faded" ? "inverse" : "white"
+      }
+
+      return {
+        ...formValues,
+        [event.target.name]: event.target.value,
+      }
+    })
   }
 
-  let hideBackground = ""
-  let hideLogo = ""
-  let hideRainbow = ""
   let logoURL = `/1.0.0/series/${formValues.series}`
-  let snippet = ""
+  let hideBackgroundInput = false
+  let hideLogoInput = false
+  let hideRainbowOption = false
+  let hideBlueOption = false
+  let hideInverseOption = false
 
   if (formValues.series === "love") {
-    hideLogo = "d-none"
+    hideLogoInput = true
     logoURL += `/${formValues.background}/${formValues.color}.svg`
   } else if (
-    formValues.series !== "classic" &&
-    formValues.series !== "gatsby"
+    formValues.series === "certified" ||
+    formValues.series === "install" ||
+    formValues.series === "dark"
   ) {
-    hideBackground = "d-none"
-    hideLogo = "d-none"
+    hideBackgroundInput = true
+    hideLogoInput = true
     logoURL += `/${formValues.color}.svg`
-  } else {
-    hideRainbow = "d-none"
-
-    if (formValues.background === "rainbow") {
-      formValues.background = "white" // resets background to white in case user switches off rainbow
-    }
+  } else if (
+    formValues.series === "classic" ||
+    formValues.series === "gatsby"
+  ) {
+    hideRainbowOption = true
+    hideBlueOption = true
 
     if (formValues.background !== "faded") {
+      hideLogoInput = true
       logoURL += `/${formValues.background}/${formValues.color}.svg`
-      hideLogo = "d-none"
+    } else {
+      logoURL += `/${formValues.background}/${formValues.logo}/${formValues.color}.svg`
+    }
+  } else if (formValues.series === "react") {
+    hideRainbowOption = true
+    hideBlueOption = formValues.background !== "solid"
+    hideInverseOption = formValues.background === "solid"
+
+    if (formValues.background === "white") {
+      hideLogoInput = true
+      logoURL += `/${formValues.background}/${formValues.color}.svg`
     } else {
       logoURL += `/${formValues.background}/${formValues.logo}/${formValues.color}.svg`
     }
   }
 
-  if (linkCheckbox) {
-    snippet += `[![PWA Shields](https://www.pwa-shields.com${logoURL})](${formValues.link})`
-  } else {
-    snippet = `![PWA Shields](https://www.pwa-shields.com${logoURL})`
-  }
+  const snippet = linkCheckbox
+    ? `[![PWA Shields](https://www.pwa-shields.com${logoURL})](${formValues.link})`
+    : `![PWA Shields](https://www.pwa-shields.com${logoURL})`
 
   return (
     <Card>
@@ -125,6 +155,7 @@ export const CreateShield = () => {
                   <option value="dark">Dark</option>
                   <option value="love">Love</option>
                   <option value="gatsby">Gatsby</option>
+                  <option value="react">React</option>
                 </FormSelect>
               </FormGroup>
             </Col>
@@ -144,7 +175,7 @@ export const CreateShield = () => {
               </FormGroup>
             </Col>
           </Row>
-          <FormGroup className={hideBackground}>
+          <FormGroup className={hideBackgroundInput ? "d-none" : ""}>
             <label htmlFor="background">Background</label>
             <FormSelect
               value={formValues.background}
@@ -155,12 +186,15 @@ export const CreateShield = () => {
               <option value="white">White</option>
               <option value="faded">Faded</option>
               <option value="solid">Solid</option>
-              <option value="rainbow" className={hideRainbow}>
+              <option
+                value="rainbow"
+                className={hideRainbowOption ? "d-none" : ""}
+              >
                 Rainbow
               </option>
             </FormSelect>
           </FormGroup>
-          <FormGroup className={hideLogo}>
+          <FormGroup className={hideLogoInput ? "d-none" : ""}>
             <label htmlFor="logo">Logo</label>
             <FormSelect
               value={formValues.logo}
@@ -168,8 +202,16 @@ export const CreateShield = () => {
               name="logo"
               id="logo"
             >
-              <option value="inverse">Inverse</option>
+              <option
+                value="inverse"
+                className={hideInverseOption ? "d-none" : ""}
+              >
+                Inverse
+              </option>
               <option value="white">White</option>
+              <option value="blue" className={hideBlueOption ? "d-none" : ""}>
+                Blue
+              </option>
             </FormSelect>
           </FormGroup>
           <Button

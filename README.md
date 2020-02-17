@@ -80,6 +80,28 @@
 ![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/solid/purple.svg)
 ![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/solid/green.svg)
 
+### React Series
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/white/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/white/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/white/green.svg)
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/faded/inverse/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/faded/inverse/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/faded/inverse/green.svg)
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/faded/white/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/faded/white/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/faded/white/green.svg)
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/solid/white/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/solid/white/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/solid/white/green.svg)
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/solid/blue/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/solid/blue/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/react/solid/blue/green.svg)
+
 ## Credits
 
 Several projects aided in inspiring & building this project. Notably they are:
