@@ -3,7 +3,7 @@
 <circle cx="63" cy="10" r="5.5" fill="url(#paint0_linear)" stroke="white"/>
 <rect x="61.0502" y="11.8712" width="6.85" height="1.15" transform="rotate(-45.3263 61.0502 11.8712)" fill="white"/>
 <rect x="59.8572" y="9.00003" width="3" height="1.22153" transform="rotate(44.5671 59.8572 9.00003)" fill="white"/>
-<path d="M5 0.5H51.5V19.5H5C2.51472 19.5 0.5 17.4853 0.5 15V5C0.5 2.51472 2.51472 0.5 5 0.5Z" fill="#3D3D3D" fill-opacity="0.4" stroke="#3D3D3D"/>
+<path d="M0.5 5C0.5 2.51472 2.51472 0.5 5 0.5H51.5V19.5H5C2.51472 19.5 0.5 17.4853 0.5 15V5Z" fill="#929292" stroke="#3D3D3D"/>
 <path d="M34.2872 14.166L35.2405 11.7632H37.9931L36.6868 8.11812L38.3205 4L43.0001 16.3841H39.5491L38.7494 14.166H34.2872Z" fill="white"/>
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="18" y="4" width="19" height="13">
 <path d="M31.3395 16.3749L36.349 3.99997L33.0278 3.99999L29.6011 11.997L27.1643 4H24.6115L21.995 11.997L20.1498 8.35291L18.48 13.4768L20.1754 16.3749H23.4438L25.8081 9.20337L28.0625 16.3749H31.3395Z" fill="#3D3D3D"/>
