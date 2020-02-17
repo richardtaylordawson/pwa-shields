@@ -62,6 +62,24 @@
 ![PWA Shields](https://www.pwa-shields.com/1.0.0/series/love/rainbow/purple.svg)
 ![PWA Shields](https://www.pwa-shields.com/1.0.0/series/love/rainbow/green.svg)
 
+### Gatsby Series
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/white/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/white/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/white/green.svg)
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/faded/inverse/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/faded/inverse/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/faded/inverse/green.svg)
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/faded/white/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/faded/white/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/faded/white/green.svg)
+
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/solid/gray.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/solid/purple.svg)
+![PWA Shields](https://www.pwa-shields.com/1.0.0/series/gatsby/solid/green.svg)
+
 ## Credits
 
 Several projects aided in inspiring & building this project. Notably they are:

@@ -41,7 +41,10 @@ export const CreateShield = () => {
   if (formValues.series === "love") {
     hideLogo = "d-none"
     logoURL += `/${formValues.background}/${formValues.color}.svg`
-  } else if (formValues.series !== "classic") {
+  } else if (
+    formValues.series !== "classic" &&
+    formValues.series !== "gatsby"
+  ) {
     hideBackground = "d-none"
     hideLogo = "d-none"
     logoURL += `/${formValues.color}.svg`
@@ -121,6 +124,7 @@ export const CreateShield = () => {
                   <option value="install">Install</option>
                   <option value="dark">Dark</option>
                   <option value="love">Love</option>
+                  <option value="gatsby">Gatsby</option>
                 </FormSelect>
               </FormGroup>
             </Col>
