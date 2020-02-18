@@ -11,6 +11,10 @@ export const Main = ({ children, currentPage }) => (
       <Navigation currentPage={currentPage} />
     </header>
     <main>{children}</main>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
+    ></script>
   </>
 )
 
