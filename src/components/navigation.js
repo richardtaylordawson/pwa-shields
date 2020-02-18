@@ -18,31 +18,38 @@ export const Navigation = ({ currentPage }) => {
       />
 
       <Collapse open={navbarOpen} navbar>
-        <Nav navbar>
-          <NavItem>
-            <Link
-              to="/"
-              className={`nav-link ${currentPage === "home" && "active"}`}
-            >
-              Home
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link
-              to="/series"
-              className={`nav-link ${currentPage === "series" && "active"}`}
-            >
-              Series
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link
-              to="/create"
-              className={`nav-link ${currentPage === "create" && "active"}`}
-            >
-              Create
-            </Link>
-          </NavItem>
+        <Nav navbar className="d-flex justify-content-between">
+          <div className="d-flex flex-column flex-md-row">
+            <NavItem>
+              <Link
+                to="/"
+                className={`nav-link ${currentPage === "home" && "active"}`}
+              >
+                Home
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link
+                to="/series"
+                className={`nav-link ${currentPage === "series" && "active"}`}
+              >
+                Series
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link
+                to="/create"
+                className={`nav-link ${currentPage === "create" && "active"}`}
+              >
+                Create
+              </Link>
+            </NavItem>
+          </div>
+          <div>
+            <NavItem>
+              <pwa-install></pwa-install>
+            </NavItem>
+          </div>
         </Nav>
       </Collapse>
     </Navbar>
