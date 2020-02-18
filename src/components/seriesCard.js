@@ -44,7 +44,7 @@ export const SeriesCard = ({
   }
 
   return (
-    <Card className="h-90 mb-3">
+    <Card className="h-md-90 mb-3">
       <CardBody className={futureSeriesClass}>
         <div className="d-flex flex-md-column flex-lg-row justify-content-between">
           <h3>
