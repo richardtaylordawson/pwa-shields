@@ -217,6 +217,7 @@ export const CreateShield = () => {
           <Button
             outline
             theme="secondary"
+            className="copy-snippet-btn" // for gtm tracking
             onClick={event => copyToClipboard(snippet, event, "Copy snippet")}
           >
             Copy snippet
