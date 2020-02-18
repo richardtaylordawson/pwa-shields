@@ -66,8 +66,10 @@ a:hover {
   max-width: 50px;
 }
 
-.h-90 {
-  height: 90%;
+@media only screen and (min-width: 768px) {
+  .h-md-90 {
+    height: 90%;
+  }
 }
 
 .ml-5px {
