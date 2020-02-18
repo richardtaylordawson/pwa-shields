@@ -186,12 +186,11 @@ export const CreateShield = () => {
               <option value="white">White</option>
               <option value="faded">Faded</option>
               <option value="solid">Solid</option>
-              <option
-                value="rainbow"
-                className={hideRainbowOption ? "d-none" : ""}
-              >
-                Rainbow
-              </option>
+              {!hideRainbowOption ? (
+                <option value="rainbow">Rainbow</option>
+              ) : (
+                ""
+              )}
             </FormSelect>
           </FormGroup>
           <FormGroup className={hideLogoInput ? "d-none" : ""}>
@@ -202,16 +201,13 @@ export const CreateShield = () => {
               name="logo"
               id="logo"
             >
-              <option
-                value="inverse"
-                className={hideInverseOption ? "d-none" : ""}
-              >
-                Inverse
-              </option>
+              {!hideInverseOption ? (
+                <option value="inverse">Inverse</option>
+              ) : (
+                ""
+              )}
               <option value="white">White</option>
-              <option value="blue" className={hideBlueOption ? "d-none" : ""}>
-                Blue
-              </option>
+              {!hideBlueOption ? <option value="blue">Blue</option> : ""}
             </FormSelect>
           </FormGroup>
           <Button
