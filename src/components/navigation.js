@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Navbar, NavbarToggler, Nav, NavItem, Collapse } from "shards-react"
 
-if (window !== undefined) {
+if (typeof window !== undefined) {
   require("@pwabuilder/pwainstall")
 }
 
