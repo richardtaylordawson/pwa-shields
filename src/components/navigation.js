@@ -3,10 +3,6 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Navbar, NavbarToggler, Nav, NavItem, Collapse } from "shards-react"
 
-if (typeof window !== undefined) {
-  require("@pwabuilder/pwainstall")
-}
-
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
