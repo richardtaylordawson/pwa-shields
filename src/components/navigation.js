@@ -2,7 +2,10 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Navbar, NavbarToggler, Nav, NavItem, Collapse } from "shards-react"
-import "@pwabuilder/pwainstall"
+
+if (window !== undefined) {
+  import "@pwabuilder/pwainstall"
+}
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
