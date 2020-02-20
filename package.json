@@ -1,6 +1,6 @@
 {
   "name": "pwa-shields",
-  "version": "1.5.0",
+  "version": "1.7.0",
   "author": "richardtaylordawson",
   "description": "Personalize your app's README with custom, fun, PWA shields in SVG",
   "homepage": "https://www.pwa-shields.com",
@@ -12,6 +12,7 @@
     "url": "https://github.com/richardtaylordawson/pwa-shields/issues"
   },
   "dependencies": {
+    "@pwabuilder/pwainstall": "^1.2.11",
     "gatsby": "^2.19.17",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-google-analytics": "^2.1.35",
