@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { Navbar, NavbarToggler, Nav, NavItem, Collapse } from "shards-react"
 
 if (window !== undefined) {
-  import "@pwabuilder/pwainstall"
+  require("@pwabuilder/pwainstall")
 }
 
 export const Navigation = ({ currentPage }) => {
