@@ -15,7 +15,7 @@ const NotFoundPage = () => (
         <Col>
           <h1>NOT FOUND</h1>
           <p>
-            Unfortunately that route doesn't exist. Return to
+            Unfortunately that route doesn't exist. Return to{" "}
             <Link to="/">home page</Link>
           </p>
         </Col>
