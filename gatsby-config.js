@@ -19,7 +19,36 @@ module.exports = {
         background_color: `#5B6168`,
         theme_color: `#5B6168`,
         display: `standalone`,
-        icon: `src/images/favicon.svg`,
+        icons: [
+          {
+            src: `/images/favicon.svg`,
+            sizes: `192x192`,
+            type: `image/svg`,
+          },
+          {
+            src: `/images/favicon.svg`,
+            sizes: `512x512`,
+            type: `image/svg`,
+          },
+        ],
+        description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
+        features: [
+          "Create & customize shields",
+          "View documentation",
+          "No network connection needed",
+        ],
+        screenshots: [
+          {
+            src:
+              "https://www.pwa-shields.com/images/screenshots/home-screen.png",
+          },
+          {
+            src: "https://www.pwa-shields.com/images/screenshots/series.png",
+          },
+          {
+            src: "https://www.pwa-shields.com/images/screenshots/create.png",
+          },
+        ],
       },
     },
     `gatsby-plugin-offline`,
