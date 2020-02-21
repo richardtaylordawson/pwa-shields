@@ -1,7 +1,14 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { Navbar, NavbarToggler, Nav, NavItem, Collapse } from "shards-react"
+import {
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavItem,
+  Collapse,
+  Button,
+} from "shards-react"
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -18,7 +25,7 @@ export const Navigation = ({ currentPage }) => {
       />
 
       <Collapse open={navbarOpen} navbar>
-        <Nav navbar className="d-flex justify-content-between">
+        <Nav navbar className="d-flex justify-content-between w-100">
           <div className="d-flex flex-column flex-md-row">
             <NavItem>
               <Link
@@ -45,9 +52,25 @@ export const Navigation = ({ currentPage }) => {
               </Link>
             </NavItem>
           </div>
-          <div>
-            <NavItem>
-              <pwa-install manifestpath="/manifest.webmanifest"></pwa-install>
+          <div className="d-flex align-items-center">
+            <NavItem className="p-md-2 pt-2">
+              <Button
+                outline
+                theme="white"
+                size="sm"
+                onClick={() => {
+                  if (typeof document !== "undefined") {
+                    document.querySelector("pwa-install").openPrompt()
+                  }
+                }}
+              >
+                Install +
+              </Button>
+              <pwa-install
+                showopen
+                usecustom
+                manifestpath="/manifest.webmanifest"
+              ></pwa-install>
             </NavItem>
           </div>
         </Nav>
