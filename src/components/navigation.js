@@ -68,6 +68,7 @@ export const Navigation = ({ currentPage }) => {
               </Button>
               <pwa-install
                 usecustom
+                iconpath="https://www.pwa-shields.com/images/favicon.svg"
                 manifestpath="/manifest.webmanifest"
               ></pwa-install>
             </NavItem>
