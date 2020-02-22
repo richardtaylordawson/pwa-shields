@@ -67,7 +67,6 @@ export const Navigation = ({ currentPage }) => {
                 Install +
               </Button>
               <pwa-install
-                showopen
                 usecustom
                 manifestpath="/manifest.webmanifest"
               ></pwa-install>
