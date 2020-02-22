@@ -20,18 +20,6 @@ module.exports = {
         theme_color: `#5B6168`,
         display: `standalone`,
         icon: `static/images/favicon.svg`,
-        icons: [
-          {
-            src: `/images/favicon.svg`,
-            sizes: `192x192`,
-            type: `image/svg`,
-          },
-          {
-            src: `/images/favicon.svg`,
-            sizes: `512x512`,
-            type: `image/svg`,
-          },
-        ],
         description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
         features: [
           "Create & customize shields",
