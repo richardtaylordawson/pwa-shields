@@ -11,25 +11,7 @@ import {
 } from "shards-react"
 
 export const Navigation = ({ currentPage }) => {
-  const getInstalledStatus = () => {
-    console.log("in installed status")
-    if (typeof document !== "undefined") {
-      console.log(document.querySelector("pwa-install").getInstalledStatus())
-      return document.querySelector("pwa-install").getInstalledStatus()
-    } else {
-      console.log("in the false")
-      return false
-    }
-  }
-
-  if (typeof window !== "undefined") {
-    window.addEventListener("install", () => {
-      console.log("installed!")
-    })
-  }
-
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(getInstalledStatus())
 
   return (
     <Navbar sticky="top" type="dark" theme="secondary" expand="md">
@@ -89,6 +71,7 @@ export const Navigation = ({ currentPage }) => {
                 usecustom
                 iconpath="https://www.pwa-shields.com/images/favicon.svg"
                 manifestpath="/manifest.webmanifest"
+                installbuttontext="Install +"
               ></pwa-install>
             </NavItem>
           </div>
