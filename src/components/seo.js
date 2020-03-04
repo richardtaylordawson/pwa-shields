@@ -112,12 +112,7 @@ export const SEO = ({ metaTitle, metaDescription }) => {
           content: twitterHandle,
         },
       ]}
-    >
-      <script
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
-      ></script>
-    </Helmet>
+    ></Helmet>
   )
 }
 
