@@ -55,7 +55,6 @@ export const Navigation = ({ currentPage }) => {
           <div className="d-flex align-items-center">
             <NavItem className="p-md-2 pt-2">
               <pwa-install
-                usecustom
                 iconpath="https://www.pwa-shields.com/images/favicon.svg"
                 manifestpath="/manifest.webmanifest"
                 installbuttontext="Install +"
