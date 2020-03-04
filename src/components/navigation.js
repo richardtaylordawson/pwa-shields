@@ -11,7 +11,16 @@ import {
 } from "shards-react"
 
 export const Navigation = ({ currentPage }) => {
+  const getInstalledStatus = () => {
+    if (typeof document !== "undefined") {
+      return document.querySelector("pwa-install").getInstalledStatus()
+    } else {
+      return false
+    }
+  }
+
   const [navbarOpen, setNavbarOpen] = useState(false)
+  const [showInstallBtn, setShowInstallBtn] = useState(getInstalledStatus())
 
   return (
     <Navbar sticky="top" type="dark" theme="secondary" expand="md">
@@ -58,6 +67,7 @@ export const Navigation = ({ currentPage }) => {
                 outline
                 theme="white"
                 size="sm"
+                className={showInstallBtn && "hidden"}
                 onClick={() => {
                   if (typeof document !== "undefined") {
                     document.querySelector("pwa-install").openPrompt()
