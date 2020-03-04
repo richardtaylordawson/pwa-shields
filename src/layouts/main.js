@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import "@pwabuilder/pwainstall"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "shards-ui/dist/css/shards.min.css"
 import "./../styles/global.css"
