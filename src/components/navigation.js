@@ -54,19 +54,6 @@ export const Navigation = ({ currentPage }) => {
           </div>
           <div className="d-flex align-items-center">
             <NavItem className="p-md-2 pt-2">
-              <Button
-                outline
-                theme="white"
-                size="sm"
-                className={showInstallBtn && "d-none"}
-                onClick={() => {
-                  if (typeof document !== "undefined") {
-                    document.querySelector("pwa-install").openPrompt()
-                  }
-                }}
-              >
-                Install +
-              </Button>
               <pwa-install
                 usecustom
                 iconpath="https://www.pwa-shields.com/images/favicon.svg"
