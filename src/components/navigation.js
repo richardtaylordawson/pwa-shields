@@ -17,9 +17,15 @@ export const Navigation = ({ currentPage }) => {
       console.log(document.querySelector("pwa-install").getInstalledStatus())
       return document.querySelector("pwa-install").getInstalledStatus()
     } else {
-      console.log("false")
+      console.log("in the false")
       return false
     }
+  }
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("install", () => {
+      console.log("installed!")
+    })
   }
 
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -70,11 +76,10 @@ export const Navigation = ({ currentPage }) => {
                 outline
                 theme="white"
                 size="sm"
-                className={showInstallBtn && "hidden"}
+                className={showInstallBtn && "d-none"}
                 onClick={() => {
                   if (typeof document !== "undefined") {
                     document.querySelector("pwa-install").openPrompt()
-                    setShowInstallBtn(true)
                   }
                 }}
               >
