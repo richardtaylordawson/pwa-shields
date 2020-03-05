@@ -22,6 +22,14 @@ export const Navigation = ({ currentPage }) => {
         setShowInstallBtn(false)
         event.preventDefault()
       })
+
+      setShowInstallBtn(
+        navigator.userAgent.includes("iPhone") ||
+          navigator.userAgent.includes("iPad") ||
+          (navigator.userAgent.includes("Macintosh") &&
+            navigator.maxTouchPoints &&
+            navigator.maxTouchPoints > 2)
+      )
     }
   }, [])
 
