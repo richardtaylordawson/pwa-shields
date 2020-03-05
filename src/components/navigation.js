@@ -71,7 +71,7 @@ export const Navigation = ({ currentPage }) => {
                 outline
                 theme="white"
                 size="sm"
-                className={!showInstallBtn && "d-none"}
+                className={showInstallBtn && "d-none"}
                 onClick={() => {
                   if (typeof document !== "undefined") {
                     document.querySelector("pwa-install").openPrompt()
