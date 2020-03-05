@@ -18,9 +18,10 @@ export const Navigation = ({ currentPage }) => {
     if (typeof window !== "undefined") {
       window.addEventListener("appinstalled", () => setShowInstallBtn(false))
 
-      window.addEventListener("beforeinstallprompt", () =>
-        setShowInstallBtn(true)
-      )
+      window.addEventListener("beforeinstallprompt", event => {
+        setShowInstallBtn(false)
+        event.preventDefault()
+      })
 
       setShowInstallBtn(
         document.querySelector("pwa-install").getInstalledStatus()
