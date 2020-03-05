@@ -19,6 +19,7 @@ export const Navigation = ({ currentPage }) => {
       window.addEventListener("appinstalled", () => setShowInstallBtn(false))
 
       window.addEventListener("beforeinstallprompt", event => {
+        console.log("before install")
         setShowInstallBtn(false)
         event.preventDefault()
       })
@@ -28,6 +29,8 @@ export const Navigation = ({ currentPage }) => {
       )
     }
   }, [])
+
+  console.log(showInstallBtn)
 
   return (
     <Navbar sticky="top" type="dark" theme="secondary" expand="md">
