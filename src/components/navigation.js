@@ -16,10 +16,12 @@ export const Navigation = ({ currentPage }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      console.log("got here")
-      console.log(document.querySelector("pwa-install").getInstalledStatus())
-
       window.addEventListener("appinstalled", () => setShowInstallBtn(false))
+
+      window.addEventListener("beforeinstallprompt", () =>
+        setShowInstallBtn(true)
+      )
+
       setShowInstallBtn(
         document.querySelector("pwa-install").getInstalledStatus()
       )
