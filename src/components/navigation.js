@@ -22,10 +22,6 @@ export const Navigation = ({ currentPage }) => {
         setShowInstallBtn(false)
         event.preventDefault()
       })
-
-      setShowInstallBtn(
-        document.querySelector("pwa-install").getInstalledStatus()
-      )
     }
   }, [])
 
