@@ -13,6 +13,7 @@ import {
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [showInstallBtn, setShowInstallBtn] = useState(true)
+  const [hasPrompt, setHasPrompt] = useState(false)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -20,11 +21,13 @@ export const Navigation = ({ currentPage }) => {
 
       window.addEventListener("beforeinstallprompt", event => {
         setShowInstallBtn(false)
+        setHasPrompt(true)
         event.preventDefault()
       })
 
       setShowInstallBtn(
-        navigator.userAgent.includes("iPhone") ||
+        hasPrompt ||
+          navigator.userAgent.includes("iPhone") ||
           navigator.userAgent.includes("iPad") ||
           (navigator.userAgent.includes("Macintosh") &&
             navigator.maxTouchPoints &&
