@@ -12,10 +12,14 @@ import {
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(false)
+  const [showInstallBtn, setShowInstallBtn] = useState(true)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      console.log("got here")
+      console.log(document.querySelector("pwa-install").getInstalledStatus())
+
+      window.addEventListener("appinstalled", () => setShowInstallBtn(false))
       setShowInstallBtn(
         document.querySelector("pwa-install").getInstalledStatus()
       )
