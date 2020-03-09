@@ -18,14 +18,14 @@ export const Navigation = ({ currentPage }) => {
     const isSupportingBrowser = window.hasOwnProperty(
       "BeforeInstallPromptEvent"
     )
-  }
 
-  const isIOS =
-    navigator.userAgent.includes("iPhone") ||
-    navigator.userAgent.includes("iPad") ||
-    (navigator.userAgent.includes("Macintosh") &&
-      navigator.maxTouchPoints &&
-      navigator.maxTouchPoints > 2)
+    const isIOS =
+      navigator.userAgent.includes("iPhone") ||
+      navigator.userAgent.includes("iPad") ||
+      (navigator.userAgent.includes("Macintosh") &&
+        navigator.maxTouchPoints &&
+        navigator.maxTouchPoints > 2)
+  }
 
   useEffect(() => {
     if (typeof window !== "undefined") {
