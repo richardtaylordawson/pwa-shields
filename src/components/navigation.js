@@ -33,6 +33,7 @@ export const Navigation = ({ currentPage }) => {
 
       window.addEventListener("beforeinstallprompt", event => {
         console.log("beforeinstallevent")
+        console.log(event)
         event.preventDefault()
       })
 
