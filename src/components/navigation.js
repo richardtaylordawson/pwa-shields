@@ -12,27 +12,27 @@ import {
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(true)
-  const [hasPrompt, setHasPrompt] = useState(false)
+  const [showInstallBtn, setShowInstallBtn] = useState(false)
+  const
+
+  const isSupportingBrowser = window.hasOwnProperty("BeforeInstallPromptEvent")
+  const isIOS =
+    navigator.userAgent.includes("iPhone") ||
+    navigator.userAgent.includes("iPad") ||
+    (navigator.userAgent.includes("Macintosh") &&
+      navigator.maxTouchPoints &&
+      navigator.maxTouchPoints > 2)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("appinstalled", () => setShowInstallBtn(true))
+      window.addEventListener("appinstalled", () => setShowInstallBtn(false))
 
       window.addEventListener("beforeinstallprompt", event => {
-        setShowInstallBtn(false)
-        setHasPrompt(true)
+        console.log('beforeinstallevent')
         event.preventDefault()
       })
 
-      setShowInstallBtn(
-        hasPrompt ||
-          navigator.userAgent.includes("iPhone") ||
-          navigator.userAgent.includes("iPad") ||
-          (navigator.userAgent.includes("Macintosh") &&
-            navigator.maxTouchPoints &&
-            navigator.maxTouchPoints > 2)
-      )
+      console.log('end of useeffect hook')
     }
   }, [])
 
