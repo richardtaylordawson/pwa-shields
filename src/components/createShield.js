@@ -24,9 +24,9 @@ export const CreateShield = () => {
     link: "",
   })
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     event.persist()
-    setFormValues(formValues => {
+    setFormValues((formValues) => {
       // set form values back to default values as user changes series
       if (event.target.name === "series") {
         formValues.color = "gray"
@@ -124,8 +124,8 @@ export const CreateShield = () => {
             <FormGroup className="d-flex align-items-end">
               <FormCheckbox
                 toggle
-                onClick={() => setLinkCheckbox(prevState => !prevState)}
-                onChange={() => setLinkCheckbox(prevState => !prevState)} // must have both events to fix safari & safari mobile
+                onClick={() => setLinkCheckbox((prevState) => !prevState)}
+                onChange={() => setLinkCheckbox((prevState) => !prevState)} // must have both events to fix safari & safari mobile
                 checked={linkCheckbox}
               ></FormCheckbox>
               <FormInput
@@ -214,7 +214,7 @@ export const CreateShield = () => {
             outline
             theme="secondary"
             className="copy-snippet-btn" // for gtm tracking
-            onClick={event => copyToClipboard(snippet, event, "Copy snippet")}
+            onClick={(event) => copyToClipboard(snippet, event, "Copy snippet")}
           >
             Copy snippet
           </Button>

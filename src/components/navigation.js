@@ -20,7 +20,7 @@ export const Navigation = ({ currentPage }) => {
       </Link>
 
       <NavbarToggler
-        onClick={() => setNavbarOpen(prevState => !prevState)}
+        onClick={() => setNavbarOpen((prevState) => !prevState)}
         aria-label="mobile navigation"
       />
 
