@@ -31,7 +31,7 @@
     "shards-react": "^1.0.3"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.3"
   },
   "scripts": {
     "build": "gatsby build",

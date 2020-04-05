@@ -19,7 +19,7 @@ export const copyToClipboard = (value, event, eventAfterText) => {
   event.currentTarget.innerText = "Copied!"
 
   setTimeout(
-    element => {
+    (element) => {
       element.innerText = eventAfterText
     },
     1000,

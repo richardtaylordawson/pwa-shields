@@ -10,7 +10,7 @@ export const Hint = ({ id, description, theme, placement }) => {
       <Button
         id={id}
         outline
-        onClick={e => e.preventDefault}
+        onClick={(e) => e.preventDefault}
         className="button-xxs ml-5px"
         theme={theme}
       >
@@ -19,7 +19,7 @@ export const Hint = ({ id, description, theme, placement }) => {
       <Tooltip
         open={hintOpen}
         target={`#${id}`}
-        toggle={() => setHintOpen(prevState => !prevState)}
+        toggle={() => setHintOpen((prevState) => !prevState)}
         placement={placement}
       >
         {description}

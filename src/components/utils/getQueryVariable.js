@@ -3,7 +3,7 @@
  * @param {string} variable - The key to search in the url
  * @return {string} - Returns the string value if the key is found, otherwise false is returned
  */
-export const getQueryVariable = variable => {
+export const getQueryVariable = (variable) => {
   if (typeof window !== "undefined") {
     const query = window.location.search.substring(1)
     const vars = query.split("&")
