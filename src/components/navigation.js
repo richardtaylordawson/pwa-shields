@@ -29,6 +29,10 @@ export const Navigation = ({ currentPage }) => {
         navigator.maxTouchPoints &&
         navigator.maxTouchPoints > 2)
 
+    console.log("isSupportingBrowser", isSupportingBrowser)
+    console.log("isStandalone", isStandalone)
+    console.log("isIOS", isIOS)
+
     setShowInstallBtn(!isStandalone && (isSupportingBrowser || isIOS))
   }
 
