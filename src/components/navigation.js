@@ -12,12 +12,15 @@ import {
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(false)
+  const [showInstallBtn, setShowInstallBtn] = useState(true)
 
-  if (typeof window !== "undefined") {
+  if (typeof window !== "undefined" && typeof navigator !== "undefined") {
     const isSupportingBrowser = window.hasOwnProperty(
       "BeforeInstallPromptEvent"
     )
+
+    const isStandalone =
+      navigator.standalone || matchMedia("(display-mode: standalone)").matches
 
     const isIOS =
       navigator.userAgent.includes("iPhone") ||
@@ -25,21 +28,9 @@ export const Navigation = ({ currentPage }) => {
       (navigator.userAgent.includes("Macintosh") &&
         navigator.maxTouchPoints &&
         navigator.maxTouchPoints > 2)
+
+    setShowInstallBtn(!isStandalone && (isSupportingBrowser || isIOS))
   }
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("appinstalled", () => setShowInstallBtn(false))
-
-      window.addEventListener("beforeinstallprompt", event => {
-        console.log("beforeinstallevent")
-        console.log(event)
-        event.preventDefault()
-      })
-
-      console.log("end of useeffect hook")
-    }
-  }, [])
 
   return (
     <Navbar sticky="top" type="dark" theme="secondary" expand="md">
@@ -86,7 +77,7 @@ export const Navigation = ({ currentPage }) => {
                 outline
                 theme="white"
                 size="sm"
-                className={showInstallBtn && "d-none"}
+                className={!showInstallBtn && "d-none"}
                 onClick={() => {
                   if (typeof document !== "undefined") {
                     document.querySelector("pwa-install").openPrompt()
