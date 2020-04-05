@@ -12,7 +12,7 @@
     "url": "https://github.com/richardtaylordawson/pwa-shields/issues"
   },
   "dependencies": {
-    "@pwabuilder/pwainstall": "^1.4.1",
+    "@pwabuilder/pwainstall": "^1.5.0",
     "gatsby": "^2.19.17",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-google-analytics": "^2.1.35",
