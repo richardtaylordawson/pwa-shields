@@ -12,29 +12,36 @@ import {
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(true)
+  const [showInstallBtn, setShowInstallBtn] = useState(false)
 
-  if (typeof window !== "undefined" && typeof navigator !== "undefined") {
-    const isSupportingBrowser = window.hasOwnProperty(
-      "BeforeInstallPromptEvent"
-    )
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof navigator !== "undefined") {
+      const isSupportingBrowser = window.hasOwnProperty(
+        "BeforeInstallPromptEvent"
+      )
 
-    const isStandalone =
-      navigator.standalone || matchMedia("(display-mode: standalone)").matches
+      const isStandalone =
+        navigator.standalone || matchMedia("(display-mode: standalone)").matches
 
-    const isIOS =
-      navigator.userAgent.includes("iPhone") ||
-      navigator.userAgent.includes("iPad") ||
-      (navigator.userAgent.includes("Macintosh") &&
-        navigator.maxTouchPoints &&
-        navigator.maxTouchPoints > 2)
+      const isIOS = !!(
+        navigator.userAgent.includes("iPhone") ||
+        navigator.userAgent.includes("iPad") ||
+        (navigator.userAgent.includes("Macintosh") &&
+          navigator.maxTouchPoints &&
+          navigator.maxTouchPoints > 2)
+      )
 
-    console.log("isSupportingBrowser", isSupportingBrowser)
-    console.log("isStandalone", isStandalone)
-    console.log("isIOS", isIOS)
+      console.log("isSupportingBrowser", isSupportingBrowser)
+      console.log("isStandalone", isStandalone)
+      console.log("isIOS", isIOS)
+      console.log(
+        "showInstallBtn",
+        !isStandalone && (isSupportingBrowser || isIOS)
+      )
 
-    setShowInstallBtn(!isStandalone && (isSupportingBrowser || isIOS))
-  }
+      setShowInstallBtn(!isStandalone && (isSupportingBrowser || isIOS))
+    }
+  }, [])
 
   return (
     <Navbar sticky="top" type="dark" theme="secondary" expand="md">
@@ -81,7 +88,7 @@ export const Navigation = ({ currentPage }) => {
                 outline
                 theme="white"
                 size="sm"
-                className={!showInstallBtn && "d-none"}
+                className={!showInstallBtn ? "d-none" : ""}
                 onClick={() => {
                   if (typeof document !== "undefined") {
                     document.querySelector("pwa-install").openPrompt()
