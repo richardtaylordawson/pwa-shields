@@ -1,4 +1,4 @@
-# ![PWA Shields](https://www.pwa-shields.com/images/logo.svg)
+# [![PWA Shields](https://www.pwa-shields.com/images/logo.svg)](https://www.pwa-shields.com)
 
 > Personalize your app's README with custom, fun, PWA shields in SVG
 
