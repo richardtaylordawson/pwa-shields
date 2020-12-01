@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Container, Row, Col, Button } from "shards-react"
@@ -156,9 +155,5 @@ export const query = graphql`
     }
   }
 `
-
-IndexPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
 
 export default IndexPage

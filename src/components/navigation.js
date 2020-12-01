@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import {
   Navbar,
@@ -12,6 +11,34 @@ import {
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+  const [showInstallBtn, setShowInstallBtn] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof navigator !== "undefined") {
+      const isSupportingBrowser = window.hasOwnProperty(
+        "BeforeInstallPromptEvent"
+      )
+
+      const isStandalone =
+        navigator.standalone || matchMedia("(display-mode: standalone)").matches
+
+      const isIOS = !!(
+        navigator.userAgent.includes("iPhone") ||
+        navigator.userAgent.includes("iPad") ||
+        (navigator.userAgent.includes("Macintosh") &&
+          navigator.maxTouchPoints &&
+          navigator.maxTouchPoints > 2)
+      )
+
+      console.log("isSupportingBrowser", isSupportingBrowser)
+      console.log("isStandalone", isStandalone)
+      console.log("isIOS", isIOS)
+      console.log(
+        "showInstallBtn",
+        !isStandalone && (isSupportingBrowser || isIOS)
+      )
+    }
+  }, [])
 
   return (
     <Navbar sticky="top" type="dark" theme="secondary" expand="md">
@@ -77,8 +104,4 @@ export const Navigation = ({ currentPage }) => {
       </Collapse>
     </Navbar>
   )
-}
-
-Navigation.propTypes = {
-  currentPage: PropTypes.string.isRequired,
 }

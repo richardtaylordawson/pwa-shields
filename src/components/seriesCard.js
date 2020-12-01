@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Card, CardBody, Button } from "shards-react"
 import { Hint } from "./"
@@ -62,15 +61,4 @@ export const SeriesCard = ({
       </CardBody>
     </Card>
   )
-}
-
-SeriesCard.propTypes = {
-  children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  linkQuery: PropTypes.string,
-  hint: PropTypes.bool,
-  hintId: PropTypes.string,
-  hintDescription: PropTypes.string,
-  futureSeries: PropTypes.bool,
 }
