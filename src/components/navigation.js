@@ -15,40 +15,50 @@ export const Navigation = ({ currentPage }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
-      const isSupportingBrowser = window.hasOwnProperty("BeforeInstallPromptEvent");
-      const isIOS = navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad") || (navigator.userAgent.includes("Macintosh") &&
-                    typeof navigator.maxTouchPoints === "number" &&
-                    navigator.maxTouchPoints > 2);
+      const isSupportingBrowser = window.hasOwnProperty(
+        "BeforeInstallPromptEvent"
+      )
 
-      let hasPrompt = false;
+      const isIOS =
+        navigator.userAgent.includes("iPhone") ||
+        navigator.userAgent.includes("iPad") ||
+        (navigator.userAgent.includes("Macintosh") &&
+          typeof navigator.maxTouchPoints === "number" &&
+          navigator.maxTouchPoints > 2)
+
+      let hasPrompt = false
 
       window.addEventListener("beforeinstallprompt", () => {
-        hasPrompt = true;
+        hasPrompt = true
 
-        const eligibleUser = isSupportingBrowser && (hasPrompt || isIOS);
+        const eligibleUser = isSupportingBrowser && (hasPrompt || isIOS)
 
-      setShowInstallBtn(("standalone" in navigator && navigator.standalone === false) || eligibleUser);
-      });
+        setShowInstallBtn(
+          ("standalone" in navigator && navigator.standalone === false) ||
+            eligibleUser
+        )
+      })
     }
   }, [])
 
   let installButton
 
   if (showInstallBtn) {
-    installButton = <Button
-    outline
-    theme="white"
-    size="sm"
-    onClick={() => {
-      if (typeof document !== "undefined") {
-        document.querySelector("pwa-install").openPrompt()
-      }
-    }}
-  >
-    Install +
-  </Button>
+    installButton = (
+      <Button
+        outline
+        theme="white"
+        size="sm"
+        onClick={() => {
+          if (typeof document !== "undefined") {
+            document.querySelector("pwa-install").openPrompt()
+          }
+        }}
+      >
+        Install +
+      </Button>
+    )
   }
-
 
   return (
     <Navbar sticky="top" type="dark" theme="secondary" expand="md">
@@ -82,7 +92,7 @@ export const Navigation = ({ currentPage }) => {
             </NavItem>
             <NavItem>
               <Link
-                  to="/create"
+                to="/create"
                 className={`nav-link ${currentPage === "create" && "active"}`}
               >
                 Create
