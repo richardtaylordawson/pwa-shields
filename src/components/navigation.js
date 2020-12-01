@@ -15,24 +15,40 @@ export const Navigation = ({ currentPage }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
-      const pwaInstallButton = document.getElementById("pwaInstallButton");
-      if (pwaInstallButton) {
-        setShowInstallBtn(false);
+      const isSupportingBrowser = window.hasOwnProperty("BeforeInstallPromptEvent");
+      const isIOS = navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPad") || (navigator.userAgent.includes("Macintosh") &&
+                    typeof navigator.maxTouchPoints === "number" &&
+                    navigator.maxTouchPoints > 2);
 
-        window.addEventListener("beforeinstallprompt", (event) => {
-          setShowInstallBtn(true);
-        });
+      let hasPrompt = false;
 
-        window.addEventListener("appinstalled", (event) => {
-          setShowInstallBtn(false);
-        });
-      }
+      window.addEventListener("beforeinstallprompt", () => {
+        hasPrompt = true;
 
-      console.log(document.querySelector("pwa-install").getInstalledStatus());
+        const eligibleUser = isSupportingBrowser && (hasPrompt || isIOS);
 
-      console.log(document.querySelector('pwa-install').shadowRoot);
+      setShowInstallBtn(("standalone" in navigator && navigator.standalone === false) || eligibleUser);
+      });
     }
   }, [])
+
+  let installButton
+
+  if (showInstallBtn) {
+    installButton = <Button
+    outline
+    theme="white"
+    size="sm"
+    onClick={() => {
+      if (typeof document !== "undefined") {
+        document.querySelector("pwa-install").openPrompt()
+      }
+    }}
+  >
+    Install +
+  </Button>
+  }
+
 
   return (
     <Navbar sticky="top" type="dark" theme="secondary" expand="md">
@@ -66,7 +82,7 @@ export const Navigation = ({ currentPage }) => {
             </NavItem>
             <NavItem>
               <Link
-                to="/create"
+                  to="/create"
                 className={`nav-link ${currentPage === "create" && "active"}`}
               >
                 Create
@@ -75,18 +91,7 @@ export const Navigation = ({ currentPage }) => {
           </div>
           <div className="d-flex align-items-center">
             <NavItem className="p-md-2 pt-2">
-              <Button
-                outline
-                theme="white"
-                size="sm"
-                onClick={() => {
-                  if (typeof document !== "undefined") {
-                    document.querySelector("pwa-install").openPrompt()
-                  }
-                }}
-              >
-                Install +
-              </Button>
+              {installButton}
               <pwa-install
                 usecustom
                 iconpath="https://www.pwa-shields.com/images/favicon.svg"
