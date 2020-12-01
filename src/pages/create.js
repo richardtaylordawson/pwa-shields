@@ -3,7 +3,9 @@ import { Container, Row, Col } from "react-bootstrap"
 import { Main } from "./../layouts/main"
 import { SEO } from "./../components"
 
-const CreateShield = React.lazy(() => import("./../components/createShield"))
+const CreateShield = React.lazy(
+  () => import("./../components/createShield").CreateShield
+)
 
 const CreatePage = () => {
   return (
