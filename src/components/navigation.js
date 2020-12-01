@@ -17,16 +17,20 @@ export const Navigation = ({ currentPage }) => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
       const pwaInstallButton = document.getElementById("pwaInstallButton");
       if (pwaInstallButton) {
-        pwaInstallButton.style.display = "none";
+        setShowInstallBtn(false);
 
         window.addEventListener("beforeinstallprompt", (event) => {
-          pwaInstallButton.style.display = "block";
+          setShowInstallBtn(true);
         });
 
         window.addEventListener("appinstalled", (event) => {
-          pwaInstallButton.style.display = "none";
+          setShowInstallBtn(false);
         });
       }
+
+      console.log(document.querySelector("pwa-install").getInstalledStatus());
+
+      console.log(document.querySelector('pwa-install').shadowRoot);
     }
   }, [])
 
