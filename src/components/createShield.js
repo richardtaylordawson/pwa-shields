@@ -4,7 +4,7 @@ import BootstrapSwitchButton from "bootstrap-switch-button-react"
 import { copyToClipboard, getQueryVariable } from "./utils"
 import { Hint } from "./"
 
-export const CreateShield = () => {
+export default CreateShield = () => {
   const [linkCheckbox, setLinkCheckbox] = useState(false)
   const [formValues, setFormValues] = useState({
     series: getQueryVariable("series") ? getQueryVariable("series") : "classic",
