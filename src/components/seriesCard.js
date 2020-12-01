@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Card, CardBody, Button } from "shards-react"
+import { Card, Button } from "react-bootstrap"
 import { Hint } from "./"
 
 export const SeriesCard = ({
@@ -20,9 +20,8 @@ export const SeriesCard = ({
   if (hint) {
     hintMarkup = (
       <Hint
-        id={hintId}
         description={hintDescription}
-        theme="secondary"
+        variant="outline-secondary"
         placement="right"
       />
     )
@@ -35,7 +34,7 @@ export const SeriesCard = ({
   if (linkQuery) {
     linkButton = (
       <Link to={`/create?series=${linkQuery}`}>
-        <Button size="sm" outline theme="secondary">
+        <Button size="sm" variant="outline-secondary">
           Try me
         </Button>
       </Link>
@@ -44,7 +43,7 @@ export const SeriesCard = ({
 
   return (
     <Card className="h-md-90 mb-3">
-      <CardBody className={futureSeriesClass}>
+      <Card.Body className={futureSeriesClass}>
         <div className="d-flex flex-md-column flex-lg-row justify-content-between">
           <h3>
             {title}
@@ -58,7 +57,7 @@ export const SeriesCard = ({
           </small>
         </p>
         {children}
-      </CardBody>
+      </Card.Body>
     </Card>
   )
 }

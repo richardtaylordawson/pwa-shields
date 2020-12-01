@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col } from "shards-react"
+import { Container, Row, Col } from "react-bootstrap"
 import { Main } from "./../layouts/main"
 import { SEO, CreateShield } from "./../components"
 

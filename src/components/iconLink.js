@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import { Button } from "shards-react"
+import { Button } from "react-bootstrap"
 
 export const IconLink = ({
   img,
@@ -18,7 +18,7 @@ export const IconLink = ({
     </div>
 
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <Button outline block theme="secondary">
+      <Button variant="outline-secondary" block>
         {linkText}
       </Button>
     </a>

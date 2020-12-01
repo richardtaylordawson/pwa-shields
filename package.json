@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@pwabuilder/pwainstall": "^1.6.7",
+    "bootstrap": "^4.5.3",
+    "bootstrap-switch-button-react": "^1.2.0",
     "gatsby": "^2.27.5",
     "gatsby-image": "^2.6.0",
     "gatsby-plugin-google-analytics": "^2.6.0",
@@ -26,9 +28,9 @@
     "gatsby-source-filesystem": "^2.6.1",
     "gatsby-transformer-sharp": "^2.7.0",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "shards-react": "^1.0.3"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
