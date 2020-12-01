@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from "react"
-import PropTypes from "prop-types"
 import { Tooltip, Button } from "shards-react"
 
 export const Hint = ({ id, description, theme, placement }) => {
@@ -26,11 +25,4 @@ export const Hint = ({ id, description, theme, placement }) => {
       </Tooltip>
     </Fragment>
   )
-}
-
-Hint.propTypes = {
-  id: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  theme: PropTypes.string.isRequired,
-  placement: PropTypes.string.isRequired,
 }

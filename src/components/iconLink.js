@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import { Button } from "shards-react"
 
@@ -25,12 +24,3 @@ export const IconLink = ({
     </a>
   </>
 )
-
-IconLink.propTypes = {
-  img: PropTypes.object.isRequired,
-  imgAlt: PropTypes.string.isRequired,
-  heading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  linkText: PropTypes.string.isRequired,
-}
