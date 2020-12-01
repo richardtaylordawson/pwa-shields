@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col } from "shards-react"
+import { Container, Row, Col } from "react-bootstrap"
 import { Main } from "./../layouts/main"
 import { SEO } from "./../components"
 

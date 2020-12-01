@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import {
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  Collapse,
-  Button,
-} from "shards-react"
+import { Navbar, Nav, NavItem, Button } from "react-bootstrap"
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(false)
+  const [showInstallBtn, setShowInstallBtn] = useState(true)
 
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
@@ -46,8 +39,7 @@ export const Navigation = ({ currentPage }) => {
   if (showInstallBtn) {
     installButton = (
       <Button
-        outline
-        theme="white"
+        variant="outline-light"
         size="sm"
         onClick={() => {
           if (typeof document !== "undefined") {
@@ -61,18 +53,18 @@ export const Navigation = ({ currentPage }) => {
   }
 
   return (
-    <Navbar sticky="top" type="dark" theme="secondary" expand="md">
+    <Navbar bg="dark" variant="dark" expand="md">
       <Link to="/" className="navbar-brand">
         <img className="m-0" src="/images/logo.svg" alt="pwa shields logo" />
       </Link>
 
-      <NavbarToggler
+      <Navbar.Toggle
         onClick={() => setNavbarOpen((prevState) => !prevState)}
         aria-label="mobile navigation"
       />
 
-      <Collapse open={navbarOpen} navbar>
-        <Nav navbar className="d-flex justify-content-between w-100">
+      <Navbar.Collapse open={navbarOpen}>
+        <Nav className="d-flex justify-content-between w-100">
           <div className="d-flex flex-column flex-md-row">
             <NavItem>
               <Link
@@ -110,7 +102,7 @@ export const Navigation = ({ currentPage }) => {
             </NavItem>
           </div>
         </Nav>
-      </Collapse>
+      </Navbar.Collapse>
     </Navbar>
   )
 }

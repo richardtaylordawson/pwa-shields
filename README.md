@@ -109,7 +109,7 @@ Several projects aided in inspiring & building this project. Notably they are:
 - [Shields.io](https://github.com/badges/shields)
 - [Figma](https://www.figma.com/login)
 - [GatsbyJS](https://www.gatsbyjs.org/)
-- [Shards React](https://designrevision.com/docs/shards-react/getting-started)
+- [React Bootstrap](https://react-bootstrap.github.io/)
 
 ## Deployment
 
