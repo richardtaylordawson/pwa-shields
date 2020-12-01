@@ -15,28 +15,18 @@ export const Navigation = ({ currentPage }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
-      const isSupportingBrowser = window.hasOwnProperty(
-        "BeforeInstallPromptEvent"
-      )
+      const pwaInstallButton = document.getElementById("pwaInstallButton");
+      if (pwaInstallButton) {
+        pwaInstallButton.style.display = "none";
 
-      const isStandalone =
-        navigator.standalone || matchMedia("(display-mode: standalone)").matches
+        window.addEventListener("beforeinstallprompt", (event) => {
+          pwaInstallButton.style.display = "block";
+        });
 
-      const isIOS = !!(
-        navigator.userAgent.includes("iPhone") ||
-        navigator.userAgent.includes("iPad") ||
-        (navigator.userAgent.includes("Macintosh") &&
-          navigator.maxTouchPoints &&
-          navigator.maxTouchPoints > 2)
-      )
-
-      console.log("isSupportingBrowser", isSupportingBrowser)
-      console.log("isStandalone", isStandalone)
-      console.log("isIOS", isIOS)
-      console.log(
-        "showInstallBtn",
-        !isStandalone && (isSupportingBrowser || isIOS)
-      )
+        window.addEventListener("appinstalled", (event) => {
+          pwaInstallButton.style.display = "none";
+        });
+      }
     }
   }, [])
 
