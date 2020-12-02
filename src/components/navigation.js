@@ -4,14 +4,10 @@ import { Navbar, Nav, NavItem, Button } from "react-bootstrap"
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(true)
+  const [showInstallBtn, setShowInstallBtn] = useState(false)
 
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
-      const isSupportingBrowser = window.hasOwnProperty(
-        "BeforeInstallPromptEvent"
-      )
-
       const isIOS =
         navigator.userAgent.includes("iPhone") ||
         navigator.userAgent.includes("iPad") ||
@@ -19,17 +15,15 @@ export const Navigation = ({ currentPage }) => {
           typeof navigator.maxTouchPoints === "number" &&
           navigator.maxTouchPoints > 2)
 
-      let hasPrompt = false
+      const isSupportingBrowser = window.hasOwnProperty(
+        "BeforeInstallPromptEvent"
+      )
 
+      setShowInstallBtn(isIOS && isSupportingBrowser)
+
+      // This will only be called if the browser is eligible and PWA has NOT been installed yet
       window.addEventListener("beforeinstallprompt", () => {
-        hasPrompt = true
-
-        const eligibleUser = isSupportingBrowser && (hasPrompt || isIOS)
-
-        setShowInstallBtn(
-          ("standalone" in navigator && navigator.standalone === false) ||
-            eligibleUser
-        )
+        setShowInstallBtn(true)
       })
     }
   }, [])
