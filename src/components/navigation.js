@@ -26,6 +26,7 @@ export const Navigation = ({ currentPage }) => {
       // This will only be called if the browser is eligible and PWA has NOT been installed yet
       window.addEventListener("beforeinstallprompt", () => {
         hasPrompt = true
+        console.log(hasPrompt, "hasPrompt in event")
       })
 
       const eligibleUser = isSupportingBrowser || isIOS
