@@ -21,12 +21,20 @@ export const Navigation = ({ currentPage }) => {
           typeof navigator.maxTouchPoints === "number" &&
           navigator.maxTouchPoints > 2)
 
+      let hasPrompt = false
+
+      // This will only be called if the browser is eligible and PWA has NOT been installed yet
+      window.addEventListener("beforeinstallprompt", () => {
+        hasPrompt = true
+      })
+
       const eligibleUser = isSupportingBrowser || isIOS
 
       setShowInstallBtn(
         (("standalone" in navigator && navigator.standalone === false) ||
           eligibleUser) &&
-          !isPWA
+          !isPWA &&
+          !hasPrompt
       )
     }
   }, [])
