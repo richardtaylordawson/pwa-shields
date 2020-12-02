@@ -37,6 +37,16 @@ export const Navigation = ({ currentPage }) => {
 
       const eligibleUser = isSupportingBrowser || isIOS
 
+      console.log(isSupportingBrowser, "isSupportingbrowser")
+      console.log(isPWA, "isPWA")
+      console.log(isIOS, "isIOS")
+      console.log(hasPrompt, "hasPrompt")
+      console.log(eligibleUser, "eligibleUser")
+      console.log(
+        "standalone" in navigator && navigator.standalone === false,
+        "navigator"
+      )
+
       setShowInstallBtn(
         (("standalone" in navigator && navigator.standalone === false) ||
           eligibleUser) &&
