@@ -12,6 +12,8 @@ export const Navigation = ({ currentPage }) => {
         "BeforeInstallPromptEvent"
       )
 
+      const isPWA = window.matchMedia("(display-mode: standalone)").matches
+
       const isIOS =
         navigator.userAgent.includes("iPhone") ||
         navigator.userAgent.includes("iPad") ||
@@ -19,25 +21,13 @@ export const Navigation = ({ currentPage }) => {
           typeof navigator.maxTouchPoints === "number" &&
           navigator.maxTouchPoints > 2)
 
-      let hasPrompt = false
+      const eligibleUser = isSupportingBrowser || isIOS
 
-      window.addEventListener("beforeinstallprompt", () => {
-        hasPrompt = true
-
-        const eligibleUser = isSupportingBrowser && (hasPrompt || isIOS)
-
-        console.log(
-          isIOS,
-          hasPrompt,
-          isSupportingBrowser,
-          "standalone" in navigator && navigator.standalone === false
-        )
-
-        setShowInstallBtn(
-          ("standalone" in navigator && navigator.standalone === false) ||
-            eligibleUser
-        )
-      })
+      setShowInstallBtn(
+        (("standalone" in navigator && navigator.standalone === false) ||
+          eligibleUser) &&
+          !isPWA
+      )
     }
   }, [])
 
