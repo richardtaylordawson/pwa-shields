@@ -8,10 +8,6 @@ export const Navigation = ({ currentPage }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
-      const isSupportingBrowser = window.hasOwnProperty(
-        "BeforeInstallPromptEvent"
-      )
-
       const isIOS =
         navigator.userAgent.includes("iPhone") ||
         navigator.userAgent.includes("iPad") ||
@@ -19,23 +15,16 @@ export const Navigation = ({ currentPage }) => {
           typeof navigator.maxTouchPoints === "number" &&
           navigator.maxTouchPoints > 2)
 
-      const eligibleUser = isSupportingBrowser || isIOS
-      const isPWA = window.matchMedia("(display-mode: standalone)").matches
+      const isSupportingBrowser = window.hasOwnProperty(
+        "BeforeInstallPromptEvent"
+      )
 
-      let hasPrompt = false
+      setShowInstallBtn(isIOS && isSupportingBrowser)
 
       // This will only be called if the browser is eligible and PWA has NOT been installed yet
       window.addEventListener("beforeinstallprompt", () => {
-        hasPrompt = true
         setShowInstallBtn(true)
       })
-
-      setShowInstallBtn(
-        (("standalone" in navigator && navigator.standalone === false) ||
-          eligibleUser) &&
-          !isPWA &&
-          !hasPrompt
-      )
     }
   }, [])
 
