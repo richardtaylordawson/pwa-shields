@@ -12,8 +12,6 @@ export const Navigation = ({ currentPage }) => {
         "BeforeInstallPromptEvent"
       )
 
-      const isPWA = window.matchMedia("(display-mode: standalone)").matches
-
       const isIOS =
         navigator.userAgent.includes("iPhone") ||
         navigator.userAgent.includes("iPad") ||
@@ -21,25 +19,22 @@ export const Navigation = ({ currentPage }) => {
           typeof navigator.maxTouchPoints === "number" &&
           navigator.maxTouchPoints > 2)
 
+      const eligibleUser = isSupportingBrowser || isIOS
+      const isPWA = window.matchMedia("(display-mode: standalone)").matches
+
       let hasPrompt = false
 
       // This will only be called if the browser is eligible and PWA has NOT been installed yet
       window.addEventListener("beforeinstallprompt", () => {
         hasPrompt = true
-        console.log(hasPrompt, "hasPrompt in event")
+
+        setShowInstallBtn(
+          (("standalone" in navigator && navigator.standalone === false) ||
+            eligibleUser) &&
+            !isPWA &&
+            !hasPrompt
+        )
       })
-
-      const eligibleUser = isSupportingBrowser || isIOS
-
-      console.log(isSupportingBrowser, "isSupportingbrowser")
-      console.log(isPWA, "isPWA")
-      console.log(isIOS, "isIOS")
-      console.log(hasPrompt, "hasPrompt")
-      console.log(eligibleUser, "eligibleUser")
-      console.log(
-        "standalone" in navigator && navigator.standalone === false,
-        "navigator"
-      )
 
       setShowInstallBtn(
         (("standalone" in navigator && navigator.standalone === false) ||
