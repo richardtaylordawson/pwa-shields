@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 export const Shield = ({ src }) => (
   <img
@@ -8,7 +7,3 @@ export const Shield = ({ src }) => (
     alt={src.replace(".svg", "").replace(/\//g, " ")}
   />
 )
-
-Shield.propTypes = {
-  src: PropTypes.string.isRequired,
-}

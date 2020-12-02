@@ -1,20 +1,10 @@
 import React, { useState } from "react"
-import {
-  Row,
-  Col,
-  Form,
-  FormGroup,
-  Card,
-  CardBody,
-  Button,
-  FormSelect,
-  FormCheckbox,
-  FormInput,
-} from "shards-react"
+import { Row, Col, Form, Card, Button } from "react-bootstrap"
+import BootstrapSwitchButton from "bootstrap-switch-button-react"
 import { copyToClipboard, getQueryVariable } from "./utils"
 import { Hint } from "./"
 
-export const CreateShield = () => {
+const CreateShield = () => {
   const [linkCheckbox, setLinkCheckbox] = useState(false)
   const [formValues, setFormValues] = useState({
     series: getQueryVariable("series") ? getQueryVariable("series") : "classic",
@@ -101,34 +91,39 @@ export const CreateShield = () => {
 
   return (
     <Card>
-      <CardBody>
+      <Card.Body>
         <Form>
-          <FormGroup>
+          <Form.Group>
             <div className="d-flex">
-              <label htmlFor="preview" className="mr-3 mb-0">
+              <Form.Label htmlFor="preview" className="mr-3 mb-0">
                 Preview:
-              </label>
+              </Form.Label>
               <img src={logoURL} alt="shield preview" id="preview" />
             </div>
-          </FormGroup>
-          <FormGroup>
-            <label htmlFor="link">
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="link">
               Link
               <Hint
-                id="linkHint"
                 description={`This will allow your shield to act as a link to an external site.`}
-                theme="secondary"
+                variant="outline-secondary"
                 placement="right"
               />
-            </label>
-            <FormGroup className="d-flex align-items-end">
-              <FormCheckbox
-                toggle
-                onClick={() => setLinkCheckbox((prevState) => !prevState)}
-                onChange={() => setLinkCheckbox((prevState) => !prevState)} // must have both events to fix safari & safari mobile
-                checked={linkCheckbox}
-              ></FormCheckbox>
-              <FormInput
+            </Form.Label>
+            <Form.Group className="d-flex align-items-center">
+              <div className="mr-15px">
+                <BootstrapSwitchButton
+                  checked={linkCheckbox}
+                  size="sm"
+                  onlabel=" "
+                  offlabel=" "
+                  onstyle="success"
+                  offstyle="dark"
+                  height={30}
+                  onChange={() => setLinkCheckbox((prevState) => !prevState)}
+                />
+              </div>
+              <Form.Control
                 type="url"
                 disabled={!linkCheckbox}
                 placeholder="https://pwa-shields.com"
@@ -137,13 +132,15 @@ export const CreateShield = () => {
                 name="link"
                 id="link"
               />
-            </FormGroup>
-          </FormGroup>
+            </Form.Group>
+          </Form.Group>
           <Row>
             <Col>
-              <FormGroup>
-                <label htmlFor="series">Series</label>
-                <FormSelect
+              <Form.Group>
+                <Form.Label htmlFor="series">Series</Form.Label>
+                <Form.Control
+                  as="select"
+                  custom
                   value={formValues.series}
                   onChange={handleInputChange}
                   name="series"
@@ -156,13 +153,15 @@ export const CreateShield = () => {
                   <option value="love">Love</option>
                   <option value="gatsby">Gatsby</option>
                   <option value="react">React</option>
-                </FormSelect>
-              </FormGroup>
+                </Form.Control>
+              </Form.Group>
             </Col>
             <Col>
-              <FormGroup>
-                <label htmlFor="color">Color</label>
-                <FormSelect
+              <Form.Group>
+                <Form.Label htmlFor="color">Color</Form.Label>
+                <Form.Control
+                  as="select"
+                  custom
                   value={formValues.color}
                   onChange={handleInputChange}
                   name="color"
@@ -171,13 +170,15 @@ export const CreateShield = () => {
                   <option value="gray">Gray</option>
                   <option value="purple">Purple</option>
                   <option value="green">Green</option>
-                </FormSelect>
-              </FormGroup>
+                </Form.Control>
+              </Form.Group>
             </Col>
           </Row>
-          <FormGroup className={hideBackgroundInput ? "d-none" : ""}>
-            <label htmlFor="background">Background</label>
-            <FormSelect
+          <Form.Group className={hideBackgroundInput ? "d-none" : ""}>
+            <Form.Label htmlFor="background">Background</Form.Label>
+            <Form.Control
+              as="select"
+              custom
               value={formValues.background}
               onChange={handleInputChange}
               name="background"
@@ -191,11 +192,13 @@ export const CreateShield = () => {
               ) : (
                 ""
               )}
-            </FormSelect>
-          </FormGroup>
-          <FormGroup className={hideLogoInput ? "d-none" : ""}>
-            <label htmlFor="logo">Logo</label>
-            <FormSelect
+            </Form.Control>
+          </Form.Group>
+          <Form.Group className={hideLogoInput ? "d-none" : ""}>
+            <Form.Label htmlFor="logo">Logo</Form.Label>
+            <Form.Control
+              as="select"
+              custom
               value={formValues.logo}
               onChange={handleInputChange}
               name="logo"
@@ -208,18 +211,19 @@ export const CreateShield = () => {
               )}
               <option value="white">White</option>
               {!hideBlueOption ? <option value="blue">Blue</option> : ""}
-            </FormSelect>
-          </FormGroup>
+            </Form.Control>
+          </Form.Group>
           <Button
-            outline
-            theme="secondary"
+            variant="outline-secondary"
             className="copy-snippet-btn" // for gtm tracking
             onClick={(event) => copyToClipboard(snippet, event, "Copy snippet")}
           >
             Copy snippet
           </Button>
         </Form>
-      </CardBody>
+      </Card.Body>
     </Card>
   )
 }
+
+export default CreateShield

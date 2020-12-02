@@ -1,7 +1,9 @@
-import React from "react"
-import { Container, Row, Col } from "shards-react"
+import React, { lazy, Suspense } from "react"
+import { Container, Row, Col } from "react-bootstrap"
 import { Main } from "./../layouts/main"
-import { SEO, CreateShield } from "./../components"
+import { SEO } from "./../components"
+
+const CreateShield = lazy(() => import("./../components/createShield"))
 
 const CreatePage = () => {
   return (
@@ -22,7 +24,11 @@ const CreatePage = () => {
         </Row>
         <Row>
           <Col>
-            <CreateShield />
+            {!(typeof window === "undefined") && (
+              <Suspense fallback={<div />}>
+                <CreateShield />
+              </Suspense>
+            )}
           </Col>
         </Row>
       </Container>

@@ -1,4 +1,3 @@
-export { CreateShield } from "./createShield"
 export { Hint } from "./hint"
 export { IconLink } from "./iconLink"
 export { Navigation } from "./navigation"
