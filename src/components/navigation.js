@@ -11,7 +11,7 @@ import {
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(true)
+  const [showInstallBtn, setShowInstallBtn] = useState(false)
 
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
