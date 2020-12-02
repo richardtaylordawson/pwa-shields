@@ -1,36 +1,18 @@
-import React, { useState, Fragment } from "react"
-import PropTypes from "prop-types"
-import { Tooltip, Button } from "shards-react"
+import React from "react"
+import { Tooltip, Button, OverlayTrigger } from "react-bootstrap"
 
-export const Hint = ({ id, description, theme, placement }) => {
-  const [hintOpen, setHintOpen] = useState(false)
+export const Hint = ({ description, variant, placement }) => {
+  const renderTooltip = (props) => <Tooltip {...props}>{description}</Tooltip>
 
   return (
-    <Fragment>
-      <Button
-        id={id}
-        outline
-        onClick={(e) => e.preventDefault}
-        className="button-xxs ml-5px"
-        theme={theme}
-      >
+    <OverlayTrigger
+      placement={placement}
+      delay={{ show: 250, hide: 400 }}
+      overlay={renderTooltip}
+    >
+      <Button className="button-xxs ml-5px" variant={variant}>
         ?
       </Button>
-      <Tooltip
-        open={hintOpen}
-        target={`#${id}`}
-        toggle={() => setHintOpen((prevState) => !prevState)}
-        placement={placement}
-      >
-        {description}
-      </Tooltip>
-    </Fragment>
+    </OverlayTrigger>
   )
-}
-
-Hint.propTypes = {
-  id: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  theme: PropTypes.string.isRequired,
-  placement: PropTypes.string.isRequired,
 }

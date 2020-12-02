@@ -1,7 +1,6 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Img from "gatsby-image"
-import { Button } from "shards-react"
+import { Button } from "react-bootstrap"
 
 export const IconLink = ({
   img,
@@ -19,18 +18,9 @@ export const IconLink = ({
     </div>
 
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <Button outline block theme="secondary">
+      <Button variant="outline-secondary" block>
         {linkText}
       </Button>
     </a>
   </>
 )
-
-IconLink.propTypes = {
-  img: PropTypes.object.isRequired,
-  imgAlt: PropTypes.string.isRequired,
-  heading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  linkText: PropTypes.string.isRequired,
-}

@@ -1,8 +1,7 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Container, Row, Col, Button } from "shards-react"
+import { Container, Row, Col, Button } from "react-bootstrap"
 import { Main } from "./../layouts/main"
 import { SEO, IconLink } from "./../components"
 import LogoShadow from "./../images/logo-shadow.svg"
@@ -27,14 +26,14 @@ const IndexPage = ({ data }) => (
           </p>
 
           <Link to="/series">
-            <Button className="mb-3" outline theme="secondary">
+            <Button className="mb-3" variant="outline-secondary">
               Get Started
             </Button>
           </Link>
 
           <p>
             <small>
-              <em>Current Version: 1.9.0</em>
+              <em>Current Version: 1.10.0</em>
             </small>
           </p>
         </Col>
@@ -156,9 +155,5 @@ export const query = graphql`
     }
   }
 `
-
-IndexPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
 
 export default IndexPage

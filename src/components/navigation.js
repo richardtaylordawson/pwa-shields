@@ -1,31 +1,64 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import {
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  Collapse,
-  Button,
-} from "shards-react"
+import { Navbar, Nav, NavItem, Button } from "react-bootstrap"
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+  const [showInstallBtn, setShowInstallBtn] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof navigator !== "undefined") {
+      const isIOS =
+        navigator.userAgent.includes("iPhone") ||
+        navigator.userAgent.includes("iPad") ||
+        (navigator.userAgent.includes("Macintosh") &&
+          typeof navigator.maxTouchPoints === "number" &&
+          navigator.maxTouchPoints > 2)
+
+      const isSupportingBrowser = window.hasOwnProperty(
+        "BeforeInstallPromptEvent"
+      )
+
+      setShowInstallBtn(isIOS && isSupportingBrowser)
+
+      // This will only be called if the browser is eligible and PWA has NOT been installed yet
+      window.addEventListener("beforeinstallprompt", () => {
+        setShowInstallBtn(true)
+      })
+    }
+  }, [])
+
+  let installButton
+
+  if (showInstallBtn) {
+    installButton = (
+      <Button
+        variant="outline-light"
+        size="sm"
+        onClick={() => {
+          if (typeof document !== "undefined") {
+            document.querySelector("pwa-install").openPrompt()
+          }
+        }}
+      >
+        Install +
+      </Button>
+    )
+  }
 
   return (
-    <Navbar sticky="top" type="dark" theme="secondary" expand="md">
+    <Navbar bg="dark" variant="dark" expand="md">
       <Link to="/" className="navbar-brand">
         <img className="m-0" src="/images/logo.svg" alt="pwa shields logo" />
       </Link>
 
-      <NavbarToggler
+      <Navbar.Toggle
         onClick={() => setNavbarOpen((prevState) => !prevState)}
         aria-label="mobile navigation"
       />
 
-      <Collapse open={navbarOpen} navbar>
-        <Nav navbar className="d-flex justify-content-between w-100">
+      <Navbar.Collapse open={navbarOpen}>
+        <Nav className="d-flex justify-content-between w-100">
           <div className="d-flex flex-column flex-md-row">
             <NavItem>
               <Link
@@ -54,18 +87,7 @@ export const Navigation = ({ currentPage }) => {
           </div>
           <div className="d-flex align-items-center">
             <NavItem className="p-md-2 pt-2">
-              <Button
-                outline
-                theme="white"
-                size="sm"
-                onClick={() => {
-                  if (typeof document !== "undefined") {
-                    document.querySelector("pwa-install").openPrompt()
-                  }
-                }}
-              >
-                Install +
-              </Button>
+              {installButton}
               <pwa-install
                 usecustom
                 iconpath="https://www.pwa-shields.com/images/favicon.svg"
@@ -74,11 +96,7 @@ export const Navigation = ({ currentPage }) => {
             </NavItem>
           </div>
         </Nav>
-      </Collapse>
+      </Navbar.Collapse>
     </Navbar>
   )
-}
-
-Navigation.propTypes = {
-  currentPage: PropTypes.string.isRequired,
 }

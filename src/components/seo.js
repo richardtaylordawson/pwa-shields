@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
 
@@ -112,16 +111,6 @@ export const SEO = ({ metaTitle, metaDescription }) => {
           content: twitterHandle,
         },
       ]}
-    >
-      <script
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
-      ></script>
-    </Helmet>
+    />
   )
-}
-
-SEO.propTypes = {
-  metaTitle: PropTypes.string.isRequired,
-  metaDescription: PropTypes.string.isRequired,
 }
