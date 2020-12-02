@@ -29,25 +29,15 @@ export const Navigation = ({ currentPage }) => {
       const eligibleUser = isSupportingBrowser || isIOS
       const isPWA = window.matchMedia("(display-mode: standalone)").matches
 
-      let hasPrompt = false
-
       // This will only be called if the browser is eligible and PWA has NOT been installed yet
-      window.addEventListener("beforeinstallprompt", () => {
-        hasPrompt = true
-
-        setShowInstallBtn(
-          (("standalone" in navigator && navigator.standalone === false) ||
-            eligibleUser) &&
-            !isPWA &&
-            !hasPrompt
-        )
-      })
+      window.addEventListener("beforeinstallprompt", () =>
+        setShowInstallBtn(true)
+      )
 
       setShowInstallBtn(
         (("standalone" in navigator && navigator.standalone === false) ||
           eligibleUser) &&
-          !isPWA &&
-          !hasPrompt
+          !isPWA
       )
     }
   }, [])
