@@ -11,13 +11,15 @@ import {
 
 export const Navigation = ({ currentPage }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
-  const [showInstallBtn, setShowInstallBtn] = useState(false)
+  const [showInstallBtn, setShowInstallBtn] = useState(true)
 
   useEffect(() => {
     if (typeof window !== "undefined" && typeof navigator !== "undefined") {
       const isSupportingBrowser = window.hasOwnProperty(
         "BeforeInstallPromptEvent"
       )
+
+      const isPWA = window.matchMedia("(display-mode: standalone)").matches
 
       const isIOS =
         navigator.userAgent.includes("iPhone") ||
@@ -26,25 +28,13 @@ export const Navigation = ({ currentPage }) => {
           typeof navigator.maxTouchPoints === "number" &&
           navigator.maxTouchPoints > 2)
 
-      let hasPrompt = false
+      const eligibleUser = isSupportingBrowser || isIOS
 
-      window.addEventListener("beforeinstallprompt", () => {
-        hasPrompt = true
-
-        const eligibleUser = isSupportingBrowser && (hasPrompt || isIOS)
-
-        console.log(
-          isIOS,
-          hasPrompt,
-          isSupportingBrowser,
-          "standalone" in navigator && navigator.standalone === false
-        )
-
-        setShowInstallBtn(
-          ("standalone" in navigator && navigator.standalone === false) ||
-            eligibleUser
-        )
-      })
+      setShowInstallBtn(
+        (("standalone" in navigator && navigator.standalone === false) ||
+          eligibleUser) &&
+          !isPWA
+      )
     }
   }, [])
 
