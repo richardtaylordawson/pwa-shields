@@ -21,8 +21,9 @@ export const Navigation = ({ currentPage }) => {
 
       setShowInstallBtn(
         (isIOS && isSupportingBrowser) ||
-          (localStorage.getItem("pwaShieldsInstalled") !== "" &&
-            localStorage.getItem("pwaShieldsInstalled") !== "false")
+          (isSupportingBrowser &&
+            (localStorage.getItem("pwaShieldsInstalled") === "" ||
+              localStorage.getItem("pwaShieldsInstalled") === "false"))
       )
 
       // This will only be called if the browser is eligible and PWA has NOT been installed yet
