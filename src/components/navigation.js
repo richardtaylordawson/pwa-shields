@@ -35,8 +35,6 @@ export const Navigation = ({ currentPage }) => {
       window.addEventListener("appinstalled", () => {
         localStorage.setItem("pwaShieldsInstalled", "true")
       })
-
-      console.log(document.querySelector("pwa-install").getInstalledStatus())
     }
   }, [])
 
