@@ -19,11 +19,21 @@ export const Navigation = ({ currentPage }) => {
         "BeforeInstallPromptEvent"
       )
 
-      setShowInstallBtn(isIOS && isSupportingBrowser)
+      setShowInstallBtn(
+        (isIOS && isSupportingBrowser) ||
+          (isSupportingBrowser &&
+            (localStorage.getItem("pwaShieldsInstalled") === "" ||
+              localStorage.getItem("pwaShieldsInstalled") === "false"))
+      )
 
       // This will only be called if the browser is eligible and PWA has NOT been installed yet
       window.addEventListener("beforeinstallprompt", () => {
+        localStorage.setItem("pwaShieldsInstalled", "false")
         setShowInstallBtn(true)
+      })
+
+      window.addEventListener("appinstalled", () => {
+        localStorage.setItem("pwaShieldsInstalled", "true")
       })
     }
   }, [])
