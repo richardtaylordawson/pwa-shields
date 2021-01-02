@@ -21,15 +21,13 @@ labels provided by Github, but are open to suggestions to change this.
    If it is a new issue, please create the issue and tag appropriately. Once you determine
    what you'd like to work on, assign the issue to you.
 
-2. Create a branch off of master using the project name & issue number.
+2. Create a branch off of production using the project name & issue number.
    Example: `pwa-shields-issue-1`
 
 3. Complete the issue making sure that the issue is 100% finished and does not break
    other parts of the code.
 
-4. Submit a PR into the `release` branch for review within the issue. If the code passes
-   review, then it will be merged into `release` and then determined when it will be launched
-   to production.
+4. Submit a PR into the `production` branch for review within the issue.
 
 ## Figma
 
