@@ -46,7 +46,9 @@ export const Navigation = ({ currentPage }) => {
             </NavItem>
           </div>
           <div className="d-flex align-items-center">
-            <NavItem className="p-md-2 pt-2">{InstallButton}</NavItem>
+            <NavItem className="p-md-2 pt-2">
+              <InstallButton />
+            </NavItem>
           </div>
         </Nav>
       </Navbar.Collapse>
