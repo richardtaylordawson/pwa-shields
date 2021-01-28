@@ -94,3 +94,7 @@ a:hover {
 .opaque {
   opacity: 0.5;
 }
+
+pwa-install::part(openButton) {
+  display: none;
+}
