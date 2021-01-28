@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { Main } from "./../layouts/main"
-import { SEO } from "./../components"
+import { SEO } from "./../components/seo"
 
 const CreateShield = lazy(() => import("./../components/createShield"))
 

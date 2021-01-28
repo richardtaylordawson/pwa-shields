@@ -3,7 +3,8 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Container, Row, Col, Button } from "react-bootstrap"
 import { Main } from "./../layouts/main"
-import { SEO, IconLink } from "./../components"
+import { SEO } from "./../components/seo"
+import { IconLink } from "./../components/iconLink"
 import LogoShadow from "./../images/logo-shadow.svg"
 
 const IndexPage = ({ data }) => (

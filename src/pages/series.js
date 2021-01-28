@@ -1,7 +1,9 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { Main } from "./../layouts/main"
-import { SEO, SeriesCard, Shield } from "./../components"
+import { SEO } from "./../components/seo"
+import { SeriesCard } from "./../components/seriesCard"
+import { Shield } from "./../components/shield"
 
 const SeriesPage = () => (
   <Main currentPage="series">

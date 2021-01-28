@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Card, Button } from "react-bootstrap"
-import { Hint } from "./"
+import { Hint } from "./hint"
 
 export const SeriesCard = ({
   children,

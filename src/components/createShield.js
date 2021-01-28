@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 import { Row, Col, Form, Card, Button } from "react-bootstrap"
 import BootstrapSwitchButton from "bootstrap-switch-button-react"
-import { copyToClipboard, getQueryVariable } from "./utils"
-import { Hint } from "./"
+import { copyToClipboard } from "./utils/copyToClipboard"
+import { getQueryVariable } from "./utils/getQueryVariable"
+import { Hint } from "./hint"
 
 const CreateShield = () => {
   const [linkCheckbox, setLinkCheckbox] = useState(false)
