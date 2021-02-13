@@ -10,14 +10,13 @@ export const SEO = ({ metaTitle, metaDescription }) => {
         site {
           siteMetadata {
             siteUrl
-            twitterHandle
           }
         }
       }
     `
   )
 
-  const { siteUrl, twitterHandle } = site.siteMetadata
+  const { siteUrl } = site.siteMetadata
   const shareImageUrl = `${siteUrl}/images/social-share.png`
 
   return (
@@ -103,14 +102,6 @@ export const SEO = ({ metaTitle, metaDescription }) => {
         {
           name: `twitter:card`,
           content: `summary_large_image`,
-        },
-        {
-          name: `twitter:site`,
-          content: twitterHandle,
-        },
-        {
-          name: `twitter:creator`,
-          content: twitterHandle,
         },
       ]}
     />

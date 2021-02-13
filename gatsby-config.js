@@ -3,7 +3,6 @@ module.exports = {
     siteUrl: `https://www.pwa-shields.com`, // for gatsby-plugin-sitemap
     title: `PWA Shields`,
     description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
-    twitterHandle: `@richard_codes`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
