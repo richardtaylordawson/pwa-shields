@@ -1,10 +1,12 @@
-# [![PWA Shields](https://www.pwa-shields.com/images/logo.svg)](https://www.pwa-shields.com)
+# PWA Shields
 
 > Personalize your app's README with custom, fun, PWA shields in SVG
 
-## Explore the Docs
+## Domain notice
 
-<https://www.pwa-shields.com>
+I no longer own or operate [pwa-shields.com](https://www.pwa-shields.com). The domain has changed hands, and any live site or hosted badge URLs that point there are not maintained by me.
+
+Shield SVG assets remain in this repository under [`static/1.0.0/`](static/1.0.0/). To browse series and build custom shields, run the site locally with `yarn install` and `yarn develop`.
 
 ## Usage
 
@@ -110,7 +112,3 @@ Several projects aided in inspiring & building this project. Notably they are:
 - [Figma](https://www.figma.com/login)
 - [GatsbyJS](https://www.gatsbyjs.org/)
 - [React Bootstrap](https://react-bootstrap.github.io/)
-
-## Deployment
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6b847872-2e80-45dd-8dc0-5490bd7d6acd/deploy-status)](https://app.netlify.com/sites/rtd-pwa-shields/deploys)
