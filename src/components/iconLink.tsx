@@ -18,7 +18,7 @@ export const IconLink = ({
   <>
     <div>
       {image}
-      <h3 className="text-center">{heading}</h3>
+      <h3>{heading}</h3>
       <p>{description}</p>
     </div>
 
