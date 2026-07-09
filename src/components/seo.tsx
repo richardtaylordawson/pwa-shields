@@ -1,7 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
-import Favicon from "./../../static/images/favicon.svg"
 
 const HelmetComponent = Helmet as unknown as React.ComponentType<
   Record<string, unknown>
@@ -41,7 +40,7 @@ export const SEO = ({ metaTitle, metaDescription }: SEOProps) => {
       htmlAttributes={{
         lang: "en",
       }}
-      link={[{ rel: "shortcut icon", type: "image/svg", href: `${Favicon}` }]}
+      link={[{ rel: "icon", type: "image/svg+xml", href: "/images/favicon.svg" }]}
       title={metaTitle}
       meta={[
         {

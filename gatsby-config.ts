@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteUrl: `https://www.pwa-shields.com`, // for gatsby-plugin-sitemap
+    siteUrl: `https://pwa-shields.richardtaylordawson.com`, // for gatsby-plugin-sitemap
     title: `PWA Shields`,
     description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
   },
@@ -28,8 +28,8 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.pwa-shields.com",
-        sitemap: "https://www.pwa-shields.com/sitemap.xml",
+        host: "https://pwa-shields.richardtaylordawson.com",
+        sitemap: "https://pwa-shields.richardtaylordawson.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

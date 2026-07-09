@@ -9,13 +9,7 @@ import { getQueryVariable } from "./utils/getQueryVariable"
 import { Hint } from "./hint"
 
 type ShieldSeries =
-  | "classic"
-  | "certified"
-  | "install"
-  | "dark"
-  | "love"
-  | "gatsby"
-  | "react"
+  "classic" | "certified" | "install" | "dark" | "love" | "gatsby" | "react"
 
 type ShieldColor = "gray" | "purple" | "green"
 type ShieldBackground = "white" | "faded" | "solid" | "rainbow"
@@ -151,8 +145,8 @@ const CreateShield = () => {
   }
 
   const snippet = linkCheckbox
-    ? `[![PWA Shields](https://www.pwa-shields.com${logoURL})](${formValues.link})`
-    : `![PWA Shields](https://www.pwa-shields.com${logoURL})`
+    ? `[![PWA Shields](https://pwa-shields.richardtaylordawson.com${logoURL})](${formValues.link})`
+    : `![PWA Shields](https://pwa-shields.richardtaylordawson.com${logoURL})`
 
   return (
     <Card>
