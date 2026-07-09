@@ -12,7 +12,13 @@ export const Navigation = ({ currentPage }: NavigationProps) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false)
 
   return (
-    <Navbar bg="dark" variant="dark" expand="md" expanded={navbarOpen}>
+    <Navbar
+      bg="dark"
+      variant="dark"
+      expand="md"
+      expanded={navbarOpen}
+      className="px-3 px-md-4"
+    >
       <Link to="/" className="navbar-brand">
         <img className="m-0" src="/images/logo.svg" alt="pwa shields logo" />
       </Link>
