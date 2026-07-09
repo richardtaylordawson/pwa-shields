@@ -72,11 +72,11 @@ a:hover {
   }
 }
 
-.ml-5px {
+.ms-5px {
   margin-left: 5px;
 }
 
-.mr-15px {
+.me-15px {
   margin-right: 15px;
 }
 
@@ -93,8 +93,4 @@ a:hover {
 
 .opaque {
   opacity: 0.5;
-}
-
-pwa-install::part(openButton) {
-  display: none;
 }

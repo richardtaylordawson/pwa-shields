@@ -1,7 +1,19 @@
-import React from "react"
+import * as React from "react"
+import type { ReactNode } from "react"
 import { Link } from "gatsby"
-import { Card, Button } from "react-bootstrap"
+import Button from "react-bootstrap/cjs/Button.js"
+import Card from "react-bootstrap/cjs/Card.js"
 import { Hint } from "./hint"
+
+type SeriesCardProps = {
+  children: ReactNode
+  title: string
+  description: string
+  linkQuery?: string
+  hint?: boolean
+  hintDescription?: string
+  futureSeries?: boolean
+}
 
 export const SeriesCard = ({
   children,
@@ -9,15 +21,14 @@ export const SeriesCard = ({
   description,
   linkQuery,
   hint = false,
-  hintId,
   hintDescription,
   futureSeries,
-}) => {
-  let hintMarkup
-  let futureSeriesClass
-  let linkButton
+}: SeriesCardProps) => {
+  let hintMarkup: ReactNode
+  let futureSeriesClass: string | undefined
+  let linkButton: ReactNode
 
-  if (hint) {
+  if (hint && hintDescription) {
     hintMarkup = (
       <Hint
         description={hintDescription}

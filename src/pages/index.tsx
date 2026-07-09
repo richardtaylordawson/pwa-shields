@@ -1,13 +1,16 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { Container, Row, Col, Button } from "react-bootstrap"
+import * as React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import Button from "react-bootstrap/cjs/Button.js"
+import Col from "react-bootstrap/cjs/Col.js"
+import Container from "react-bootstrap/cjs/Container.js"
+import Row from "react-bootstrap/cjs/Row.js"
 import { Main } from "./../layouts/main"
 import { SEO } from "./../components/seo"
 import { IconLink } from "./../components/iconLink"
 import LogoShadow from "./../images/logo-shadow.svg"
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Main currentPage="home">
     <SEO
       metaTitle="PWA Shields - Home"
@@ -40,7 +43,7 @@ const IndexPage = ({ data }) => (
         </Col>
         <Col xs={12} sm={12} md={5} lg={5}>
           <img
-            className="d-none d-md-inline float-md-right"
+            className="d-none d-md-inline float-md-end"
             width="75%"
             src={LogoShadow}
             alt="pwa shields logo"
@@ -70,10 +73,12 @@ const IndexPage = ({ data }) => (
           </p>
         </Col>
         <Col xs={12} sm={12} md={6} lg={6}>
-          <Img
-            fluid={data.exampleProject.childImageSharp.fluid}
+          <StaticImage
+            src="../images/example-project.png"
             className="img-fluid shadow rounded"
             alt="example project"
+            placeholder="dominantColor"
+            quality={100}
           />
         </Col>
       </Row>
@@ -86,8 +91,15 @@ const IndexPage = ({ data }) => (
           className="d-flex flex-column justify-content-between mb-5"
         >
           <IconLink
-            img={data.bug.childImageSharp.fluid}
-            imgAlt="bug icon"
+            image={
+              <StaticImage
+                src="../images/bug.png"
+                alt="bug icon"
+                className="mw-50 mx-auto"
+                placeholder="dominantColor"
+                quality={100}
+              />
+            }
             heading="Bugs or Issues?"
             description="If you are experiencing any problems or have an idea you would like reviewed for a future release, then please open an issue."
             link="https://github.com/richardtaylordawson/pwa-shields/issues"
@@ -103,8 +115,15 @@ const IndexPage = ({ data }) => (
           className="d-flex flex-column justify-content-between mb-5"
         >
           <IconLink
-            img={data.fork.childImageSharp.fluid}
-            imgAlt="fork icon"
+            image={
+              <StaticImage
+                src="../images/fork.png"
+                alt="fork icon"
+                className="mw-50 mx-auto"
+                placeholder="dominantColor"
+                quality={100}
+              />
+            }
             heading="Contributing"
             description="Would you like to contribute? Please see the contribution guidelines for more information on how to do so."
             link="https://github.com/richardtaylordawson/pwa-shields/blob/master/CONTRIBUTING.md"
@@ -120,8 +139,15 @@ const IndexPage = ({ data }) => (
           className="d-flex flex-column justify-content-between mb-5"
         >
           <IconLink
-            img={data.badge.childImageSharp.fluid}
-            imgAlt="badge icon"
+            image={
+              <StaticImage
+                src="../images/badge.png"
+                alt="badge icon"
+                className="mw-50 mx-auto"
+                placeholder="dominantColor"
+                quality={100}
+              />
+            }
             heading="Shields.io"
             description="This project could not have been possible without the inspirational help of Shields.io. They are the leader in providing endpoints for hundreds of shields for developer README's."
             link="https://shields.io/"
@@ -132,29 +158,5 @@ const IndexPage = ({ data }) => (
     </Container>
   </Main>
 )
-
-export const query = graphql`
-  query {
-    logo: file(relativePath: { eq: "logo.png" }) {
-      ...Image350
-    }
-
-    exampleProject: file(relativePath: { eq: "example-project.png" }) {
-      ...Image550
-    }
-
-    badge: file(relativePath: { eq: "badge.png" }) {
-      ...Image50
-    }
-
-    bug: file(relativePath: { eq: "bug.png" }) {
-      ...Image50
-    }
-
-    fork: file(relativePath: { eq: "fork.png" }) {
-      ...Image50
-    }
-  }
-`
 
 export default IndexPage

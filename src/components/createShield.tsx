@@ -1,44 +1,108 @@
-import React, { useState } from "react"
-import { Row, Col, Form, Card, Button } from "react-bootstrap"
-import BootstrapSwitchButton from "bootstrap-switch-button-react"
+import * as React from "react"
+import Button from "react-bootstrap/cjs/Button.js"
+import Card from "react-bootstrap/cjs/Card.js"
+import Col from "react-bootstrap/cjs/Col.js"
+import Form from "react-bootstrap/cjs/Form.js"
+import Row from "react-bootstrap/cjs/Row.js"
 import { copyToClipboard } from "./utils/copyToClipboard"
 import { getQueryVariable } from "./utils/getQueryVariable"
 import { Hint } from "./hint"
 
+type ShieldSeries =
+  | "classic"
+  | "certified"
+  | "install"
+  | "dark"
+  | "love"
+  | "gatsby"
+  | "react"
+
+type ShieldColor = "gray" | "purple" | "green"
+type ShieldBackground = "white" | "faded" | "solid" | "rainbow"
+type ShieldLogo = "inverse" | "white" | "blue"
+
+type FormValues = {
+  series: ShieldSeries
+  color: ShieldColor
+  background: ShieldBackground
+  logo: ShieldLogo
+  link: string
+}
+
+const isShieldSeries = (value: string | undefined): value is ShieldSeries =>
+  value === "classic" ||
+  value === "certified" ||
+  value === "install" ||
+  value === "dark" ||
+  value === "love" ||
+  value === "gatsby" ||
+  value === "react"
+
+const isShieldColor = (value: string): value is ShieldColor =>
+  value === "gray" || value === "purple" || value === "green"
+
+const isShieldBackground = (value: string): value is ShieldBackground =>
+  value === "white" ||
+  value === "faded" ||
+  value === "solid" ||
+  value === "rainbow"
+
+const isShieldLogo = (value: string): value is ShieldLogo =>
+  value === "inverse" || value === "white" || value === "blue"
+
 const CreateShield = () => {
-  const [linkCheckbox, setLinkCheckbox] = useState(false)
-  const [formValues, setFormValues] = useState({
-    series: getQueryVariable("series") ? getQueryVariable("series") : "classic",
+  const [linkCheckbox, setLinkCheckbox] = React.useState(false)
+  const querySeries = getQueryVariable("series")
+  const [formValues, setFormValues] = React.useState<FormValues>({
+    series: isShieldSeries(querySeries) ? querySeries : "classic",
     color: "gray",
     background: "white",
     logo: "inverse",
     link: "",
   })
 
-  const handleInputChange = (event) => {
-    event.persist()
-    setFormValues((formValues) => {
-      // set form values back to default values as user changes series
-      if (event.target.name === "series") {
-        formValues.color = "gray"
-        formValues.background = "white"
+  const handleInputChange = (
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    const { name, value } = event.target
 
-        if (formValues.series === "react") {
-          formValues.logo = "white"
+    setFormValues((currentValues) => {
+      const nextValues: FormValues = {
+        ...currentValues,
+      }
+
+      if (name === "series" && isShieldSeries(value)) {
+        nextValues.series = value
+      } else if (name === "color" && isShieldColor(value)) {
+        nextValues.color = value
+      } else if (name === "background" && isShieldBackground(value)) {
+        nextValues.background = value
+      } else if (name === "logo" && isShieldLogo(value)) {
+        nextValues.logo = value
+      } else if (name === "link") {
+        nextValues.link = value
+      }
+
+      // set form values back to default values as user changes series
+      if (name === "series") {
+        nextValues.color = "gray"
+        nextValues.background = "white"
+
+        if (value === "react") {
+          nextValues.logo = "white"
         } else {
-          formValues.logo = "inverse"
+          nextValues.logo = "inverse"
         }
       }
 
       // reset logo value when changing background of react series
-      if (event.target.name === "background" && formValues.series === "react") {
-        formValues.logo = event.target.value === "faded" ? "inverse" : "white"
+      if (name === "background" && currentValues.series === "react") {
+        nextValues.logo = value === "faded" ? "inverse" : "white"
       }
 
-      return {
-        ...formValues,
-        [event.target.name]: event.target.value,
-      }
+      return nextValues
     })
   }
 
@@ -94,15 +158,15 @@ const CreateShield = () => {
     <Card>
       <Card.Body>
         <Form>
-          <Form.Group>
+          <Form.Group className="mb-3">
             <div className="d-flex">
-              <Form.Label htmlFor="preview" className="mr-3 mb-0">
+              <Form.Label htmlFor="preview" className="me-3 mb-0">
                 Preview:
               </Form.Label>
               <img src={logoURL} alt="shield preview" id="preview" />
             </div>
           </Form.Group>
-          <Form.Group>
+          <Form.Group className="mb-3">
             <Form.Label htmlFor="link">
               Link
               <Hint
@@ -112,15 +176,11 @@ const CreateShield = () => {
               />
             </Form.Label>
             <Form.Group className="d-flex align-items-center">
-              <div className="mr-15px">
-                <BootstrapSwitchButton
+              <div className="me-15px">
+                <Form.Check
+                  aria-label="Enable link"
                   checked={linkCheckbox}
-                  size="sm"
-                  onlabel=" "
-                  offlabel=" "
-                  onstyle="success"
-                  offstyle="dark"
-                  height={30}
+                  type="switch"
                   onChange={() => setLinkCheckbox((prevState) => !prevState)}
                 />
               </div>
@@ -139,9 +199,7 @@ const CreateShield = () => {
             <Col>
               <Form.Group>
                 <Form.Label htmlFor="series">Series</Form.Label>
-                <Form.Control
-                  as="select"
-                  custom
+                <Form.Select
                   value={formValues.series}
                   onChange={handleInputChange}
                   name="series"
@@ -154,15 +212,13 @@ const CreateShield = () => {
                   <option value="love">Love</option>
                   <option value="gatsby">Gatsby</option>
                   <option value="react">React</option>
-                </Form.Control>
+                </Form.Select>
               </Form.Group>
             </Col>
             <Col>
               <Form.Group>
                 <Form.Label htmlFor="color">Color</Form.Label>
-                <Form.Control
-                  as="select"
-                  custom
+                <Form.Select
                   value={formValues.color}
                   onChange={handleInputChange}
                   name="color"
@@ -171,15 +227,13 @@ const CreateShield = () => {
                   <option value="gray">Gray</option>
                   <option value="purple">Purple</option>
                   <option value="green">Green</option>
-                </Form.Control>
+                </Form.Select>
               </Form.Group>
             </Col>
           </Row>
           <Form.Group className={hideBackgroundInput ? "d-none" : ""}>
             <Form.Label htmlFor="background">Background</Form.Label>
-            <Form.Control
-              as="select"
-              custom
+            <Form.Select
               value={formValues.background}
               onChange={handleInputChange}
               name="background"
@@ -193,13 +247,11 @@ const CreateShield = () => {
               ) : (
                 ""
               )}
-            </Form.Control>
+            </Form.Select>
           </Form.Group>
           <Form.Group className={hideLogoInput ? "d-none" : ""}>
             <Form.Label htmlFor="logo">Logo</Form.Label>
-            <Form.Control
-              as="select"
-              custom
+            <Form.Select
               value={formValues.logo}
               onChange={handleInputChange}
               name="logo"
@@ -212,7 +264,7 @@ const CreateShield = () => {
               )}
               <option value="white">White</option>
               {!hideBlueOption ? <option value="blue">Blue</option> : ""}
-            </Form.Control>
+            </Form.Select>
           </Form.Group>
           <Button
             variant="outline-secondary"

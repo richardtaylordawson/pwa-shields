@@ -1,9 +1,26 @@
-import React from "react"
+import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Favicon from "./../../static/images/favicon.svg"
 
-export const SEO = ({ metaTitle, metaDescription }) => {
+const HelmetComponent = Helmet as unknown as React.ComponentType<
+  Record<string, unknown>
+>
+
+type SiteMetadataQuery = {
+  site: {
+    siteMetadata: {
+      siteUrl: string
+    }
+  }
+}
+
+type SEOProps = {
+  metaTitle: string
+  metaDescription: string
+}
+
+export const SEO = ({ metaTitle, metaDescription }: SEOProps) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -14,13 +31,13 @@ export const SEO = ({ metaTitle, metaDescription }) => {
         }
       }
     `
-  )
+  ) as SiteMetadataQuery
 
   const { siteUrl } = site.siteMetadata
   const shareImageUrl = `${siteUrl}/images/social-share.png`
 
   return (
-    <Helmet
+    <HelmetComponent
       htmlAttributes={{
         lang: "en",
       }}
@@ -40,7 +57,7 @@ export const SEO = ({ metaTitle, metaDescription }) => {
           content: metaTitle,
         },
         {
-          itemprop: `name`,
+          itemProp: `name`,
           content: metaTitle,
         },
         {
@@ -60,7 +77,7 @@ export const SEO = ({ metaTitle, metaDescription }) => {
           content: metaDescription,
         },
         {
-          itemprop: `description`,
+          itemProp: `description`,
           content: metaDescription,
         },
         {
@@ -80,7 +97,7 @@ export const SEO = ({ metaTitle, metaDescription }) => {
           content: shareImageUrl,
         },
         {
-          itemprop: `image`,
+          itemProp: `image`,
           content: shareImageUrl,
         },
         {

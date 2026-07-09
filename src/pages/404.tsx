@@ -1,6 +1,8 @@
-import React from "react"
+import * as React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col } from "react-bootstrap"
+import Col from "react-bootstrap/cjs/Col.js"
+import Container from "react-bootstrap/cjs/Container.js"
+import Row from "react-bootstrap/cjs/Row.js"
 import { Main } from "./../layouts/main"
 import { SEO } from "./../components/seo"
 

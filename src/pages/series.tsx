@@ -1,5 +1,7 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import * as React from "react"
+import Col from "react-bootstrap/cjs/Col.js"
+import Container from "react-bootstrap/cjs/Container.js"
+import Row from "react-bootstrap/cjs/Row.js"
 import { Main } from "./../layouts/main"
 import { SEO } from "./../components/seo"
 import { SeriesCard } from "./../components/seriesCard"
@@ -112,7 +114,6 @@ const SeriesPage = () => (
             linkQuery="certified"
             description="Show off the fact that your app is PWA certified"
             hint={true}
-            hintId="certifiedHint"
             hintDescription={`Please note that the use of the word "certified" was just another way of saying your application is a PWA. It does not mean it is certified by PWA Shields or another application.`}
           >
             <Row>

@@ -1,9 +1,9 @@
 /**
  * Searches the url for a given key
  * @param {string} variable - The key to search in the url
- * @return {string} - Returns the string value if the key is found, otherwise false is returned
+ * @return {string | undefined} - Returns the string value if the key is found
  */
-export const getQueryVariable = (variable) => {
+export const getQueryVariable = (variable: string): string | undefined => {
   if (typeof window !== "undefined") {
     const query = window.location.search.substring(1)
     const vars = query.split("&")
@@ -15,7 +15,5 @@ export const getQueryVariable = (variable) => {
         return pair[1]
       }
     }
-
-    return false
   }
 }

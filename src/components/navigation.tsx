@@ -1,13 +1,18 @@
-import React, { useState } from "react"
+import * as React from "react"
 import { Link } from "gatsby"
-import { Navbar, Nav, NavItem } from "react-bootstrap"
-import { InstallButton } from "./installButton"
+import Nav from "react-bootstrap/cjs/Nav.js"
+import NavItem from "react-bootstrap/cjs/NavItem.js"
+import Navbar from "react-bootstrap/cjs/Navbar.js"
 
-export const Navigation = ({ currentPage }) => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
+type NavigationProps = {
+  currentPage?: "home" | "series" | "create"
+}
+
+export const Navigation = ({ currentPage }: NavigationProps) => {
+  const [navbarOpen, setNavbarOpen] = React.useState(false)
 
   return (
-    <Navbar bg="dark" variant="dark" expand="md">
+    <Navbar bg="dark" variant="dark" expand="md" expanded={navbarOpen}>
       <Link to="/" className="navbar-brand">
         <img className="m-0" src="/images/logo.svg" alt="pwa shields logo" />
       </Link>
@@ -17,7 +22,7 @@ export const Navigation = ({ currentPage }) => {
         aria-label="mobile navigation"
       />
 
-      <Navbar.Collapse open={navbarOpen}>
+      <Navbar.Collapse>
         <Nav className="d-flex justify-content-between w-100">
           <div className="d-flex flex-column flex-md-row">
             <NavItem>
@@ -43,11 +48,6 @@ export const Navigation = ({ currentPage }) => {
               >
                 Create
               </Link>
-            </NavItem>
-          </div>
-          <div className="d-flex align-items-center">
-            <NavItem className="p-md-2 pt-2">
-              <InstallButton />
             </NavItem>
           </div>
         </Nav>

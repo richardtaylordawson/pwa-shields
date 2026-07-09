@@ -1,4 +1,6 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby"
+
+const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: `https://www.pwa-shields.com`, // for gatsby-plugin-sitemap
     title: `PWA Shields`,
@@ -6,40 +8,10 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `PWA Shields`,
-        short_name: `PWA Shields`,
-        start_url: `/`,
-        background_color: `#353A3F`,
-        theme_color: `#353A3F`,
-        display: `standalone`,
-        icon: `static/images/favicon.svg`,
-        description: `Personalize your app's README with custom, fun, PWA shields in SVG`,
-        features: [
-          "Create & customize shields",
-          "View documentation",
-          "No network connection needed",
-        ],
-        screenshots: [
-          {
-            src:
-              "https://www.pwa-shields.com/images/screenshots/home-screen.png",
-          },
-          {
-            src: "https://www.pwa-shields.com/images/screenshots/series.png",
-          },
-          {
-            src: "https://www.pwa-shields.com/images/screenshots/create.png",
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -70,3 +42,5 @@ module.exports = {
     },
   ],
 }
+
+export default config

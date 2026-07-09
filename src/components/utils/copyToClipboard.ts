@@ -1,10 +1,14 @@
 /**
  * Copies a value to the user's clipboard
  * @param {string} value - The value to copy to the clipboard
- * @param {object} event - The event object that fires the copy event
+ * @param {React.MouseEvent<HTMLButtonElement>} event - The event object that fires the copy event
  * @param {string} eventAfterText - The text that will be changed once the event is complete
  */
-export const copyToClipboard = (value, event, eventAfterText) => {
+export const copyToClipboard = (
+  value: string,
+  event: React.MouseEvent<HTMLButtonElement>,
+  eventAfterText: string
+) => {
   const tempElement = document.createElement("textarea")
   tempElement.value = value
   tempElement.setAttribute("readonly", "")
@@ -19,7 +23,7 @@ export const copyToClipboard = (value, event, eventAfterText) => {
   event.currentTarget.innerText = "Copied!"
 
   setTimeout(
-    (element) => {
+    (element: HTMLButtonElement) => {
       element.innerText = eventAfterText
     },
     1000,
