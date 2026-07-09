@@ -151,7 +151,7 @@ const CreateShield = () => {
   return (
     <Card>
       <Card.Body>
-        <Form>
+        <Form className="create-shield-form">
           <Form.Group className="mb-3">
             <div className="d-flex">
               <Form.Label htmlFor="preview" className="me-3 mb-0">
@@ -189,8 +189,8 @@ const CreateShield = () => {
               />
             </Form.Group>
           </Form.Group>
-          <Row>
-            <Col>
+          <Row className="g-3 mb-3">
+            <Col xs={12} md={6}>
               <Form.Group>
                 <Form.Label htmlFor="series">Series</Form.Label>
                 <Form.Select
@@ -209,7 +209,7 @@ const CreateShield = () => {
                 </Form.Select>
               </Form.Group>
             </Col>
-            <Col>
+            <Col xs={12} md={6}>
               <Form.Group>
                 <Form.Label htmlFor="color">Color</Form.Label>
                 <Form.Select
@@ -225,7 +225,7 @@ const CreateShield = () => {
               </Form.Group>
             </Col>
           </Row>
-          <Form.Group className={hideBackgroundInput ? "d-none" : ""}>
+          <Form.Group className={hideBackgroundInput ? "d-none" : "mb-3"}>
             <Form.Label htmlFor="background">Background</Form.Label>
             <Form.Select
               value={formValues.background}
@@ -243,7 +243,7 @@ const CreateShield = () => {
               )}
             </Form.Select>
           </Form.Group>
-          <Form.Group className={hideLogoInput ? "d-none" : ""}>
+          <Form.Group className={hideLogoInput ? "d-none" : "mb-3"}>
             <Form.Label htmlFor="logo">Logo</Form.Label>
             <Form.Select
               value={formValues.logo}

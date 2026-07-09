@@ -94,3 +94,17 @@ a:hover {
 .opaque {
   opacity: 0.5;
 }
+
+.create-shield-form .form-check-input {
+  accent-color: #6c757d;
+}
+
+.create-shield-form .form-check-input:checked {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.create-shield-form .form-switch .form-check-input:focus {
+  border-color: #6c757d;
+  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25);
+}
