@@ -14954,13 +14954,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "web-vitals@npm:1.1.2"
-  checksum: 10c0/9521ea2e8ca2e4446ba8e3d5430b0c9a9a07e0d6f468a90dc5fab2bab524fb1a699f3874ea392c9e35a63dcf3651b40130d58ebd78e53a406cb9622049bf1403
-  languageName: node
-  linkType: hard
-
 "webidl-conversions@npm:^3.0.0":
   version: 3.0.1
   resolution: "webidl-conversions@npm:3.0.1"
