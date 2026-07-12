@@ -13,19 +13,6 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "G-K9ZMDNM4F7",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-WF9BBDH",
-        includeInDevelopment: false,
-      },
-    },
-    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://pwa-shields.richardtaylordawson.com",

@@ -8078,35 +8078,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-analytics@npm:^5.16.0":
-  version: 5.16.0
-  resolution: "gatsby-plugin-google-analytics@npm:5.16.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.20.13"
-    minimatch: "npm:^3.1.2"
-    web-vitals: "npm:^1.1.2"
-  peerDependencies:
-    gatsby: ^5.0.0-next
-    react: ^18.0.0 || ^19.0.0 || ^0.0.0
-    react-dom: ^18.0.0 || ^19.0.0 || ^0.0.0
-  checksum: 10c0/719417190bf3c933dc66156bb6c0a7bbc0a690411b33c4150678c16a63089dba1af256efb4dddc63e02e716bbd1ba567eeaff08451ef29665981d5131751cc28
-  languageName: node
-  linkType: hard
-
-"gatsby-plugin-google-tagmanager@npm:^5.16.0":
-  version: 5.16.0
-  resolution: "gatsby-plugin-google-tagmanager@npm:5.16.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.20.13"
-    web-vitals: "npm:^1.1.2"
-  peerDependencies:
-    gatsby: ^5.0.0-next
-    react: ^18.0.0 || ^19.0.0 || ^0.0.0
-    react-dom: ^18.0.0 || ^19.0.0 || ^0.0.0
-  checksum: 10c0/68530e35658787edfe997ad32b67fcfd3e3def3444bf618391067d420b3053759f9acbd3c63deeca6aec69e3408ca974e239f9532e3b3ff2fe2628bb1124457f
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-image@npm:^3.16.0":
   version: 3.16.0
   resolution: "gatsby-plugin-image@npm:3.16.0"
@@ -12294,8 +12265,6 @@ __metadata:
     "@types/react-helmet": "npm:^6.1.11"
     bootstrap: "npm:^5.3.8"
     gatsby: "npm:^5.16.1"
-    gatsby-plugin-google-analytics: "npm:^5.16.0"
-    gatsby-plugin-google-tagmanager: "npm:^5.16.0"
     gatsby-plugin-image: "npm:^3.16.0"
     gatsby-plugin-react-helmet: "npm:^6.16.0"
     gatsby-plugin-robots-txt: "npm:^1.5.3"

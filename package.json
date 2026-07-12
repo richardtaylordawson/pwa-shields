@@ -15,8 +15,6 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
     "gatsby": "^5.16.1",
-    "gatsby-plugin-google-analytics": "^5.16.0",
-    "gatsby-plugin-google-tagmanager": "^5.16.0",
     "gatsby-plugin-image": "^3.16.0",
     "gatsby-plugin-react-helmet": "^6.16.0",
     "gatsby-plugin-robots-txt": "^1.5.3",

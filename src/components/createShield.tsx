@@ -262,7 +262,7 @@ const CreateShield = () => {
           </Form.Group>
           <Button
             variant="outline-secondary"
-            className="copy-snippet-btn" // for gtm tracking
+            className="copy-snippet-btn"
             onClick={(event) => copyToClipboard(snippet, event, "Copy snippet")}
           >
             Copy snippet
