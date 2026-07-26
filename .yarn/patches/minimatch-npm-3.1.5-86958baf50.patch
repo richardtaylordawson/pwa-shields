@@ -1,0 +1,15 @@
+diff --git a/minimatch.js b/minimatch.js
+index 2e4a058a130dceebf83a7bd435f5d22b765ac836..9a463f876ac6fd1c8d8f07837927d4a7228d45fb 100644
+--- a/minimatch.js
++++ b/minimatch.js
+@@ -10,0 +11,3 @@ var expand = require('brace-expansion')
++if (expand && typeof expand.expand === 'function') {
++  expand = expand.expand
++}
+diff --git a/package.json b/package.json
+index 563d2184370b69bad91039364f9543c88a64a158..489dc4b82771bd4806f17d4d6a3696b0b777da25 100644
+--- a/package.json
++++ b/package.json
+@@ -24 +24 @@
+-    "brace-expansion": "^1.1.7"
++    "brace-expansion": "^5.0.8"
