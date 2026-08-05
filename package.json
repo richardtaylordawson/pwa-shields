@@ -45,7 +45,7 @@
     "braces": "^3.0.3",
     "cookie": "^0.7.2",
     "es5-ext": "^0.10.64",
-    "fast-uri": "^3.1.4",
+    "fast-uri": "^3.1.5",
     "file-type": "^21.3.1",
     "flatted": "^3.4.2",
     "gatsby-parcel-config": "file:vendor/gatsby-parcel-config",
