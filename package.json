@@ -53,7 +53,7 @@
     "http-cache-semantics": "^4.2.0",
     "immutable": "^4.3.9",
     "ini": "^1.3.8",
-    "js-yaml": "^3.15.0",
+    "js-yaml": "^3.15.1",
     "json5": "^2.2.3",
     "lodash": "^4.18.1",
     "minimatch": "patch:minimatch@npm%3A3.1.5#~/.yarn/patches/minimatch-npm-3.1.5-86958baf50.patch",
