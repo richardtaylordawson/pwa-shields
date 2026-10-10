@@ -50,7 +50,7 @@
     "flatted": "^3.4.2",
     "gatsby-parcel-config": "file:vendor/gatsby-parcel-config",
     "hosted-git-info": "^2.8.9",
-    "http-cache-semantics": "^4.2.0",
+    "http-cache-semantics": "^4.3.0",
     "immutable": "^4.3.9",
     "ini": "^1.3.8",
     "js-yaml": "^3.15.2",
